@@ -15,4 +15,18 @@ export const UserActions = {
         });
     });
   },
+  fetchUserById({ getters }: any, id: String) {
+    const isUsingMockData = getters.getIsUsingMockData;
+    const route = isUsingMockData ? `/mock/users/${id}` : `/users/${id}`;
+    return new Promise((resolve, reject) => {
+      api
+        .get(route)
+        .then(({ data }) => {
+          resolve(data);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  },
 };

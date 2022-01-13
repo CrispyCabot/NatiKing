@@ -11,6 +11,16 @@ router.route("/users").get((req, res) => {
         res.json(response);
     });
 });
+router.route("/users/:id").get((req, res) => {
+    const { id } = req.params;
+    Users.findOne({ _id: id }, async(err, response) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        res.json(response);
+    });
+});
 
 //Posts getters
 const Posts = require("../models/post-model");

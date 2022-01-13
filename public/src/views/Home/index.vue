@@ -5,7 +5,7 @@
       v-for="post in splicedPosts"
       :key="post._id"
       :title="post.title"
-      :author="post.owner_id"
+      :authorID="post.owner_id"
     />
   </div>
 </template>

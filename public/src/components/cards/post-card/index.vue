@@ -3,7 +3,7 @@
     <img :src="getLogo" />
     <div class="rhs">
       <h1>{{ title }}</h1>
-      <h5>By: {{ author }}</h5>
+      <h5>By: {{ authorName }}</h5>
     </div>
   </div>
 </template>
