@@ -1,0 +1,316 @@
+[{
+    "_id": {
+        "$oid": "23836b6474cfc3232ad95e1e"
+    },
+    "email": "cbridewell5@gmail.com",
+    "password": "password123",
+    "is_admin_user": true,
+    "name": "Chris Bridewell",
+    "access_level": {
+        "$numberInt": "3"
+    },
+    "socials": [{
+        "username": "cbridewell",
+        "url": "twitter.com/cbridewell"
+    }]
+    },{
+    "_id": {
+        "$oid": "e95b922a3e305a0b777aeb2d"
+    },
+    "email": "PatrickMathis@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Patrick Mathis",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "PatrickMathis",
+        "url": "twitter.com/PatrickMathis"
+    }]
+    },{
+    "_id": {
+        "$oid": "129b62e8e7239ae2c277eba9"
+    },
+    "email": "CrystalStevensonMD@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Crystal Stevenson MD",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "CrystalStevensonMD",
+        "url": "twitter.com/CrystalStevensonMD"
+    }]
+    },{
+    "_id": {
+        "$oid": "f71194ceb83e56135fa37960"
+    },
+    "email": "AlexisLogan@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Alexis Logan",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "AlexisLogan",
+        "url": "twitter.com/AlexisLogan"
+    }]
+    },{
+    "_id": {
+        "$oid": "8b3d6dfb41c043079a08274f"
+    },
+    "email": "SophiaLara@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Sophia Lara",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "SophiaLara",
+        "url": "twitter.com/SophiaLara"
+    }]
+    },{
+    "_id": {
+        "$oid": "27833b6338356663471cb16b"
+    },
+    "email": "KathyThompson@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Kathy Thompson",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "KathyThompson",
+        "url": "twitter.com/KathyThompson"
+    }]
+    },{
+    "_id": {
+        "$oid": "ad4a192927bc2eacfb2648c7"
+    },
+    "email": "PatriciaStanley@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Patricia Stanley",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "PatriciaStanley",
+        "url": "twitter.com/PatriciaStanley"
+    }]
+    },{
+    "_id": {
+        "$oid": "b50a0e65d11fe19839f7f115"
+    },
+    "email": "AlishaBerry@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Alisha Berry",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "AlishaBerry",
+        "url": "twitter.com/AlishaBerry"
+    }]
+    },{
+    "_id": {
+        "$oid": "6b7d24ff9d0dc0b9d6d3ddd2"
+    },
+    "email": "StaceyShah@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Stacey Shah",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "StaceyShah",
+        "url": "twitter.com/StaceyShah"
+    }]
+    },{
+    "_id": {
+        "$oid": "0f1c4da1e1dc1c7a054a3b39"
+    },
+    "email": "MarilynSchmidt@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Marilyn Schmidt",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "MarilynSchmidt",
+        "url": "twitter.com/MarilynSchmidt"
+    }]
+    },{
+    "_id": {
+        "$oid": "eb841641aab3b39cb1d81a8c"
+    },
+    "email": "CarlosOliver@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Carlos Oliver",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "CarlosOliver",
+        "url": "twitter.com/CarlosOliver"
+    }]
+    },{
+    "_id": {
+        "$oid": "0d6c4d02c3d0acdb6eab8ca3"
+    },
+    "email": "MissSamanthaSchultz@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Miss Samantha Schultz",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "MissSamanthaSchultz",
+        "url": "twitter.com/MissSamanthaSchultz"
+    }]
+    },{
+    "_id": {
+        "$oid": "add228ede952af27d2b92aa8"
+    },
+    "email": "BrandyBenton@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Brandy Benton",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "BrandyBenton",
+        "url": "twitter.com/BrandyBenton"
+    }]
+    },{
+    "_id": {
+        "$oid": "452f632c4d74cff0dd63da9a"
+    },
+    "email": "JordanMontgomery@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Jordan Montgomery",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "JordanMontgomery",
+        "url": "twitter.com/JordanMontgomery"
+    }]
+    },{
+    "_id": {
+        "$oid": "23836b6474cfc3232ad95e1e"
+    },
+    "email": "AnnaGuerrero@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Anna Guerrero",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "AnnaGuerrero",
+        "url": "twitter.com/AnnaGuerrero"
+    }]
+    },{
+    "_id": {
+        "$oid": "3782da88e5cc7098ed610e6f"
+    },
+    "email": "AmyGoodwin@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Amy Goodwin",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "AmyGoodwin",
+        "url": "twitter.com/AmyGoodwin"
+    }]
+    },{
+    "_id": {
+        "$oid": "408468637dc91be838f16273"
+    },
+    "email": "VictoriaJensen@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Victoria Jensen",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "VictoriaJensen",
+        "url": "twitter.com/VictoriaJensen"
+    }]
+    },{
+    "_id": {
+        "$oid": "c687bac6d13a882420aaa889"
+    },
+    "email": "VirginiaPearson@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Virginia Pearson",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "VirginiaPearson",
+        "url": "twitter.com/VirginiaPearson"
+    }]
+    },{
+    "_id": {
+        "$oid": "da10b7ea276860e56c35b186"
+    },
+    "email": "BarbaraBullock@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Barbara Bullock",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "BarbaraBullock",
+        "url": "twitter.com/BarbaraBullock"
+    }]
+    },{
+    "_id": {
+        "$oid": "e279748c05839be8626d9260"
+    },
+    "email": "MatthewJordan@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Matthew Jordan",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "MatthewJordan",
+        "url": "twitter.com/MatthewJordan"
+    }]
+    },{
+    "_id": {
+        "$oid": "ce3148a6ad31b42de1686a05"
+    },
+    "email": "RaymondKing@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Raymond King",
+    "access_level": {
+        "$numberInt": "1"
+    },
+    "socials": [{
+        "username": "RaymondKing",
+        "url": "twitter.com/RaymondKing"
+    }]
+    }]

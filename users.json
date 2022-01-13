@@ -1,0 +1,201 @@
+{
+    "_id": {
+        "$oid": "kxo45a76oztxmbgrqbkthxxt"
+    },
+    "email": "AnnaAndrews@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Anna Andrews",
+    "access_level": 1,
+    "socials": [{"username": "AnnaAndrews", "url": "twitter.com/AnnaAndrews"}]
+}{
+    "_id": {
+        "$oid": "874uc8hck1rw2xl0evsqyk5l"
+    },
+    "email": "KarenBishop@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Karen Bishop",
+    "access_level": 1,
+    "socials": [{"username": "KarenBishop", "url": "twitter.com/KarenBishop"}]
+}{
+    "_id": {
+        "$oid": "4cpdn7bod1dfr3c8800lhvq1"
+    },
+    "email": "LarryRoss@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Larry Ross",
+    "access_level": 1,
+    "socials": [{"username": "LarryRoss", "url": "twitter.com/LarryRoss"}]
+}{
+    "_id": {
+        "$oid": "mu8zwrqt2c6w3w1unkjurni0"
+    },
+    "email": "NicholasOlson@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Nicholas Olson",
+    "access_level": 1,
+    "socials": [{"username": "NicholasOlson", "url": "twitter.com/NicholasOlson"}]
+}{
+    "_id": {
+        "$oid": "efkph9o0lkignl32uyodafxs"
+    },
+    "email": "EricMoreno@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Eric Moreno",
+    "access_level": 1,
+    "socials": [{"username": "EricMoreno", "url": "twitter.com/EricMoreno"}]
+}{
+    "_id": {
+        "$oid": "z3czdsv6g4toq7a34elro99s"
+    },
+    "email": "MichaelHartman@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Michael Hartman",
+    "access_level": 1,
+    "socials": [{"username": "MichaelHartman", "url": "twitter.com/MichaelHartman"}]
+}{
+    "_id": {
+        "$oid": "ohd5hfyeaeefqwi9l5dw6m81"
+    },
+    "email": "AaronPorter@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Aaron Porter",
+    "access_level": 1,
+    "socials": [{"username": "AaronPorter", "url": "twitter.com/AaronPorter"}]
+}{
+    "_id": {
+        "$oid": "xbnaiwao7cidfdpc9n8lg255"
+    },
+    "email": "JosephHenderson@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Joseph Henderson",
+    "access_level": 1,
+    "socials": [{"username": "JosephHenderson", "url": "twitter.com/JosephHenderson"}]
+}{
+    "_id": {
+        "$oid": "dt63du3frzzbcwll9yak5khl"
+    },
+    "email": "KyleGreen@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Kyle Green",
+    "access_level": 1,
+    "socials": [{"username": "KyleGreen", "url": "twitter.com/KyleGreen"}]
+}{
+    "_id": {
+        "$oid": "4xu7c4d64anxx8s2o0cx0usn"
+    },
+    "email": "JamesStevens@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "James Stevens",
+    "access_level": 1,
+    "socials": [{"username": "JamesStevens", "url": "twitter.com/JamesStevens"}]
+}{
+    "_id": {
+        "$oid": "ksa978yk7bsnzkkga76bkhte"
+    },
+    "email": "RonaldBailey@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Ronald Bailey",
+    "access_level": 1,
+    "socials": [{"username": "RonaldBailey", "url": "twitter.com/RonaldBailey"}]
+}{
+    "_id": {
+        "$oid": "y4pma6t18fl861sjuefvma1y"
+    },
+    "email": "LoriContreras@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Lori Contreras",
+    "access_level": 1,
+    "socials": [{"username": "LoriContreras", "url": "twitter.com/LoriContreras"}]
+}{
+    "_id": {
+        "$oid": "1m9ivdob0nvpx632udwobx6x"
+    },
+    "email": "AnneJenkins@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Anne Jenkins",
+    "access_level": 1,
+    "socials": [{"username": "AnneJenkins", "url": "twitter.com/AnneJenkins"}]
+}{
+    "_id": {
+        "$oid": "3s8djtksgtkwkfirbl72sekt"
+    },
+    "email": "SusanBanks@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Susan Banks",
+    "access_level": 1,
+    "socials": [{"username": "SusanBanks", "url": "twitter.com/SusanBanks"}]
+}{
+    "_id": {
+        "$oid": "jl9y59bbil61ttcef4s7s6hz"
+    },
+    "email": "JamesReynolds@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "James Reynolds",
+    "access_level": 1,
+    "socials": [{"username": "JamesReynolds", "url": "twitter.com/JamesReynolds"}]
+}{
+    "_id": {
+        "$oid": "12jdwtxvqjttfmqp1p5hv5c3"
+    },
+    "email": "BrianRodriguez@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Brian Rodriguez",
+    "access_level": 1,
+    "socials": [{"username": "BrianRodriguez", "url": "twitter.com/BrianRodriguez"}]
+}{
+    "_id": {
+        "$oid": "f9bd5euqjy5s0daubsrovncv"
+    },
+    "email": "RonaldOdonnell@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Ronald Odonnell",
+    "access_level": 1,
+    "socials": [{"username": "RonaldOdonnell", "url": "twitter.com/RonaldOdonnell"}]
+}{
+    "_id": {
+        "$oid": "u9hndjdmxkfdsn8nay3fivan"
+    },
+    "email": "AllenJohnson@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Allen Johnson",
+    "access_level": 1,
+    "socials": [{"username": "AllenJohnson", "url": "twitter.com/AllenJohnson"}]
+}{
+    "_id": {
+        "$oid": "y1fzu931srjxly6nru3v0n2r"
+    },
+    "email": "TammyGreen@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Tammy Green",
+    "access_level": 1,
+    "socials": [{"username": "TammyGreen", "url": "twitter.com/TammyGreen"}]
+}{
+    "_id": {
+        "$oid": "7blyq7zixpub0z1uc4h5hgs6"
+    },
+    "email": "MichaelPotter@email.com",
+    "password": "password123",
+    "is_admin_user": false,
+    "name": "Michael Potter",
+    "access_level": 1,
+    "socials": [{"username": "MichaelPotter", "url": "twitter.com/MichaelPotter"}]
+}
