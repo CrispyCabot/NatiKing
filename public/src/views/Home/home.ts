@@ -13,16 +13,28 @@ export default defineComponent({
   mixins: [PaginationMixin],
   data() {
     return {
-      leagues: [],
-      columns: [],
       users: [],
+      posts: [],
       tableLoading: false,
+      splicedPosts: [],
     };
   },
   async created() {
     this.tableLoading = true;
-    this.users = await this.fetchUsers();
+    this.posts = await this.fetchPosts();
+    this.splicedPosts = this.posts.splice(0, 10);
     this.tableLoading = false;
+    window.addEventListener("scroll", () => {
+      const bottomOfWindow =
+        document.documentElement.scrollTop + window.innerHeight ===
+        document.documentElement.offsetHeight;
+
+      if (bottomOfWindow) {
+        this.posts.splice(0, 10).map((item) => {
+          this.splicedPosts.push(item);
+        });
+      }
+    });
   },
   computed: {
     userRows(): Array<Object> {
@@ -36,9 +48,12 @@ export default defineComponent({
     ...mapGetters(["getIsLoggedIn", "getLogo"]),
   },
   methods: {
-    ...mapActions(["fetchUsers"]),
+    ...mapActions(["fetchPosts"]),
     redirect(link: string) {
       this.$router.push(link);
     },
+  },
+  beforeUnmount() {
+    console.log("in beforeUnmount");
   },
 });
