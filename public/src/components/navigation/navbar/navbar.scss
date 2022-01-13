@@ -1,0 +1,129 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  color: $off_white;
+  font-size: 1.75rem;
+  max-width: 80rem;
+  margin: 0 auto;
+
+  &_mobile {
+
+  }
+
+  &_desktop {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+      object-fit: cover;
+      margin-right: .5rem;
+      cursor: pointer;
+    }
+    p {
+      font-size: .9rem;
+      margin-right: .5rem;
+      color: $accent_light_red;
+      cursor: pointer;
+      transition: color .3s;
+      &.active {
+        color: $off_white;
+        font-weight: 600;
+      }
+      &:hover {
+        color: $off_white;
+      }
+    }
+  }
+
+  &_profile {
+    cursor: pointer;
+    position: relative;
+    &_icon {
+      div {
+        position: absolute;
+        top: .2rem;
+        left: calc(100% - .2rem);
+        transform: translate(-50%, -50%);
+        font-weight: 700;
+        font-size: .65rem;
+        padding: .15rem;
+        border-radius: 50%;
+        background-color: $accent_red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .user-popup {
+      left: .5rem;
+      top: -.4rem;
+    }
+    
+    // Popup Transitions
+    .popup-enter-from,
+    .popup-leave-to {
+      opacity: 0;
+    }
+  
+    .popup-enter-to,
+    .popup-leave-from {
+      left: .5rem;
+      top: -.4rem;
+    }
+    
+    .popup-enter-active,
+    .popup-leave-active {
+      transition: all 0.3s;
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .navbar-container {
+    width: calc(100% - 4rem);
+    padding: 2rem 0;
+    &_profile {
+      &_icon {
+        div {
+          font-size: .75rem;
+        }
+        .user-icon {
+          font-size: 2.25rem;
+        }
+      }
+    }
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .navbar-container {
+    &_desktop {
+      img {
+        margin-right: 1rem;
+      }
+      p {
+        margin-right: 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .navbar-container {
+    padding: 3rem 0;
+  }
+}

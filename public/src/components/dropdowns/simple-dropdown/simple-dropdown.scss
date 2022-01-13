@@ -1,0 +1,101 @@
+.simple-dropdown {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+  &_label {
+    text-align: left;
+    font-size: .75rem;
+    font-weight: 600;
+    margin-bottom: .25rem;
+  }
+
+  &_selected-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $off_white;
+    border: 1px solid $light_grey;
+    border-radius: .25rem;
+    padding: .5rem .75rem;
+    width: inherit;
+    min-width: 5rem;
+    font-size: .75rem;
+    p {
+    }
+    &_icon {
+      margin-left: 1rem;
+      transform: rotate(0deg);
+      transition: .3s;
+      &.open {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  
+  &_content {
+    border: 1px solid $light_grey;
+    border-radius: .25rem;
+    position: absolute;
+    top: calc(100% + .35rem);
+    left: -1rem;
+    width: calc(100% + 2rem);
+    max-height: 7rem;
+    overflow-y: scroll;
+    &_item {
+      background-color: $off_white;
+      padding: .5rem .75rem;
+      &:nth-child(even) {
+        background-color: $light_grey;
+      }
+      p {
+        font-size: .75rem;
+        text-align: left;
+      }
+      &:hover {
+        background: $hover_grey;
+      }
+    }
+    &-arrow {
+      position: absolute;
+      top: calc(100% - .1rem);
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 6;
+      width: 0; 
+      height: 0; 
+      border-left: .8rem solid transparent;
+      border-right: .8rem solid transparent;
+      border-bottom: .8rem solid $light_grey;
+      border-top: none;
+      &::after {
+        content: '';
+        position: absolute;
+        top: .1rem;
+        left: -.75rem;
+        width: 0; 
+        height: 0; 
+        border-left: .75rem solid transparent;
+        border-right: .75rem solid transparent;
+        border-bottom: .75rem solid $off_white;
+        border-top: none;
+        z-index: 3;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .simple-dropdown {
+    &_content {
+      &_item {
+        background-color: $off_white;
+        &:nth-child(even) {
+          background-color: $off_white;
+        }
+        &:hover {
+          background: $light_grey;
+        }
+      }
+    }
+  }
+}

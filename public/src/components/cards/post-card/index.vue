@@ -1,0 +1,12 @@
+<template>
+  <div class="post-card">
+    <img :src="getLogo" />
+    <div class="rhs">
+      <h1>{{ title }}</h1>
+      <h5>By: {{ author }}</h5>
+    </div>
+  </div>
+</template>
+
+<script src="./post-card.ts"></script>
+<style src="./post-card.scss" lang="scss"></style>

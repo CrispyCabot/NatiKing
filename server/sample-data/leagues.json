@@ -1,0 +1,249 @@
+[
+{
+  "_id": {
+        "$oid": "7c57b3e58ca492417e98a63d"
+    },
+    "name": "Social researcher",
+    "player_ids": [{ "$oid": "aa7c96e31ecb4f8ad3e19241" },{ "$oid": "ff8d95d4274aab33a1de2d35" },{ "$oid": "bfc3e6da8a26f4d1bc968cdc" },{ "$oid": "5db47c2f5f9e9e8ad35f1ccb" },{ "$oid": "3b985d5f243df79e2d4c38e6" },{ "$oid": "53b42bdfce766ab3b4dccdcd" },{ "$oid": "b2db224116ee74dd2b2ee1ed" },{ "$oid": "f6356331b1915f6b6593be34" }],
+    "player_stats": [{ "player_id": { "$oid": "aa7c96e31ecb4f8ad3e19241" },"stats": {"hits": 40,"singles": 2,"doubles": 4,"triples": 23,"homeruns": 8,"at_bats": 78,"games": 5,"wins": 1,"losses": 4,"points": 121}},{ "player_id": { "$oid": "ff8d95d4274aab33a1de2d35" },"stats": {"hits": 40,"singles": 18,"doubles": 3,"triples": 14,"homeruns": 3,"at_bats": 71,"games": 3,"wins": 1,"losses": 2,"points": 88}},{ "player_id": { "$oid": "bfc3e6da8a26f4d1bc968cdc" },"stats": {"hits": 40,"singles": 3,"doubles": 18,"triples": 15,"homeruns": 3,"at_bats": 77,"games": 2,"wins": 0,"losses": 2,"points": 96}},{ "player_id": { "$oid": "5db47c2f5f9e9e8ad35f1ccb" },"stats": {"hits": 40,"singles": 32,"doubles": 3,"triples": 2,"homeruns": 2,"at_bats": 71,"games": 5,"wins": 0,"losses": 5,"points": 52}},{ "player_id": { "$oid": "3b985d5f243df79e2d4c38e6" },"stats": {"hits": 40,"singles": 25,"doubles": 5,"triples": 4,"homeruns": 3,"at_bats": 87,"games": 2,"wins": 0,"losses": 2,"points": 59}},{ "player_id": { "$oid": "53b42bdfce766ab3b4dccdcd" },"stats": {"hits": 40,"singles": 16,"doubles": 11,"triples": 11,"homeruns": 0,"at_bats": 53,"games": 5,"wins": 1,"losses": 4,"points": 81}},{ "player_id": { "$oid": "b2db224116ee74dd2b2ee1ed" },"stats": {"hits": 40,"singles": 32,"doubles": 3,"triples": 3,"homeruns": 0,"at_bats": 78,"games": 1,"wins": 0,"losses": 1,"points": 47}},{ "player_id": { "$oid": "f6356331b1915f6b6593be34" },"stats": {"hits": 40,"singles": 20,"doubles": 14,"triples": 1,"homeruns": 3,"at_bats": 55,"games": 4,"wins": 1,"losses": 3,"points": 73}}],
+    "max_num_players": 10,
+    "league_creator_id": { "$oid": "ff8d95d4274aab33a1de2d35" },
+    "game_ids": [{ "$oid": "4becf9c5b3cbbdb25637f2fd" },{ "$oid": "c8ea7a11b55eaa44c16d6c37" },{ "$oid": "c8be2519cceab6cc54e7ff53" },{ "$oid": "bc72ea1c9ad27b2c6d81e33b" },{ "$oid": "b7dbccf634a7e25cf4f4fb2b" },{ "$oid": "19be63b536c14aaaa4636782" },{ "$oid": "d26ec35eca3b8bfe8398371e" },{ "$oid": "fc8df3feec82336998fd6cd6" },{ "$oid": "7de7fb5fe3accf5bddd164b7" },{ "$oid": "164ec9d5447de7fa6ecfa48c" },{ "$oid": "dd3d38c6be271878df4aedb8" }],
+    "num_games": 14,
+    "games_created": true,
+    "team_size": 4,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1628900000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1632700000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1628000000000"
+        }
+    },
+    "about_text": "Sure voice shake space remember Democrat medical best. Not success act born turn explain mouth power. Various then produce again direction parent choose natural. Cut good carry bed.",
+    "num_games_completed": 11
+},
+{
+  "_id": {
+        "$oid": "c75ed7c6ca4ae2dc72c7e465"
+    },
+    "name": "Holiday representative",
+    "player_ids": [{ "$oid": "9ed7dbcaf1b5f4534eaddd1b" },{ "$oid": "b66db82bda4f72a6dcf8ebd5" },{ "$oid": "afe1f1d6d1dcaed36fb28a86" },{ "$oid": "e5ecdb71ac49d6e8fc189b6c" },{ "$oid": "8e4d4ecdb4cb8cff3ad17bfc" },{ "$oid": "9b71a6dc5fa7fef954dbc976" },{ "$oid": "f6356331b1915f6b6593be34" },{ "$oid": "651a624abb2f6bba42452777" },{ "$oid": "e2afa44e55bbcb2d2cae731c" },{ "$oid": "53b42bdfce766ab3b4dccdcd" }],
+    "player_stats": [{ "player_id": { "$oid": "9ed7dbcaf1b5f4534eaddd1b" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "b66db82bda4f72a6dcf8ebd5" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "afe1f1d6d1dcaed36fb28a86" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "e5ecdb71ac49d6e8fc189b6c" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "8e4d4ecdb4cb8cff3ad17bfc" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "9b71a6dc5fa7fef954dbc976" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "f6356331b1915f6b6593be34" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "651a624abb2f6bba42452777" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "e2afa44e55bbcb2d2cae731c" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "53b42bdfce766ab3b4dccdcd" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}}],
+    "max_num_players": 14,
+    "league_creator_id": { "$oid": "651a624abb2f6bba42452777" },
+    "game_ids": [],
+    "num_games": 11,
+    "games_created": false,
+    "team_size": 1,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1631100000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1635100000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1630200000000"
+        }
+    },
+    "about_text": "Total blood conference major phone unit. Respond smile claim set their something. Itself money million.",
+    "num_games_completed": 8
+},
+{
+  "_id": {
+        "$oid": "f1fa67ec1d77a9aaabf73a75"
+    },
+    "name": "Engineer, electrical",
+    "player_ids": [{ "$oid": "65a959b1dded9eca289414d2" },{ "$oid": "3b985d5f243df79e2d4c38e6" },{ "$oid": "aa7c96e31ecb4f8ad3e19241" },{ "$oid": "b2db224116ee74dd2b2ee1ed" },{ "$oid": "ca1ffa34886ec5f95d6fff1f" },{ "$oid": "963ebec8cbfd43dbe8d3eb5e" },{ "$oid": "931aab4b55a51c3358d8fe6e" },{ "$oid": "53b42bdfce766ab3b4dccdcd" },{ "$oid": "651a624abb2f6bba42452777" },{ "$oid": "8e4d4ecdb4cb8cff3ad17bfc" }],
+    "player_stats": [{ "player_id": { "$oid": "65a959b1dded9eca289414d2" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "3b985d5f243df79e2d4c38e6" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "aa7c96e31ecb4f8ad3e19241" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "b2db224116ee74dd2b2ee1ed" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "ca1ffa34886ec5f95d6fff1f" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "963ebec8cbfd43dbe8d3eb5e" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "931aab4b55a51c3358d8fe6e" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "53b42bdfce766ab3b4dccdcd" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "651a624abb2f6bba42452777" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "8e4d4ecdb4cb8cff3ad17bfc" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}}],
+    "max_num_players": 13,
+    "league_creator_id": { "$oid": "53b42bdfce766ab3b4dccdcd" },
+    "game_ids": [],
+    "num_games": 11,
+    "games_created": false,
+    "team_size": 4,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1632400000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1633600000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1631400000000"
+        }
+    },
+    "about_text": "Ahead admit very article feeling. Main age general. Brother hospital teacher wind kind. Country go nature. Western despite race become exist well play.",
+    "num_games_completed": 0
+},
+{
+  "_id": {
+        "$oid": "7f6db7e69692783dec17b54d"
+    },
+    "name": "Volunteer coordinator",
+    "player_ids": [{ "$oid": "73b6f8de7ac1aba7bcb8a815" },{ "$oid": "f8a6baeeb9439fcbcfb1ebee" },{ "$oid": "6b2fb22ff3b19cbbb74fd1dc" },{ "$oid": "931aab4b55a51c3358d8fe6e" },{ "$oid": "342c4dabbffbdbb435c4dd3b" },{ "$oid": "3522eeeaf75a8edf472da614" },{ "$oid": "f6356331b1915f6b6593be34" },{ "$oid": "5db47c2f5f9e9e8ad35f1ccb" },{ "$oid": "ca1ffa34886ec5f95d6fff1f" },{ "$oid": "9b71a6dc5fa7fef954dbc976" },{ "$oid": "53b42bdfce766ab3b4dccdcd" },{ "$oid": "b4ab857a1a577beaad4bdb3f" },{ "$oid": "e5ecdb71ac49d6e8fc189b6c" },{ "$oid": "e2afa44e55bbcb2d2cae731c" }],
+    "player_stats": [{ "player_id": { "$oid": "73b6f8de7ac1aba7bcb8a815" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "f8a6baeeb9439fcbcfb1ebee" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "6b2fb22ff3b19cbbb74fd1dc" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "931aab4b55a51c3358d8fe6e" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "342c4dabbffbdbb435c4dd3b" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "3522eeeaf75a8edf472da614" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "f6356331b1915f6b6593be34" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "5db47c2f5f9e9e8ad35f1ccb" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "ca1ffa34886ec5f95d6fff1f" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "9b71a6dc5fa7fef954dbc976" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "53b42bdfce766ab3b4dccdcd" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "b4ab857a1a577beaad4bdb3f" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "e5ecdb71ac49d6e8fc189b6c" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "e2afa44e55bbcb2d2cae731c" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}}],
+    "max_num_players": 17,
+    "league_creator_id": { "$oid": "3522eeeaf75a8edf472da614" },
+    "game_ids": [],
+    "num_games": 6,
+    "games_created": false,
+    "team_size": 3,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1631400000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1632500000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1630400000000"
+        }
+    },
+    "about_text": "Thousand edge occur practice lay decision side. Land decision think against enter teacher among. Thank rate continue decade.",
+    "num_games_completed": 4
+},
+{
+  "_id": {
+        "$oid": "e33db2297553ff4c7dc659ca"
+    },
+    "name": "Occupational hygienist",
+    "player_ids": [{ "$oid": "8e4d4ecdb4cb8cff3ad17bfc" },{ "$oid": "ff8d95d4274aab33a1de2d35" },{ "$oid": "f8a6baeeb9439fcbcfb1ebee" }],
+    "player_stats": [{ "player_id": { "$oid": "8e4d4ecdb4cb8cff3ad17bfc" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "ff8d95d4274aab33a1de2d35" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "f8a6baeeb9439fcbcfb1ebee" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}}],
+    "max_num_players": 13,
+    "league_creator_id": { "$oid": "f8a6baeeb9439fcbcfb1ebee" },
+    "game_ids": [],
+    "num_games": 13,
+    "games_created": false,
+    "team_size": 1,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1632200000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1635400000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1632100000000"
+        }
+    },
+    "about_text": "Score crime order floor now. Usually population ground look. Man war expert medical game. Like conference under go rate. Ten many positive. Although it more simply cultural.",
+    "num_games_completed": 0
+},
+{
+  "_id": {
+        "$oid": "55a22879fdcf5d5be882a8c3"
+    },
+    "name": "Psychologist, forensic",
+    "player_ids": [{ "$oid": "963ebec8cbfd43dbe8d3eb5e" },{ "$oid": "f8a6baeeb9439fcbcfb1ebee" },{ "$oid": "fcde37afb2c4eb7ffdf17496" },{ "$oid": "b66db82bda4f72a6dcf8ebd5" },{ "$oid": "f6356331b1915f6b6593be34" },{ "$oid": "3b985d5f243df79e2d4c38e6" },{ "$oid": "b2db224116ee74dd2b2ee1ed" }],
+    "player_stats": [{ "player_id": { "$oid": "963ebec8cbfd43dbe8d3eb5e" },"stats": {"hits": 37,"singles": 7,"doubles": 3,"triples": 3,"homeruns": 22,"at_bats": 53,"games": 3,"wins": 0,"losses": 3,"points": 110}},{ "player_id": { "$oid": "f8a6baeeb9439fcbcfb1ebee" },"stats": {"hits": 37,"singles": 3,"doubles": 20,"triples": 7,"homeruns": 5,"at_bats": 54,"games": 3,"wins": 2,"losses": 1,"points": 104}},{ "player_id": { "$oid": "fcde37afb2c4eb7ffdf17496" },"stats": {"hits": 37,"singles": 20,"doubles": 11,"triples": 2,"homeruns": 3,"at_bats": 84,"games": 1,"wins": 0,"losses": 1,"points": 60}},{ "player_id": { "$oid": "b66db82bda4f72a6dcf8ebd5" },"stats": {"hits": 37,"singles": 20,"doubles": 8,"triples": 0,"homeruns": 8,"at_bats": 84,"games": 1,"wins": 0,"losses": 1,"points": 68}},{ "player_id": { "$oid": "f6356331b1915f6b6593be34" },"stats": {"hits": 37,"singles": 19,"doubles": 0,"triples": 10,"homeruns": 6,"at_bats": 52,"games": 4,"wins": 3,"losses": 1,"points": 103}},{ "player_id": { "$oid": "3b985d5f243df79e2d4c38e6" },"stats": {"hits": 37,"singles": 24,"doubles": 0,"triples": 10,"homeruns": 1,"at_bats": 87,"games": 0,"wins": 0,"losses": 0,"points": 58}},{ "player_id": { "$oid": "b2db224116ee74dd2b2ee1ed" },"stats": {"hits": 37,"singles": 29,"doubles": 4,"triples": 1,"homeruns": 1,"at_bats": 74,"games": 3,"wins": 1,"losses": 2,"points": 54}}],
+    "max_num_players": 8,
+    "league_creator_id": { "$oid": "b2db224116ee74dd2b2ee1ed" },
+    "game_ids": [{ "$oid": "9adddff8627689a7cf85d1c8" },{ "$oid": "e497b7a687ec2fc1488b6efb" },{ "$oid": "769d72b2ab4fd86fa9da8c59" },{ "$oid": "f4dcd9971ee14fc94a48dce6" }],
+    "num_games": 5,
+    "games_created": true,
+    "team_size": 1,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1630800000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1634800000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1630300000000"
+        }
+    },
+    "about_text": "Table season spring senior season ten. Community list feeling both despite everybody employee. Few yes left specific always. Can debate huge ball seem your.",
+    "num_games_completed": 2
+},
+{
+  "_id": {
+        "$oid": "8a3da376ce4f1afadc1dbec8"
+    },
+    "name": "Learning disability nurse",
+    "player_ids": [{ "$oid": "e69d253c139c73e79688df4c" },{ "$oid": "f6356331b1915f6b6593be34" }],
+    "player_stats": [{ "player_id": { "$oid": "e69d253c139c73e79688df4c" },"stats": {"hits": 36,"singles": 12,"doubles": 20,"triples": 1,"homeruns": 0,"at_bats": 55,"games": 4,"wins": 1,"losses": 3,"points": 65}},{ "player_id": { "$oid": "f6356331b1915f6b6593be34" },"stats": {"hits": 36,"singles": 6,"doubles": 22,"triples": 0,"homeruns": 6,"at_bats": 62,"games": 3,"wins": 1,"losses": 2,"points": 84}}],
+    "max_num_players": 8,
+    "league_creator_id": { "$oid": "e69d253c139c73e79688df4c" },
+    "game_ids": [{ "$oid": "ad987b3a4ff582feb284c864" },{ "$oid": "ac2711b66dacdc71ed367f9d" },{ "$oid": "df52575ed3356421fe3672d4" },{ "$oid": "beb68d4ed86bfe2c9b5bed57" },{ "$oid": "e48ce8d7bb7a237c21edb7e5" },{ "$oid": "36bc7acacf23bb7dd4d71e89" },{ "$oid": "e59deb71befb2d7e453e75c6" },{ "$oid": "aa57b59e1cd8d1bfdf44813e" }],
+    "num_games": 14,
+    "games_created": true,
+    "team_size": 1,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1626500000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1628800000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1626000000000"
+        }
+    },
+    "about_text": "Rich author stop rise require admit military. Look apply hear order decade state eat. Five arm eat upon president morning. Big yet ok discuss cold another election culture.",
+    "num_games_completed": 13
+},
+{
+  "_id": {
+        "$oid": "b3aa5f4f21aa45fed3ad69df"
+    },
+    "name": "Programmer, systems",
+    "player_ids": [{ "$oid": "f8a6baeeb9439fcbcfb1ebee" },{ "$oid": "aa7c96e31ecb4f8ad3e19241" },{ "$oid": "ca1ffa34886ec5f95d6fff1f" },{ "$oid": "afe1f1d6d1dcaed36fb28a86" },{ "$oid": "3522eeeaf75a8edf472da614" },{ "$oid": "bb1a68cca4cbe7ebd17fdf44" }],
+    "player_stats": [{ "player_id": { "$oid": "f8a6baeeb9439fcbcfb1ebee" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "aa7c96e31ecb4f8ad3e19241" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "ca1ffa34886ec5f95d6fff1f" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "afe1f1d6d1dcaed36fb28a86" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "3522eeeaf75a8edf472da614" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}},{ "player_id": { "$oid": "bb1a68cca4cbe7ebd17fdf44" },"stats": {"hits": 0,"singles": 0,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 0,"games": 0,"wins": 0,"losses": 0,"points": 0}}],
+    "max_num_players": 15,
+    "league_creator_id": { "$oid": "aa7c96e31ecb4f8ad3e19241" },
+    "game_ids": [],
+    "num_games": 4,
+    "games_created": false,
+    "team_size": 1,
+    "start_date": {
+        "$date": {
+            "$numberLong": "1623600000000"
+        }
+    },
+    "end_date": {
+        "$date": {
+            "$numberLong": "1625000000000"
+        }
+    },
+    "deadline_date": {
+        "$date": {
+            "$numberLong": "1622600000000"
+        }
+    },
+    "about_text": "Practice project story however. Stand wish attack. Voice figure research reach. Worry practice north color single threat plant. Enjoy story surface election yet.",
+    "num_games_completed": 1
+}]

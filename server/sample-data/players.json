@@ -1,0 +1,1321 @@
+[
+{
+    "_id": {
+        "$oid": "6b2fb22ff3b19cbbb74fd1dc"
+    },
+    "email": "KeithHahn@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Keith",
+    "lastname": "Hahn",
+    "gender": "Female",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 162,"singles": 103,"doubles": 55,"triples": 3,"homeruns": 0,"at_bats": 212,"games": 4,"wins": 2,"losses": 2,"points": 242},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7f6db7e69692783dec17b54d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "bfc3e6da8a26f4d1bc968cdc"
+    },
+    "email": "AlexDillon@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Alex",
+    "lastname": "Dillon",
+    "gender": "Male",
+    "nickname": "",
+    "phone_number": "001-958-143-2872",
+    "player_stats": {"hits": 190,"singles": 40,"doubles": 43,"triples": 70,"homeruns": 35,"at_bats": 195,"games": 5,"wins": 0,"losses": 5,"points": 476},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7c57b3e58ca492417e98a63d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "fcde37afb2c4eb7ffdf17496"
+    },
+    "email": "JulieSchwartz@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Julie",
+    "lastname": "Schwartz",
+    "gender": "Female",
+    "nickname": "",
+    "phone_number": "+1-816-068-9642x533",
+    "player_stats": {"hits": 88,"singles": 19,"doubles": 2,"triples": 22,"homeruns": 43,"at_bats": 102,"games": 4,"wins": 3,"losses": 1,"points": 291},
+    "show_information": false,
+    "league_ids": [{ "$oid": "55a22879fdcf5d5be882a8c3" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "bb1a68cca4cbe7ebd17fdf44"
+    },
+    "email": "TraceyMitchell@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Tracey",
+    "lastname": "Mitchell",
+    "gender": "Other",
+    "nickname": "Jordan",
+    "phone_number": "301.256.7182",
+    "player_stats": {"hits": 77,"singles": 57,"doubles": 1,"triples": 17,"homeruns": 0,"at_bats": 104,"games": 4,"wins": 0,"losses": 4,"points": 110},
+    "show_information": false,
+    "league_ids": [{ "$oid": "b3aa5f4f21aa45fed3ad69df" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "e2afa44e55bbcb2d2cae731c"
+    },
+    "email": "MichaelHo@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Michael",
+    "lastname": "Ho",
+    "gender": "Male",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 77,"singles": 13,"doubles": 49,"triples": 4,"homeruns": 9,"at_bats": 79,"games": 4,"wins": 3,"losses": 1,"points": 189},
+    "show_information": false,
+    "league_ids": [{ "$oid": "c75ed7c6ca4ae2dc72c7e465" },{ "$oid": "7f6db7e69692783dec17b54d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "3522eeeaf75a8edf472da614"
+    },
+    "email": "ErikLynn@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Erik",
+    "lastname": "Lynn",
+    "gender": "Female",
+    "nickname": "",
+    "phone_number": "136.318.3300x131",
+    "player_stats": {"hits": 108,"singles": 24,"doubles": 50,"triples": 29,"homeruns": 3,"at_bats": 112,"games": 1,"wins": 0,"losses": 1,"points": 223},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7f6db7e69692783dec17b54d" },{ "$oid": "b3aa5f4f21aa45fed3ad69df" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "8e4d4ecdb4cb8cff3ad17bfc"
+    },
+    "email": "SusanJordan@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Susan",
+    "lastname": "Jordan",
+    "gender": "Female",
+    "nickname": "",
+    "phone_number": "(711)554-5258x915",
+    "player_stats": {"hits": 82,"singles": 19,"doubles": 21,"triples": 38,"homeruns": 2,"at_bats": 112,"games": 5,"wins": 3,"losses": 2,"points": 213},
+    "show_information": false,
+    "league_ids": [{ "$oid": "c75ed7c6ca4ae2dc72c7e465" },{ "$oid": "f1fa67ec1d77a9aaabf73a75" },{ "$oid": "e33db2297553ff4c7dc659ca" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "f8a6baeeb9439fcbcfb1ebee"
+    },
+    "email": "StacyFrost@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Stacy",
+    "lastname": "Frost",
+    "gender": "Female",
+    "nickname": "Bonnie",
+    "phone_number": "",
+    "player_stats": {"hits": 117,"singles": 51,"doubles": 6,"triples": 18,"homeruns": 39,"at_bats": 151,"games": 4,"wins": 3,"losses": 1,"points": 303},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7f6db7e69692783dec17b54d" },{ "$oid": "e33db2297553ff4c7dc659ca" },{ "$oid": "55a22879fdcf5d5be882a8c3" },{ "$oid": "b3aa5f4f21aa45fed3ad69df" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "afe1f1d6d1dcaed36fb28a86"
+    },
+    "email": "BriannaMyers@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Brianna",
+    "lastname": "Myers",
+    "gender": "Male",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 131,"singles": 112,"doubles": 17,"triples": 0,"homeruns": 0,"at_bats": 152,"games": 4,"wins": 3,"losses": 1,"points": 176},
+    "show_information": false,
+    "league_ids": [{ "$oid": "c75ed7c6ca4ae2dc72c7e465" },{ "$oid": "b3aa5f4f21aa45fed3ad69df" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "9b71a6dc5fa7fef954dbc976"
+    },
+    "email": "MichaelGray@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Michael",
+    "lastname": "Gray",
+    "gender": "Female",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 64,"singles": 15,"doubles": 6,"triples": 2,"homeruns": 39,"at_bats": 110,"games": 4,"wins": 2,"losses": 2,"points": 209},
+    "show_information": false,
+    "league_ids": [{ "$oid": "c75ed7c6ca4ae2dc72c7e465" },{ "$oid": "7f6db7e69692783dec17b54d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "e5ecdb71ac49d6e8fc189b6c"
+    },
+    "email": "KyleSchmidt@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Kyle",
+    "lastname": "Schmidt",
+    "gender": "Female",
+    "nickname": "Luis",
+    "phone_number": "",
+    "player_stats": {"hits": 126,"singles": 34,"doubles": 11,"triples": 44,"homeruns": 35,"at_bats": 130,"games": 4,"wins": 3,"losses": 1,"points": 358},
+    "show_information": false,
+    "league_ids": [{ "$oid": "c75ed7c6ca4ae2dc72c7e465" },{ "$oid": "7f6db7e69692783dec17b54d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "aa7c96e31ecb4f8ad3e19241"
+    },
+    "email": "BrandyRay@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Brandy",
+    "lastname": "Ray",
+    "gender": "Female",
+    "nickname": "",
+    "phone_number": "350-479-6157",
+    "player_stats": {"hits": 66,"singles": 31,"doubles": 13,"triples": 16,"homeruns": 5,"at_bats": 85,"games": 5,"wins": 2,"losses": 3,"points": 145},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7c57b3e58ca492417e98a63d" },{ "$oid": "f1fa67ec1d77a9aaabf73a75" },{ "$oid": "b3aa5f4f21aa45fed3ad69df" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "e69d253c139c73e79688df4c"
+    },
+    "email": "JeffHouston@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Jeff",
+    "lastname": "Houston",
+    "gender": "Male",
+    "nickname": "Brittney",
+    "phone_number": "",
+    "player_stats": {"hits": 25,"singles": 12,"doubles": 11,"triples": 0,"homeruns": 0,"at_bats": 46,"games": 0,"wins": 0,"losses": 0,"points": 34},
+    "show_information": false,
+    "league_ids": [{ "$oid": "8a3da376ce4f1afadc1dbec8" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "3b985d5f243df79e2d4c38e6"
+    },
+    "email": "CharlesLevine@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Charles",
+    "lastname": "Levine",
+    "gender": "Male",
+    "nickname": "",
+    "phone_number": "001-415-699-4446",
+    "player_stats": {"hits": 122,"singles": 105,"doubles": 3,"triples": 4,"homeruns": 9,"at_bats": 143,"games": 3,"wins": 2,"losses": 1,"points": 179},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7c57b3e58ca492417e98a63d" },{ "$oid": "f1fa67ec1d77a9aaabf73a75" },{ "$oid": "55a22879fdcf5d5be882a8c3" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "9ed7dbcaf1b5f4534eaddd1b"
+    },
+    "email": "BrendaPennington@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Brenda",
+    "lastname": "Pennington",
+    "gender": "Other",
+    "nickname": "Elizabeth",
+    "phone_number": "6436154534",
+    "player_stats": {"hits": 76,"singles": 72,"doubles": 1,"triples": 1,"homeruns": 0,"at_bats": 116,"games": 2,"wins": 1,"losses": 1,"points": 87},
+    "show_information": false,
+    "league_ids": [{ "$oid": "c75ed7c6ca4ae2dc72c7e465" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "b66db82bda4f72a6dcf8ebd5"
+    },
+    "email": "JasmineGarrison@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Jasmine",
+    "lastname": "Garrison",
+    "gender": "Male",
+    "nickname": "Melissa",
+    "phone_number": "",
+    "player_stats": {"hits": 66,"singles": 60,"doubles": 5,"triples": 0,"homeruns": 0,"at_bats": 84,"games": 4,"wins": 1,"losses": 3,"points": 80},
+    "show_information": false,
+    "league_ids": [{ "$oid": "c75ed7c6ca4ae2dc72c7e465" },{ "$oid": "55a22879fdcf5d5be882a8c3" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "b2db224116ee74dd2b2ee1ed"
+    },
+    "email": "CraigMatthews@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Craig",
+    "lastname": "Matthews",
+    "gender": "Male",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 45,"games": 3,"wins": 1,"losses": 2,"points": 11},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7c57b3e58ca492417e98a63d" },{ "$oid": "f1fa67ec1d77a9aaabf73a75" },{ "$oid": "55a22879fdcf5d5be882a8c3" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "ca1ffa34886ec5f95d6fff1f"
+    },
+    "email": "JoyChan@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Joy",
+    "lastname": "Chan",
+    "gender": "Male",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 195,"singles": 47,"doubles": 72,"triples": 20,"homeruns": 53,"at_bats": 202,"games": 1,"wins": 0,"losses": 1,"points": 463},
+    "show_information": false,
+    "league_ids": [{ "$oid": "f1fa67ec1d77a9aaabf73a75" },{ "$oid": "7f6db7e69692783dec17b54d" },{ "$oid": "b3aa5f4f21aa45fed3ad69df" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "342c4dabbffbdbb435c4dd3b"
+    },
+    "email": "StephanieYoung@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Stephanie",
+    "lastname": "Young",
+    "gender": "Other",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 187,"singles": 180,"doubles": 0,"triples": 0,"homeruns": 5,"at_bats": 206,"games": 3,"wins": 1,"losses": 2,"points": 210},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7f6db7e69692783dec17b54d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "53b42bdfce766ab3b4dccdcd"
+    },
+    "email": "ChristyLivingston@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Christy",
+    "lastname": "Livingston",
+    "gender": "Male",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 86,"singles": 7,"doubles": 55,"triples": 2,"homeruns": 19,"at_bats": 130,"games": 2,"wins": 0,"losses": 2,"points": 199},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7c57b3e58ca492417e98a63d" },{ "$oid": "c75ed7c6ca4ae2dc72c7e465" },{ "$oid": "f1fa67ec1d77a9aaabf73a75" },{ "$oid": "7f6db7e69692783dec17b54d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "73b6f8de7ac1aba7bcb8a815"
+    },
+    "email": "JonathanMcgee@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Jonathan",
+    "lastname": "Mcgee",
+    "gender": "Male",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 98,"singles": 33,"doubles": 37,"triples": 26,"homeruns": 1,"at_bats": 138,"games": 0,"wins": 0,"losses": 0,"points": 189},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7f6db7e69692783dec17b54d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "931aab4b55a51c3358d8fe6e"
+    },
+    "email": "GabrielSanders@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Gabriel",
+    "lastname": "Sanders",
+    "gender": "Male",
+    "nickname": "Rodney",
+    "phone_number": "",
+    "player_stats": {"hits": 83,"singles": 14,"doubles": 25,"triples": 39,"homeruns": 3,"at_bats": 83,"games": 3,"wins": 1,"losses": 2,"points": 203},
+    "show_information": false,
+    "league_ids": [{ "$oid": "f1fa67ec1d77a9aaabf73a75" },{ "$oid": "7f6db7e69692783dec17b54d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "f6356331b1915f6b6593be34"
+    },
+    "email": "JesseMcfarland@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Jesse",
+    "lastname": "Mcfarland",
+    "gender": "Other",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 155,"singles": 11,"doubles": 5,"triples": 127,"homeruns": 10,"at_bats": 185,"games": 4,"wins": 2,"losses": 2,"points": 462},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7c57b3e58ca492417e98a63d" },{ "$oid": "c75ed7c6ca4ae2dc72c7e465" },{ "$oid": "7f6db7e69692783dec17b54d" },{ "$oid": "55a22879fdcf5d5be882a8c3" },{ "$oid": "8a3da376ce4f1afadc1dbec8" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "77dd2ec992ff69b43ec1c47c"
+    },
+    "email": "NicholeGilbert@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Nichole",
+    "lastname": "Gilbert",
+    "gender": "Male",
+    "nickname": "Cynthia",
+    "phone_number": "",
+    "player_stats": {"hits": 166,"singles": 123,"doubles": 34,"triples": 1,"homeruns": 6,"at_bats": 194,"games": 2,"wins": 1,"losses": 1,"points": 228},
+    "show_information": false,
+    "league_ids": [],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "65a959b1dded9eca289414d2"
+    },
+    "email": "AnthonyLynn@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Anthony",
+    "lastname": "Lynn",
+    "gender": "Female",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 72,"singles": 41,"doubles": 18,"triples": 6,"homeruns": 5,"at_bats": 98,"games": 3,"wins": 2,"losses": 1,"points": 135},
+    "show_information": false,
+    "league_ids": [{ "$oid": "f1fa67ec1d77a9aaabf73a75" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "5db47c2f5f9e9e8ad35f1ccb"
+    },
+    "email": "BrandyMullins@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Brandy",
+    "lastname": "Mullins",
+    "gender": "Other",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 138,"singles": 16,"doubles": 47,"triples": 59,"homeruns": 14,"at_bats": 152,"games": 1,"wins": 0,"losses": 1,"points": 343},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7c57b3e58ca492417e98a63d" },{ "$oid": "7f6db7e69692783dec17b54d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "963ebec8cbfd43dbe8d3eb5e"
+    },
+    "email": "LarryWilson@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Larry",
+    "lastname": "Wilson",
+    "gender": "Male",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 34,"singles": 24,"doubles": 8,"triples": 0,"homeruns": 0,"at_bats": 58,"games": 2,"wins": 1,"losses": 1,"points": 50},
+    "show_information": false,
+    "league_ids": [{ "$oid": "f1fa67ec1d77a9aaabf73a75" },{ "$oid": "55a22879fdcf5d5be882a8c3" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "651a624abb2f6bba42452777"
+    },
+    "email": "MeaganWilliams@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Meagan",
+    "lastname": "Williams",
+    "gender": "Female",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 16,"singles": 10,"doubles": 1,"triples": 1,"homeruns": 2,"at_bats": 56,"games": 1,"wins": 0,"losses": 1,"points": 23},
+    "show_information": false,
+    "league_ids": [{ "$oid": "c75ed7c6ca4ae2dc72c7e465" },{ "$oid": "f1fa67ec1d77a9aaabf73a75" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "ff8d95d4274aab33a1de2d35"
+    },
+    "email": "LisaHorne@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Lisa",
+    "lastname": "Horne",
+    "gender": "Other",
+    "nickname": "Tiffany",
+    "phone_number": "757-462-4277x7447",
+    "player_stats": {"hits": 3,"singles": 1,"doubles": 0,"triples": 0,"homeruns": 0,"at_bats": 38,"games": 4,"wins": 3,"losses": 1,"points": 31},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7c57b3e58ca492417e98a63d" },{ "$oid": "e33db2297553ff4c7dc659ca" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+},
+{
+    "_id": {
+        "$oid": "b4ab857a1a577beaad4bdb3f"
+    },
+    "email": "StanleySmith@email.com",
+    "password": "$2b$08$WY6dvhd2HS0weY2FHilUou712VXgQqWmt7AYpRE8f8eIjCz2F9cnu",
+    "firstname": "Stanley",
+    "lastname": "Smith",
+    "gender": "Female",
+    "nickname": "",
+    "phone_number": "",
+    "player_stats": {"hits": 86,"singles": 3,"doubles": 34,"triples": 15,"homeruns": 32,"at_bats": 127,"games": 5,"wins": 4,"losses": 1,"points": 284},
+    "show_information": false,
+    "league_ids": [{ "$oid": "7f6db7e69692783dec17b54d" }],
+    "token_version": 0,
+    "selected_league_schedules": ["All"],
+    "notifications": {
+        "league_invitations": {
+            "notifications": [],
+            "order_index": 0,
+            "collapsed": false
+        },
+        "league_updates": {
+            "notifications": [],
+            "order_index": 1,
+            "collapsed": false
+        },
+        "league_join_requests": {
+            "notifications": [],
+            "order_index": 2,
+            "collapsed": false
+        },
+        "contact_requests": {
+            "notifications": [],
+            "order_index": 3,
+            "collapsed": false
+        },
+        "other": {
+            "notifications": [],
+            "order_index": 4,
+            "collapsed": false
+        }
+    }
+}]

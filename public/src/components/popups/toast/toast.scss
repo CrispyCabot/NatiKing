@@ -1,0 +1,121 @@
+.toast {
+  position: relative;
+  width: 100%;
+  max-width: 40rem;
+  background-color: $off_white;
+  border-radius: .5rem;
+  border: 1px solid $light_grey;
+  min-height: 3rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem 3.5rem 1rem 1.75rem;
+  color: $dark_background;
+  overflow: hidden;
+  
+  &_sidebar {
+    width: .5rem;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0 0 0 .5rem;
+    z-index: 5;
+    &_background {
+      width: .5rem;
+      height: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      border-radius: .5rem 0 0 .5rem;
+      z-index: 4;
+      &.success {
+        background-color: $toast_green_offset;
+      }
+      &.info {
+        background-color: $toast_blue_offset;
+      }
+      &.error {
+        background-color: $toast_red_offset;
+      }
+      &.warning {
+        background-color: $toast_yellow_offset;
+      }
+    }
+    &.success {
+      background-color: $toast_green;
+    }
+    &.info {
+      background-color: $toast_blue;
+    }
+    &.error {
+      background-color: $toast_red;
+    }
+    &.warning {
+      background-color: $toast_yellow;
+    }
+  }
+
+  &_close-icon {
+    position: absolute;
+    top: .5rem;
+    right: .75rem;
+    color: $default_grey;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3s;
+    &:hover {
+      color: $dark_grey;
+    }
+  }
+
+  &_content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    &_icon {
+      font-size: 2rem;
+      margin-left: 0;
+      &.success {
+        color: $toast_green;
+      }
+      &.info {
+        color: $toast_blue;
+      }
+      &.error {
+        color: $toast_red;
+      }
+      &.warning {
+        color: $toast_yellow;
+      }
+    }
+    &_text {
+      margin-left: 1rem;
+      &_type {
+        font-size: 1rem;
+        font-weight: 700;
+      }
+      &_message {
+        font-size: .9rem;
+        color: $default_grey;
+      }
+    }
+  }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

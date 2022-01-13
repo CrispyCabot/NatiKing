@@ -1,0 +1,44 @@
+.pagination-container {
+  margin: 1rem 0 0 0;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &_pagination {
+    &_page-index {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .arrow {
+        margin: 0 .5rem;
+        color: $dark_background;
+        pointer-events: all;
+        &.inactive-arrow {
+          color: $light_grey;
+          pointer-events: none;
+        }
+        cursor: pointer;
+      }
+      .indexs {
+        display: flex;
+        p {
+          height: 1.5rem;
+          width: 1.5rem;
+          vertical-align: middle;
+          line-height: 1.5rem;
+          border-radius: 50%;
+          background-color: $accent_light_red;
+          margin: 0 .25rem;
+          font-weight: bold;
+          color: $off_white;
+          cursor: pointer;
+          &.active-page {
+            background-color: $accent_red;
+          }
+        }
+      }
+    }
+  }
+}
+
