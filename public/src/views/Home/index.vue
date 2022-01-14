@@ -7,6 +7,8 @@
       :title="post.title"
       :authorID="post.owner_id"
       :tags="post.tags"
+      :commentAmt="post.comments.length"
+      :likeAmt="post.likes.length"
     />
   </div>
 </template>

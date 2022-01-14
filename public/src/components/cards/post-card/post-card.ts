@@ -12,6 +12,8 @@ export default defineComponent({
   props: {
     title: { type: String, default: () => "No Title Found" },
     authorID: { type: String, default: () => "No Author Found" },
+    commentAmt: { type: Number, default: () => 0 },
+    likeAmt: { type: Number, default: () => 0 },
     tags: { type: Array, default: () => [] },
   },
   async created() {

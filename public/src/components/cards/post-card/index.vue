@@ -3,7 +3,10 @@
     <img :src="getLogo" />
     <div class="rhs">
       <h1>{{ title }}</h1>
-      <h5>By: {{ authorName }}</h5>
+      <h5>
+        By: {{ authorName }} | {{ commentAmt }} comment(s) |
+        {{ likeAmt }} like(s)
+      </h5>
       <div class="tags">
         <p v-for="tag in tags" :key="tag.name">{{ tag }}</p>
       </div>
