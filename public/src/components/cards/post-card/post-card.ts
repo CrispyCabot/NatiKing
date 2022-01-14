@@ -12,6 +12,7 @@ export default defineComponent({
   props: {
     title: { type: String, default: () => "No Title Found" },
     authorID: { type: String, default: () => "No Author Found" },
+    tags: { type: Array, default: () => [] },
   },
   async created() {
     this.authorName = (await this.fetchUserById(this.authorID)).name;

@@ -6,6 +6,7 @@
       :key="post._id"
       :title="post.title"
       :authorID="post.owner_id"
+      :tags="post.tags"
     />
   </div>
 </template>
