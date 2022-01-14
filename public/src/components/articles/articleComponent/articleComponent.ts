@@ -8,9 +8,11 @@ export default defineComponent({
     return {
       postInfo: {
         owner_id: "",
+        image_path: "",
       },
       authorName: "No Author Found",
       authorID: "",
+      imagePath: "default.png",
     };
   },
   props: {
@@ -18,12 +20,19 @@ export default defineComponent({
   },
   async created() {
     this.postInfo = await this.fetchPostById(this.postID);
-    this.authorName = (await this.fetchUserById(this.postInfo.owner_id)).name;
+    const writer = await this.fetchUserById(this.postInfo.owner_id);
+    this.authorName = writer.name;
+    if (this.postInfo.image_path != null) {
+      this.imagePath = this.postInfo.image_path;
+    }
   },
   computed: {
     ...mapGetters(["getIsLoggedIn", "getLogo"]),
   },
   methods: {
     ...mapActions(["fetchPostById", "fetchUserById"]),
+    redirect(link: string) {
+      this.$router.push(link);
+    },
   },
 });

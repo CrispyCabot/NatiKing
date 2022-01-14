@@ -1,8 +1,10 @@
 <template>
   <div class="article-component">
-    <h1>test</h1>
+    <img :src="require(`@/uploads/${imagePath}`)" />
     <h1>{{ postInfo.title }}</h1>
-    <h5>By: {{ authorName }}</h5>
+    <h5 @click="redirect('/writers/' + postInfo.owner_id)">
+      By: {{ authorName }}
+    </h5>
     <div class="tags">
       <p v-for="tag in postInfo.tags" :key="tag.name">{{ tag }}</p>
     </div>

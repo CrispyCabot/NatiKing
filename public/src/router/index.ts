@@ -6,6 +6,8 @@ import SignUp from "../views/SignUp/index.vue";
 import Login from "../views/Login/index.vue";
 import Profile from "../views/Profile/index.vue";
 import Article from "../views/Article/index.vue";
+import Writers from "../views/Article/index.vue"; //TODO
+import Writer from "../views/Article/index.vue"; //TODO
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -29,12 +31,19 @@ const routes: Array<RouteRecordRaw> = [
     component: Profile,
   },
   {
-    path: "/article/:articleId",
+    path: "/articles/:articleId",
     name: routeNames.Article,
     component: Article,
-    meta: {
-      breadcrumbs: [{ name: routeNames.Home }],
-    },
+  },
+  {
+    path: "/writers",
+    name: routeNames.Writers,
+    component: Writers,
+  },
+  {
+    path: "/writers/:writerId",
+    name: routeNames.Writer,
+    component: Writer,
   },
   // Catch All Routes
   {

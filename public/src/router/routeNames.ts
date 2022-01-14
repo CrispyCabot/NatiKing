@@ -5,4 +5,6 @@ export default {
   NotFound: "not-found",
   Profile: "profile",
   Article: "article",
+  Writers: "writers",
+  Writer: "writer",
 };
