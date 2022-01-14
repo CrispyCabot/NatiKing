@@ -5,6 +5,7 @@ import NotFound from "../views/NotFound/index.vue";
 import SignUp from "../views/SignUp/index.vue";
 import Login from "../views/Login/index.vue";
 import Profile from "../views/Profile/index.vue";
+import Article from "../views/Article/index.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -26,6 +27,14 @@ const routes: Array<RouteRecordRaw> = [
     path: "/profile",
     name: routeNames.Profile,
     component: Profile,
+  },
+  {
+    path: "/article/:articleId",
+    name: routeNames.Article,
+    component: Article,
+    meta: {
+      breadcrumbs: [{ name: routeNames.Home }],
+    },
   },
   // Catch All Routes
   {

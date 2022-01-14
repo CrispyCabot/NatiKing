@@ -4,4 +4,5 @@ export default {
   Home: "home",
   NotFound: "not-found",
   Profile: "profile",
+  Article: "article",
 };

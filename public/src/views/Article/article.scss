@@ -1,0 +1,29 @@
+.article {
+    position: relative;
+    padding-bottom: unset;
+    text-align: center;
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .home {
+        &_about {
+            padding: 2rem 3rem;
+            p {
+                max-width: 60rem;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

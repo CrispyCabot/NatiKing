@@ -33,5 +33,15 @@ router.route("/posts").get((req, res) => {
         res.json(response);
     });
 });
+router.route("/posts/:id").get((req, res) => {
+    const { id } = req.params;
+    Posts.findOne({ _id: id }, async(err, response) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        res.json(response);
+    });
+});
 
 module.exports = router;
