@@ -1,6 +1,7 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
+import CommentCard from "@/components/cards/comment-card/index.vue";
 
 export default defineComponent({
   name: "article-component",
@@ -9,11 +10,18 @@ export default defineComponent({
       postInfo: {
         owner_id: "",
         image_path: "",
+        likes: [],
+        tags: [],
+        comments: [],
       },
       authorName: "No Author Found",
       authorID: "",
       imagePath: "default.png",
+      numLikes: 0,
     };
+  },
+  components: {
+    CommentCard,
   },
   props: {
     postID: { type: String, default: () => "" },
@@ -25,6 +33,9 @@ export default defineComponent({
     if (this.postInfo.image_path != null) {
       this.imagePath = this.postInfo.image_path;
     }
+    if (this.postInfo.likes != null) {
+      this.numLikes = this.postInfo.likes.length;
+    }
   },
   computed: {
     ...mapGetters(["getIsLoggedIn", "getLogo"]),
@@ -33,6 +44,10 @@ export default defineComponent({
     ...mapActions(["fetchPostById", "fetchUserById"]),
     redirect(link: string) {
       this.$router.push(link);
+    },
+    generateKey(id: string, comment: string) {
+      const uniqueKey = `${id}-${comment}`;
+      return uniqueKey;
     },
   },
 });
