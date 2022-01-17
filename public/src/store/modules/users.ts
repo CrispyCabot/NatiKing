@@ -29,4 +29,18 @@ export const UserActions = {
         });
     });
   },
+  fetchWriters({ getters }: any) {
+    const isUsingMockData = getters.getIsUsingMockData;
+    const route = isUsingMockData ? `/mock/writers` : `/writers`;
+    return new Promise((resolve, reject) => {
+      api
+        .get(route)
+        .then(({ data }) => {
+          resolve(data);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  },
 };

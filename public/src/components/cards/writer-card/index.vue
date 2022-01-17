@@ -1,5 +1,5 @@
 <template>
-  <div class="post-card">
+  <div class="writer-card">
     <img :src="require(`@/uploads/${imagePath}`)" />
     <div class="rhs">
       <h1>{{ title }}</h1>
@@ -14,5 +14,5 @@
   </div>
 </template>
 
-<script src="./post-card.ts"></script>
-<style src="./post-card.scss" lang="scss"></style>
+<script src="./writer-card.ts"></script>
+<style src="./writer-card.scss" lang="scss"></style>

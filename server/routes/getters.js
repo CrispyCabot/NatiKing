@@ -21,6 +21,15 @@ router.route("/users/:id").get((req, res) => {
         res.json(response);
     });
 });
+router.route("/writers").get((req, res) => {
+    Users.find({ access_level: 3 }, async(err, response) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        res.json(response);
+    });
+});
 
 //Posts getters
 const Posts = require("../models/post-model");

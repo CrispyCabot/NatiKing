@@ -1,0 +1,41 @@
+.post-card {
+    background: white;
+    width: 45%;
+    margin: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: row;
+    img {
+        width: 25%;
+    }
+    .rhs {
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: auto;
+        h1 {
+            font-size: 24px;
+            text-align: left;
+            margin: 2px;
+        }
+        h5 {
+            font-size: 12px;
+            text-align: left;
+            margin: 2px;
+        }
+        .tags {
+            text-align: left;
+            p {
+                display: inline-block;
+                padding: 5px 12px;
+                margin-right: 5px;
+                border-radius: 20px;
+                background: $accent_red;
+                color: $off_white;
+            }
+        }
+    }
+}
