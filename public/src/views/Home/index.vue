@@ -9,6 +9,7 @@
       :tags="post.tags"
       :commentAmt="post.comments.length"
       :likeAmt="post.likes.length"
+      @click="redirect('/articles/' + post._id)"
     />
   </div>
 </template>

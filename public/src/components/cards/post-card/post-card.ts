@@ -25,5 +25,8 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(["fetchUserById"]),
+    redirect(link: string) {
+      this.$router.push(link);
+    },
   },
 });
