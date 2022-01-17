@@ -1,6 +1,6 @@
 .post-card {
-    background: white;
-    width: 45%;
+    background: $off_white;
+    width: 95%;
     margin: auto;
     border-radius: 10px;
     margin-top: 15px;
@@ -17,7 +17,7 @@
         margin-bottom: auto;
         width: auto;
         h1 {
-            font-size: 24px;
+            font-size: 18px;
             text-align: left;
             margin: 2px;
         }
@@ -35,6 +35,54 @@
                 border-radius: 20px;
                 background: $accent_red;
                 color: $off_white;
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .post-card {
+        width: 85%;
+        .rhs {
+            h1 {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .post-card {
+        width: 75%;
+        .rhs {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .post-card {
+        width: 55%;
+        .rhs {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .post-card {
+        width: 45%;
+        .rhs {
+            h1 {
+                font-size: 24px;
             }
         }
     }

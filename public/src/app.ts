@@ -1,100 +1,116 @@
-import api from '@/api/api'
-import Navbar from '@/components/navigation/navbar/index.vue'
-import Footer from '@/components/navigation/footer/index.vue'
-import Toast from '@/components/popups/toast/index.vue'
-import { mapActions, mapGetters, mapMutations } from 'vuex'
-import { defineComponent } from '@vue/runtime-core'
+import api from "@/api/api";
+import Navbar from "@/components/navigation/navbar/index.vue";
+import Footer from "@/components/navigation/footer/index.vue";
+import Toast from "@/components/popups/toast/index.vue";
+import { mapActions, mapGetters, mapMutations } from "vuex";
+import { defineComponent } from "@vue/runtime-core";
 
 export default defineComponent({
-  name: 'app',
+  name: "app",
   components: {
     Navbar,
     Footer,
-    Toast
+    Toast,
   },
   data() {
     return {
       isMobileView: true,
       isMaxViewportHeight: true,
-      backgroundSvg: require('@/assets/photon.svg')
-    }
+      backgroundSvg: require("@/assets/photon.svg"),
+    };
   },
   async created() {
-    const res = await this.retrieveRefreshToken()
-    console.log('token refreshed', res)
+    const res = await this.retrieveRefreshToken();
+    console.log("token refreshed", res);
     if (res.ok) {
-      this.updateIsLoggedIn(true)
-      this.updateLoggedInPlayer(res.user)
-      api.defaults.headers.common['Authorization'] = `Bearer ${res.accessToken}`
+      this.updateIsLoggedIn(true);
+      this.updateLoggedInPlayer(res.user);
+      api.defaults.headers.common[
+        "Authorization"
+      ] = `Bearer ${res.accessToken}`;
     }
-    this.initializeWebSocketConnection()
-    window.addEventListener('load', this.loadingPage)
+    this.initializeWebSocketConnection();
+    window.addEventListener("load", this.loadingPage);
   },
   mounted() {
-    this.setIsMobileView()
-    window.addEventListener('resize', this.setIsMobileView)
-    this.setIsMaxViewportHeight()
-    window.addEventListener('resize', this.setIsMaxViewportHeight)  
+    this.setIsMobileView();
+    window.addEventListener("resize", this.setIsMobileView);
+    this.setIsMaxViewportHeight();
+    window.addEventListener("resize", this.setIsMaxViewportHeight);
   },
   updated() {
-    this.setIsMobileView()
-    this.setIsMaxViewportHeight()
+    this.setIsMobileView();
+    this.setIsMaxViewportHeight();
   },
   computed: {
     ...mapGetters([
-    'getGlobalToastMessage',
-    'getGlobalToastType',
-    'getGlobalToastIsShowing',
-    'getGlobalToastDuration',
-    'getGlobalToastIsShowingOverride',
-    'getAccessToken',
-    'getMockOverride',
-    'getWebSocketConnection'
-  ])
+      "getGlobalToastMessage",
+      "getGlobalToastType",
+      "getGlobalToastIsShowing",
+      "getGlobalToastDuration",
+      "getGlobalToastIsShowingOverride",
+      "getAccessToken",
+      "getMockOverride",
+      "getWebSocketConnection",
+    ]),
   },
   methods: {
-    ...mapActions(['retrieveRefreshToken', 'initializeWebSocketConnection', 'closeWebSocketConnection']),
-    ...mapMutations(['updateIsLoggedIn', 'updateLoggedInPlayer', 'updateGlobalToast', 'setIsUsingMockData']),
+    ...mapActions([
+      "retrieveRefreshToken",
+      "initializeWebSocketConnection",
+      "closeWebSocketConnection",
+    ]),
+    ...mapMutations([
+      "updateIsLoggedIn",
+      "updateLoggedInPlayer",
+      "updateGlobalToast",
+      "setIsUsingMockData",
+    ]),
     closingGlobalToast() {
       if (this.getGlobalToastIsShowing) {
         this.updateGlobalToast({
-          isShowing: false
-        })
+          isShowing: false,
+        });
       }
     },
     setIsMobileView() {
-      this.isMobileView = Boolean(window.outerWidth <= 576)
+      this.isMobileView = Boolean(window.outerWidth <= 576);
     },
     setIsMaxViewportHeight() {
-      const routerView = this.$refs.router_view as any
-      const routerViewBounds = routerView.getBoundingClientRect()
-      const footerSpan = this.$refs.footer_element as any
-      const footerBounds = footerSpan.children[0].getBoundingClientRect()
-      this.isMaxViewportHeight = Boolean((routerViewBounds.height + footerBounds.height) >= window.outerHeight )
+      const routerView = this.$refs.router_view as any;
+      const routerViewBounds = routerView.getBoundingClientRect();
+      const footerSpan = this.$refs.footer_element as any;
+      const footerBounds = footerSpan.children[0].getBoundingClientRect();
+      this.isMaxViewportHeight = Boolean(
+        routerViewBounds.height + footerBounds.height >= window.outerHeight
+      );
       if (!this.isMaxViewportHeight) {
-        routerView.style.paddingBottom = footerBounds.height + 'px'
+        routerView.style.paddingBottom = footerBounds.height + "px";
       }
     },
     loadingPage() {
-      if (this.getWebSocketConnection) this.closeWebSocketConnection()
-      this.initializeWebSocketConnection()
-    }
+      if (this.getWebSocketConnection) this.closeWebSocketConnection();
+      this.initializeWebSocketConnection();
+    },
   },
-  beforeUnmount() { 
-    window.removeEventListener('resize', this.setIsMobileView)
-    window.removeEventListener('resize', this.setIsMaxViewportHeight)
-    window.removeEventListener('load', this.loadingPage)
+  beforeUnmount() {
+    window.removeEventListener("resize", this.setIsMobileView);
+    window.removeEventListener("resize", this.setIsMaxViewportHeight);
+    window.removeEventListener("load", this.loadingPage);
   },
   watch: {
     $route() {
       if (this.getAccessToken) {
-        api.defaults.headers.common['Authorization'] = `Bearer ${this.getAccessToken}`
+        api.defaults.headers.common[
+          "Authorization"
+        ] = `Bearer ${this.getAccessToken}`;
       }
-      if (window.location.href.includes('mock') || this.getMockOverride) this.setIsUsingMockData(true)
-      else this.setIsUsingMockData(false)
+      if (window.location.href.includes("mock") || this.getMockOverride)
+        this.setIsUsingMockData(true);
+      else this.setIsUsingMockData(false);
     },
     getLoggedInPlayer() {
-      this.loadingPage()
-    }
-  }
-})
+      this.loadingPage();
+    },
+  },
+});

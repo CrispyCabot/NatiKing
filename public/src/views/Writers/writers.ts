@@ -1,4 +1,3 @@
-import GridTable from "@/components/tables/grid-table/index.vue";
 import WriterCard from "@/components/cards/writer-card/index.vue";
 import PaginationMixin from "@/mixins/pagination-mixin";
 import { defineComponent } from "@vue/runtime-core";
@@ -27,8 +26,5 @@ export default defineComponent({
     redirect(link: string) {
       this.$router.push(link);
     },
-  },
-  beforeUnmount() {
-    console.log("in beforeUnmount");
   },
 });
