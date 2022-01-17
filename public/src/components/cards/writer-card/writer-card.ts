@@ -56,5 +56,8 @@ export default defineComponent({
       }
       window.open(link, "_blank");
     },
+    redirect(link: string) {
+      this.$router.push(link);
+    },
   },
 });

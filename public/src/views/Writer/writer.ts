@@ -53,5 +53,11 @@ export default defineComponent({
       }
       return LogoIcons.DEFAULT;
     },
+    redirectExternal(link: string) {
+      if (!link.includes("https")) {
+        link = "https://" + link;
+      }
+      window.open(link, "_blank");
+    },
   },
 });
