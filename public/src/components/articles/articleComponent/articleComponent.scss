@@ -1,5 +1,5 @@
 .article-component {
-    width: 45%;
+    width: 95%;
     margin: auto;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -15,5 +15,56 @@
         color: $off_white;
         font-style: italic;
         margin-top: 10px;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .article-component {
+        width: 85%;
+        .rhs {
+            h1 {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .article-component {
+        width: 75%;
+        img {
+            width: 75%;
+        }
+        .rhs {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .article-component {
+        width: 55%;
+        .rhs {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .article-component {
+        width: 45%;
+        .rhs {
+            h1 {
+                font-size: 24px;
+            }
+        }
     }
 }
