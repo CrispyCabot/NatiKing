@@ -7,7 +7,7 @@ import Login from "../views/Login/index.vue";
 import Profile from "../views/Profile/index.vue";
 import Article from "../views/Article/index.vue";
 import Writers from "../views/Writers/index.vue";
-import Writer from "../views/Article/index.vue"; //TODO
+import Writer from "../views/Writer/index.vue"; //TODO
 
 const routes: Array<RouteRecordRaw> = [
   {

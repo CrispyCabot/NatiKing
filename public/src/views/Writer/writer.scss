@@ -1,0 +1,58 @@
+.writer {
+    position: relative;
+    padding-bottom: unset;
+    text-align: center;
+    .writer-content {
+        background: $off_white;
+        margin: 5px auto;
+        width: 95%;
+        border-radius: 10px;
+        .writer_pic {
+            width: 30%;
+        }
+        p {
+            padding-bottom: 10px;
+        }
+        .writer_social_icons {
+            width: 10%;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query since this is the default
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .writer {
+        .writer-content {
+            width: 85%;
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .writer {
+        .writer-content {
+            width: 75%;
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .writer {
+        .writer-content {
+            width: 65%;
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .writer {
+        .writer-content {
+            width: 55%;
+        }
+    }
+}
