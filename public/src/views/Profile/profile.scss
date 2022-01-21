@@ -1,6 +1,17 @@
 .profile {
-    .white_card_background {
-        color: $off_white;
+    .profile_not_logged_in {
+        background-color: $off_white;
+        width: 90%;
+        border-radius: 10px;
+        margin: auto;
+        padding: 20px 0;
+        p {
+            text-align: center;
+        }
+    }
+    .profile_not_logged_in:hover {
+        background-color: $hover_grey;
+        cursor: pointer;
     }
     .profile-info {
         background: $off_white;
@@ -16,6 +27,12 @@
         }
         .user-inputs {
             text-align: center;
+            input {
+                display: block;
+                margin: 0 auto 20px auto;
+                font-size: 20px;
+                width: 80%;
+            }
         }
     }
 }

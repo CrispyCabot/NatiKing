@@ -1,15 +1,15 @@
-import { reactive } from "@vue/reactivity"
-import { IToast } from '@/interfaces/IToast'
+import { reactive } from "@vue/reactivity";
+import { IToast } from "@/interfaces/IToast";
 
 export default reactive({
   isLoggedIn: false,
-  loggedInPlayer: {},
-  accessToken: '',
+  loggedInUser: {},
+  accessToken: "",
   globalToast: {} as IToast,
-  currentLeagueName: '',
-  currentPlayerName: '',
-  currentGameName: '',
+  currentLeagueName: "",
+  currentPlayerName: "",
+  currentGameName: "",
   isUsingMockData: false,
   mockOverride: false,
-  webSocketConnection: null as any
-})
+  webSocketConnection: null as any,
+});

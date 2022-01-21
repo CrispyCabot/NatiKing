@@ -24,7 +24,7 @@ export default defineComponent({
     console.log("token refreshed", res);
     if (res.ok) {
       this.updateIsLoggedIn(true);
-      this.updateLoggedInPlayer(res.user);
+      this.updateLoggedInUser(res.user);
       api.defaults.headers.common[
         "Authorization"
       ] = `Bearer ${res.accessToken}`;
@@ -56,7 +56,7 @@ export default defineComponent({
     ...mapActions(["retrieveRefreshToken", "closeWebSocketConnection"]),
     ...mapMutations([
       "updateIsLoggedIn",
-      "updateLoggedInPlayer",
+      "updateLoggedInUser",
       "updateGlobalToast",
       "setIsUsingMockData",
     ]),

@@ -64,7 +64,7 @@ export default defineComponent({
     };
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLoggedInPlayer"]),
+    ...mapGetters(["getIsLoggedIn", "getLoggedInUser"]),
     confirmPassMatch(): Boolean {
       return Boolean(this.fields.password.value == this.fields.confirm.value);
     },
@@ -84,9 +84,7 @@ export default defineComponent({
   },
   async created() {
     this.setIsMobileView();
-    this.userID = this.getLoggedInPlayer._id;
-    this.setupFieldsValues();
-    this.user = await this.fetchUserById(this.userID);
+    this.userID = this.getLoggedInUser._id;
     this.setupFieldsValues();
   },
   methods: {
@@ -122,8 +120,8 @@ export default defineComponent({
       // })
     },
     setupFieldsValues() {
-      if (this.getLoggedInPlayer) {
-        this.fields.name.value = this.getLoggedInPlayer.name;
+      if (this.getLoggedInUser) {
+        this.fields.name.value = this.getLoggedInUser.name;
         // this.fields.phone.value = this.getLoggedInPlayer.phone_number
         // this.formatPhone(null, true)
         // this.fields.email.value = this.getLoggedInPlayer.email

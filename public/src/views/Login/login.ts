@@ -56,7 +56,7 @@ export default defineComponent({
     ...mapActions(["logUserIn"]),
     ...mapMutations([
       "updateIsLoggedIn",
-      "updateLoggedInPlayer",
+      "updateLoggedInUser",
       "updateGlobalToast",
     ]),
     async login() {
@@ -64,10 +64,11 @@ export default defineComponent({
         email: this.fields.email.value,
         password: this.fields.password.value,
       });
-
+      console.log("RESPONSE");
+      console.log(res);
       if (res.status == 200) {
         this.updateIsLoggedIn(true);
-        this.updateLoggedInPlayer(res.player);
+        this.updateLoggedInUser(res.user);
         api.defaults.headers.common[
           "Authorization"
         ] = `Bearer ${res.accessToken}`;

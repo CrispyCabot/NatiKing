@@ -5,8 +5,8 @@ export default {
   getIsLoggedIn(): Boolean {
     return state.isLoggedIn;
   },
-  getLoggedInPlayer(): any {
-    return state.loggedInPlayer;
+  getLoggedInUser(): any {
+    return state.loggedInUser;
   },
   getAccessToken(): String {
     return state.accessToken;

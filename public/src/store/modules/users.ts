@@ -69,7 +69,7 @@ export const UserActions = {
         .then(({ data }) => {
           if (data.status == 200) {
             commit("updateIsLoggedIn", true);
-            commit("updateLoggedInPlayer", data.player);
+            commit("updateLoggedInUser", data.player);
             commit("updateAccessToken", data.accessToken);
           }
           resolve(data);
@@ -88,7 +88,7 @@ export const UserActions = {
         .then(({ data }) => {
           if (data.status == 200) {
             commit("updateIsLoggedIn", false);
-            commit("updateLoggedInPlayer", {});
+            commit("updateLoggedInUser", {});
             commit("updateAccessToken", null);
             commit("updateGlobalToast", {
               message: data.message,
