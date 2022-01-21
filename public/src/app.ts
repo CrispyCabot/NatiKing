@@ -1,6 +1,6 @@
 import api from "@/api/api";
 import Navbar from "@/components/navigation/navbar/index.vue";
-import Footer from "@/components/navigation/footer/index.vue";
+import CustomFooter from "@/components/navigation/custom-footer/index.vue";
 import Toast from "@/components/popups/toast/index.vue";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 import { defineComponent } from "@vue/runtime-core";
@@ -9,7 +9,7 @@ export default defineComponent({
   name: "app",
   components: {
     Navbar,
-    Footer,
+    CustomFooter,
     Toast,
   },
   data() {
@@ -29,8 +29,6 @@ export default defineComponent({
         "Authorization"
       ] = `Bearer ${res.accessToken}`;
     }
-    this.initializeWebSocketConnection();
-    window.addEventListener("load", this.loadingPage);
   },
   mounted() {
     this.setIsMobileView();
@@ -55,11 +53,7 @@ export default defineComponent({
     ]),
   },
   methods: {
-    ...mapActions([
-      "retrieveRefreshToken",
-      "initializeWebSocketConnection",
-      "closeWebSocketConnection",
-    ]),
+    ...mapActions(["retrieveRefreshToken", "closeWebSocketConnection"]),
     ...mapMutations([
       "updateIsLoggedIn",
       "updateLoggedInPlayer",
@@ -88,15 +82,10 @@ export default defineComponent({
         routerView.style.paddingBottom = footerBounds.height + "px";
       }
     },
-    loadingPage() {
-      if (this.getWebSocketConnection) this.closeWebSocketConnection();
-      this.initializeWebSocketConnection();
-    },
   },
   beforeUnmount() {
     window.removeEventListener("resize", this.setIsMobileView);
     window.removeEventListener("resize", this.setIsMaxViewportHeight);
-    window.removeEventListener("load", this.loadingPage);
   },
   watch: {
     $route() {
@@ -108,9 +97,6 @@ export default defineComponent({
       if (window.location.href.includes("mock") || this.getMockOverride)
         this.setIsUsingMockData(true);
       else this.setIsUsingMockData(false);
-    },
-    getLoggedInPlayer() {
-      this.loadingPage();
     },
   },
 });

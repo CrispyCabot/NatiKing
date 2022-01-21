@@ -15,5 +15,5 @@
   </div>
 </template>
 
-<script src="./footer.ts"></script>
-<style src="./footer.scss" lang="scss"></style>
+<script src="./custom-footer.ts"></script>
+<style src="./custom-footer.scss" lang="scss"></style>
