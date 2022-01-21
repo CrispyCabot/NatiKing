@@ -5,10 +5,7 @@ export default {
     state.isLoggedIn = isLoggedIn;
   },
   updateLoggedInUser(state: any, user: any) {
-    console.log("USER");
-    console.log(user);
     state.loggedInUser = user;
-    console.log(state.loggedInUser);
   },
   updateAccessToken(state: any, accessToken: any) {
     state.accessToken = accessToken;

@@ -122,6 +122,7 @@ export default defineComponent({
     setupFieldsValues() {
       if (this.getLoggedInUser) {
         this.fields.name.value = this.getLoggedInUser.name;
+        console.log(this.getLoggedInUser.name);
         // this.fields.phone.value = this.getLoggedInPlayer.phone_number
         // this.formatPhone(null, true)
         // this.fields.email.value = this.getLoggedInPlayer.email
