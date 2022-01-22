@@ -1,5 +1,6 @@
 <template>
   <div class="footer-container">
+    <div class="footer-margin"></div>
     <div class="flex-container">
       <div class="logo">
         <img :src="getLogo" />

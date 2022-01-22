@@ -1,24 +1,22 @@
-import { defineComponent } from "@vue/runtime-core"
+import { defineComponent } from "@vue/runtime-core";
 import { mapGetters } from "vuex";
 
 export default defineComponent({
-  name: 'footer',
-  props: {
-  },
+  name: "custom-footer",
+  props: {},
   data() {
-    return {}
+    return {};
   },
   computed: {
-    ...mapGetters(['getIsLoggedIn', 'getLogo'])
+    ...mapGetters(["getIsLoggedIn", "getLogo"]),
   },
   methods: {
     redirect(link: string) {
       if (link == "top") {
-        window.scrollTo({ left: 0, top: 0, behavior: 'smooth' });
+        window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
+      } else {
+        this.$router.push(link);
       }
-      else {
-        this.$router.push(link)
-      }
-    }
-  }
-})
+    },
+  },
+});

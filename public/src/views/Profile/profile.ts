@@ -122,15 +122,8 @@ export default defineComponent({
     setupFieldsValues() {
       if (this.getLoggedInUser) {
         this.fields.name.value = this.getLoggedInUser.name;
-        console.log(this.getLoggedInUser.name);
-        // this.fields.phone.value = this.getLoggedInPlayer.phone_number
-        // this.formatPhone(null, true)
-        // this.fields.email.value = this.getLoggedInPlayer.email
-        // this.fields.fname.value = this.getLoggedInPlayer.firstname
-        // this.fields.lname.value = this.getLoggedInPlayer.lastname
-        // this.fields.nname.value = this.getLoggedInPlayer.nickname
-        // this.fields.contactInfo.value = this.getLoggedInPlayer.show_information
-        // this.fields.gender.value = this.getLoggedInPlayer.gender
+        this.fields.email.value = this.getLoggedInUser.email;
+        this.fields.bio.value = this.getLoggedInUser.bio;
       }
     },
     redirect(link: string) {

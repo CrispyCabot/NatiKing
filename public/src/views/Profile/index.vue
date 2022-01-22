@@ -26,6 +26,9 @@
               :key="field.name"
               :placeholder="field.placeholder"
               :disabled="!isSettingsEditing"
+              :name="field.name"
+              :type="field.type"
+              v-model="field.value"
             />
           </div>
         </content-dropdown>

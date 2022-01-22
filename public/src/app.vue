@@ -23,7 +23,6 @@
     </div>
 
     <inline-svg class="background-svg" :src="backgroundSvg"></inline-svg>
-    <div class="footer-margin"></div>
     <span ref="footer_element">
       <CustomFooter
         :class="{ 'max-viewport-height-footer': isMaxViewportHeight }"

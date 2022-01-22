@@ -17,6 +17,13 @@
     //   mix-blend-mode: multiply;
     //   z-index: 1;
     // }
+    .footer-margin {
+        position: relative;
+        width: 100px;
+        height: 300px;
+        top: 200px;
+        visibility: hidden;
+    }
     .flex-container {
         position: fixed;
         background-color: $accent_red;
