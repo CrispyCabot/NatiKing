@@ -25,6 +25,18 @@
         p {
             text-align: center;
         }
+        .socials {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            .plus-icon {
+                width: 2rem;
+                height: 2rem;
+                color: green;
+            }
+        }
         .user-inputs {
             text-align: center;
             input {
@@ -34,6 +46,17 @@
                 font-size: 14px;
                 width: 80%;
             }
+        }
+        .btn {
+            text-align: center;
+            display: block;
+            border: 2px solid $accent_red;
+            color: $off_white;
+            background: $accent_red;
+            border-radius: 20px;
+            font-size: 16px;
+            margin: 10px auto;
+            padding: 5px 10px;
         }
     }
 }

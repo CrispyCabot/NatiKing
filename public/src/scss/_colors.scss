@@ -1,21 +1,19 @@
 $light_grey: #e2e2e2;
 $hover_grey: #f0f0f0;
-$default_grey: #C5C5C5;
+$default_grey: #c5c5c5;
 $dark_grey: #7e7e7e;
 $off_white: #fcfcfc;
 $pure_white: #ffffff;
 $dark_background: #141516;
-
 $accent_red: #fe3838;
 $accent_light_red: #ffacac;
 $accent_red_hover: darken($accent_red, 15);
-
 $toast_offset: 35;
-$toast_red: #FE3838;
-$toast_red_offset: lighten(#FE3838, $toast_offset);
-$toast_green: #29E176;
-$toast_green_offset: lighten(#29E176, $toast_offset);
-$toast_blue: #3182CE;
-$toast_blue_offset: lighten(#3182CE, $toast_offset);
-$toast_yellow: #FFC107;
-$toast_yellow_offset: lighten(#FFC107, $toast_offset);
+$toast_red: #fe3838;
+$toast_red_offset: lighten(#fe3838, $toast_offset);
+$toast_green: #29e176;
+$toast_green_offset: lighten(#29e176, $toast_offset);
+$toast_blue: #3182ce;
+$toast_blue_offset: lighten(#3182ce, $toast_offset);
+$toast_yellow: #ffc107;
+$toast_yellow_offset: lighten(#ffc107, $toast_offset);

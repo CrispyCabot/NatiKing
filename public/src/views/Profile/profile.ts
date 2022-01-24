@@ -1,21 +1,19 @@
 import { defineComponent } from "@vue/runtime-core";
-import GridTable from "@/components/tables/grid-table/index.vue";
 import ContentDropdown from "@/components/dropdowns/content-dropdown/index.vue";
 import PaginationMixin from "@/mixins/pagination-mixin";
-import RadioSlider from "@/components/inputs/radio-slider/index.vue";
-import RadioButtonGroup from "@/components/inputs/radio-button-group/index.vue";
+import SocialInput from "@/components/inputs/social-input/index.vue";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 import { TOAST_TYPES } from "@/utils/toastTypes";
 import RowCard from "@/components/cards/row-card/index.vue";
+import { faThumbsDown } from "@fortawesome/free-solid-svg-icons";
+import LogoIcons from "@/utils/socialIcons";
 
 export default defineComponent({
   name: "profile",
   components: {
-    GridTable,
     ContentDropdown,
-    RadioSlider,
-    RadioButtonGroup,
     RowCard,
+    SocialInput,
   },
   mixins: [PaginationMixin],
   data() {
@@ -23,7 +21,8 @@ export default defineComponent({
       isMobileView: true,
       isSettingsEditing: false,
       userID: "",
-      user: Object(),
+      name: "",
+      bio: "",
       fields: {
         name: {
           value: "",
@@ -87,43 +86,59 @@ export default defineComponent({
     this.userID = this.getLoggedInUser._id;
     this.setupFieldsValues();
   },
+  mounted() {
+    this.setupFieldsValues();
+  },
   methods: {
-    ...mapActions(["fetchUserById"]),
+    ...mapActions(["fetchUserById", "updateUserSettings"]),
     ...mapMutations(["updateGlobalToast"]),
     editSettings() {
-      this.isSettingsEditing = true;
+      requestAnimationFrame(() => {
+        this.isSettingsEditing = true;
+      });
     },
     cancelSettings() {
       this.isSettingsEditing = false;
       this.setupFieldsValues();
     },
     async saveSettings() {
-      // const res = await this.updateUserSettings({
-      //   playerId: this.getLoggedInPlayer._id,
-      //   updates: {
-      //     phone_number: Number(this.fields.phone.value.split('-').join('')),
-      //     email: this.fields.email.value,
-      //     firstname: this.fields.fname.value,
-      //     lastname: this.fields.lname.value,
-      //     nickname: this.fields.nname.value,
-      //     password: this.fields.password.value,
-      //     confirm_password: this.fields.confirm.value,
-      //     show_information: Boolean(this.fields.contactInfo.value),
-      //     gender: this.fields.gender.value
-      //   }
-      // })
-      // this.updateGlobalToast({
-      //   message: res.message,
-      //   type: res.status == 400 ? TOAST_TYPES.Error : res.status == 403 ? TOAST_TYPES.Warning : TOAST_TYPES.Success,
-      //   duration: 5000,
-      //   isShowing: true
-      // })
+      const res = await this.updateUserSettings({
+        userId: this.getLoggedInUser._id,
+        updates: {
+          name: this.fields.name.value,
+          email: this.fields.email.value,
+          bio: this.fields.bio.value,
+          password: this.fields.password.value,
+          confirm_password: this.fields.confirm.value,
+        },
+      });
+      this.updateGlobalToast({
+        message: res.message,
+        type:
+          res.status == 400
+            ? TOAST_TYPES.Error
+            : res.status == 403
+            ? TOAST_TYPES.Warning
+            : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true,
+      });
+      this.isSettingsEditing = false;
     },
-    setupFieldsValues() {
+    openSocialPopup() {
+      console.log("open modal");
+    },
+    removeSocial() {},
+    async setupFieldsValues() {
       if (this.getLoggedInUser) {
-        this.fields.name.value = this.getLoggedInUser.name;
-        this.fields.email.value = this.getLoggedInUser.email;
-        this.fields.bio.value = this.getLoggedInUser.bio;
+        requestAnimationFrame(() => {
+          this.name = this.getLoggedInUser.name;
+          this.bio = this.getLoggedInUser.bio;
+          this.fields.name.value = this.getLoggedInUser.name;
+          this.fields.email.value = this.getLoggedInUser.email;
+          this.fields.bio.value = this.getLoggedInUser.bio;
+          console.log(this.getLoggedInUser.socials);
+        });
       }
     },
     redirect(link: string) {
@@ -136,12 +151,25 @@ export default defineComponent({
     setIsMobileView() {
       this.isMobileView = Boolean(window.outerWidth <= 576);
     },
-    playerClick(row: any) {
-      this.$router.push(`/player/${row.id.text}`);
+    getLogoSrc(url: string) {
+      if (url.includes("twitter")) {
+        return LogoIcons.TWITTER;
+      } else if (url.includes("facebook")) {
+        return LogoIcons.FACEBOOK;
+      } else if (url.includes("linkedin")) {
+        return LogoIcons.LINKEDIN;
+      }
+      return LogoIcons.DEFAULT;
+    },
+    redirectExternal(link: string) {
+      if (!link.includes("https")) {
+        link = "https://" + link;
+      }
+      window.open(link, "_blank");
     },
   },
   watch: {
-    getLoggedInPlayer() {
+    getLoggedInUser() {
       if (this.fields) {
         this.setupFieldsValues();
       }

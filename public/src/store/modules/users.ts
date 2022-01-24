@@ -69,7 +69,7 @@ export const UserActions = {
         .then(({ data }) => {
           if (data.status == 200) {
             commit("updateIsLoggedIn", true);
-            commit("updateLoggedInUser", data.player);
+            commit("updateLoggedInUser", data.user);
             commit("updateAccessToken", data.accessToken);
           }
           resolve(data);
@@ -97,6 +97,28 @@ export const UserActions = {
               duration: 5000,
               isShowing: true,
             });
+            resolve(data);
+          } else {
+            throw "Invalid logout";
+          }
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  },
+  updateUserSettings({ commit, getters }: any, payload: any) {
+    const { userId, updates } = payload;
+    const isUsingMockData = getters.getIsUsingMockData;
+    const route = isUsingMockData
+      ? `/mock/users/update-profile`
+      : `/users/update-profile`;
+    return new Promise((resolve, reject) => {
+      api
+        .put(route, { userId, updates })
+        .then(({ data }) => {
+          if (data.status == 200) {
+            commit("updateLoggedInUser", data.user);
             resolve(data);
           } else {
             throw "Invalid logout";

@@ -12,8 +12,21 @@
     <div v-if="getIsLoggedIn">
       <h1 class="site-title">Your Profile</h1>
       <div class="profile-info">
-        <h3>{{ getLoggedInUser.name }}</h3>
-        <p>{{ getLoggedInUser.bio }}</p>
+        <h3>{{ name }}</h3>
+        <p>{{ bio }}</p>
+        <div class="socials">
+          <SocialInput
+            v-for="social in getLoggedInUser.socials"
+            :key="social.url"
+            :url="social.url"
+            :isEditing="isSettingsEditing"
+          />
+          <font-awesome-icon
+            v-if="isSettingsEditing"
+            class="plus-icon"
+            :icon="['fas', 'plus-circle']"
+          ></font-awesome-icon>
+        </div>
         <content-dropdown
           class="settings"
           :label="'Settings'"
@@ -31,6 +44,16 @@
               v-model="field.value"
             />
           </div>
+
+          <button v-if="!isSettingsEditing" class="btn" @click="editSettings">
+            Edit
+          </button>
+          <button v-if="isSettingsEditing" class="btn" @click="saveSettings">
+            Save
+          </button>
+          <button v-if="isSettingsEditing" class="btn" @click="cancelSettings">
+            Cancel
+          </button>
         </content-dropdown>
       </div>
     </div>
