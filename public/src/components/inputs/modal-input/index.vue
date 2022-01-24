@@ -1,5 +1,5 @@
 <template>
-  <div class="social-input" @click="focusInput">
+  <div class="modal-input" @click="focusInput">
     <img :src="getLogoSrc(url)" @click="redirectExternal(url)" />
     <font-awesome-icon
       v-if="isEditing"
@@ -10,5 +10,5 @@
   </div>
 </template>
 
-<script src="./social-input.ts"></script>
-<style src="./social-input.scss" lang="scss"></style>
+<script src="./modal-input.ts"></script>
+<style src="./modal-input.scss" lang="scss"></style>

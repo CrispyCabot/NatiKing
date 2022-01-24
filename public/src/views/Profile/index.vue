@@ -25,6 +25,7 @@
             v-if="isSettingsEditing"
             class="plus-icon"
             :icon="['fas', 'plus-circle']"
+            @click="openSocialPopup()"
           ></font-awesome-icon>
         </div>
         <content-dropdown

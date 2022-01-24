@@ -126,7 +126,6 @@ export default defineComponent({
     openSocialPopup() {
       console.log("open modal");
     },
-    removeSocial() {},
     async setupFieldsValues() {
       if (this.getLoggedInUser) {
         requestAnimationFrame(() => {
@@ -135,7 +134,6 @@ export default defineComponent({
           this.fields.name.value = this.getLoggedInUser.name;
           this.fields.email.value = this.getLoggedInUser.email;
           this.fields.bio.value = this.getLoggedInUser.bio;
-          console.log(this.getLoggedInUser.socials);
         });
       }
     },

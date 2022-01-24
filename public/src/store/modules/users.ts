@@ -129,4 +129,26 @@ export const UserActions = {
         });
     });
   },
+  deleteSocial({ commit, getters }: any, payload: any) {
+    const { userId, socialURL } = payload;
+    const isUsingMockData = getters.getIsUsingMockData;
+    const route = isUsingMockData
+      ? `/mock/users/delete-social`
+      : `/users/delete-social`;
+    return new Promise((resolve, reject) => {
+      api
+        .put(route, { userId, socialURL })
+        .then(({ data }) => {
+          if (data.status == 200) {
+            commit("updateLoggedInUser", data.user);
+            resolve(data);
+          } else {
+            throw "Invalid logout";
+          }
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  },
 };

@@ -74,4 +74,31 @@ router.route("/users/update-profile").put(authChecker, async(req, res) => {
     }
 });
 
+router.route("/users/delete-social").put(authChecker, async(req, res) => {
+    const { userId, socialURL } = req.body;
+    const preUpdatePlayer = await Users.findOne({ _id: userId });
+    const updates = {
+        socials: preUpdatePlayer.socials.filter(
+            (social) => social.url != socialURL
+        ),
+    };
+    let updatedUser = false;
+
+    await Users.findOneAndUpdate({ _id: userId }, {...updates });
+    updatedUser = await Users.findOne({ _id: userId });
+
+    if (updatedUser) {
+        res.send({
+            status: 200,
+            message: "Player has successfully been updated",
+            user: updatedUser,
+        });
+    } else {
+        res.send({
+            status: 400,
+            message: "Player has unsuccessfully been updated",
+        });
+    }
+});
+
 module.exports = router;

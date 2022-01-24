@@ -3,7 +3,7 @@ import { mapActions, mapGetters } from "vuex";
 import LogoIcons from "@/utils/socialIcons";
 
 export default defineComponent({
-  name: "social-input",
+  name: "modal-input",
   data() {
     return {};
   },
