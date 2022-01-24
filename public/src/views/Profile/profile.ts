@@ -4,7 +4,6 @@ import PaginationMixin from "@/mixins/pagination-mixin";
 import SocialInput from "@/components/inputs/social-input/index.vue";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 import { TOAST_TYPES } from "@/utils/toastTypes";
-import RowCard from "@/components/cards/row-card/index.vue";
 import { faThumbsDown } from "@fortawesome/free-solid-svg-icons";
 import LogoIcons from "@/utils/socialIcons";
 
@@ -12,7 +11,6 @@ export default defineComponent({
   name: "profile",
   components: {
     ContentDropdown,
-    RowCard,
     SocialInput,
   },
   mixins: [PaginationMixin],

@@ -1,14 +1,11 @@
 import api from "@/api/api";
 import { defineComponent } from "@vue/runtime-core";
-import RadioButtonGroup from "@/components/inputs/radio-button-group/index.vue";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 import { TOAST_TYPES } from "@/utils/toastTypes";
 
 export default defineComponent({
   name: "signup",
-  components: {
-    RadioButtonGroup,
-  },
+  components: {},
   data() {
     return {
       fields: {
