@@ -1,12 +1,18 @@
 <template>
   <div class="modal-input" @click="focusInput">
-    <img :src="getLogoSrc(url)" @click="redirectExternal(url)" />
-    <font-awesome-icon
-      v-if="isEditing"
-      class="x-icon"
-      :icon="['fas', 'times-circle']"
-      @click="removeSocial(url)"
-    ></font-awesome-icon>
+    <div v-if="showModal" class="modal-content">
+      <h1>{{ title }}</h1>
+      <div class="inputFields">
+        <p>{{ prompt }}</p>
+        <input
+          v-model="inp"
+          :placeholder="placeholder"
+          :name="name"
+          :type="type"
+        />
+      </div>
+      <button @click="emitClick">Submit</button>
+    </div>
   </div>
 </template>
 

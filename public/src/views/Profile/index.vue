@@ -28,6 +28,14 @@
             @click="openSocialPopup()"
           ></font-awesome-icon>
         </div>
+        <ModalInput
+          :showModal="isShowingModal"
+          :title="'Add a Social Link'"
+          :prompt="'Enter the url:'"
+          :name="'socialURLInput'"
+          :type="'text'"
+          @clicked="addSocial"
+        />
         <content-dropdown
           class="settings"
           :label="'Settings'"

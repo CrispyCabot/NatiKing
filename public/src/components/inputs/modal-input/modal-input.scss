@@ -1,14 +1,38 @@
 .modal-input {
-    align-items: center;
-    display: inline;
-    .x-icon {
-        position: relative;
-        bottom: 3rem;
-        right: 1rem;
-        width: 30px;
-    }
-    img {
-        width: 3rem;
-        margin: 0.5rem;
+    background: $accent_red;
+    border-radius: 10px;
+    width: 95%;
+    margin: 10px auto;
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        justify-items: center;
+        h1 {
+            font-size: 16px;
+            text-align: center;
+            color: $off_white;
+            padding: 10px 10px;
+        }
+        .inputFields {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            p {
+                color: $off_white;
+                padding: 5px;
+            }
+            input {
+                padding: 5px;
+            }
+        }
+        button {
+            color: $accent_red;
+            background: $off_white;
+            border-radius: 20px;
+            padding: 10px;
+            border: none;
+            margin: 10px auto;
+        }
     }
 }

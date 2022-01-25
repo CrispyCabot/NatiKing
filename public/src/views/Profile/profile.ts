@@ -2,6 +2,7 @@ import { defineComponent } from "@vue/runtime-core";
 import ContentDropdown from "@/components/dropdowns/content-dropdown/index.vue";
 import PaginationMixin from "@/mixins/pagination-mixin";
 import SocialInput from "@/components/inputs/social-input/index.vue";
+import ModalInput from "@/components/inputs/modal-input/index.vue";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 import { TOAST_TYPES } from "@/utils/toastTypes";
 import { faThumbsDown } from "@fortawesome/free-solid-svg-icons";
@@ -12,12 +13,14 @@ export default defineComponent({
   components: {
     ContentDropdown,
     SocialInput,
+    ModalInput,
   },
   mixins: [PaginationMixin],
   data() {
     return {
       isMobileView: true,
       isSettingsEditing: false,
+      isShowingModal: false,
       userID: "",
       name: "",
       bio: "",
@@ -124,7 +127,7 @@ export default defineComponent({
       this.isSettingsEditing = false;
     },
     openSocialPopup() {
-      console.log("open modal");
+      this.isShowingModal = true;
     },
     async setupFieldsValues() {
       if (this.getLoggedInUser) {
@@ -162,6 +165,10 @@ export default defineComponent({
         link = "https://" + link;
       }
       window.open(link, "_blank");
+    },
+    addSocial(social: any) {
+      console.log("addSocial");
+      console.log(social);
     },
   },
   watch: {
