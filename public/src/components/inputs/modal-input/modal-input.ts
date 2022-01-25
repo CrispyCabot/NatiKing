@@ -20,6 +20,7 @@ export default defineComponent({
   methods: {
     emitClick() {
       this.$emit("clicked", this.inp);
+      this.inp = "";
     },
   },
 });
