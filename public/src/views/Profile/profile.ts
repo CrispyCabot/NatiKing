@@ -24,7 +24,7 @@ export default defineComponent({
       userID: "",
       name: "",
       bio: "",
-      VALID_SOCIALS: ["facebook", "twitter", "linkedin"],
+      VALID_SOCIALS: ["facebook", "twitter", "linkedin", "instagram"],
       fields: {
         name: {
           value: "",
