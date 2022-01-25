@@ -101,7 +101,7 @@
         color: $off_white;
     }
     .post-card:hover .tags {
-        transform: scale(0.8) translateY(30%);
+        transform: translateY(30%);
     }
     .post-card h1::before {
         content: "";

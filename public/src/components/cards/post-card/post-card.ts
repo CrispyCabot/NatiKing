@@ -21,6 +21,12 @@ export default defineComponent({
   async created() {
     this.authorName = (await this.fetchUserById(this.authorID)).name;
     this.themedStyle = { backgroundColor: this.getPrimaryColor };
+    const css = `.post-card::before {
+      background-color: ${this.getPrimaryColor};
+    }`;
+    const style = document.createElement("style");
+    style.appendChild(document.createTextNode(css));
+    document.getElementsByTagName("head")[0].appendChild(style);
   },
   computed: {
     ...mapGetters(["getIsLoggedIn", "getLogo", "getPrimaryColor"]),
