@@ -24,6 +24,7 @@ export default defineComponent({
       userID: "",
       name: "",
       bio: "",
+      VALID_SOCIALS: ["facebook", "twitter", "linkedin"],
       fields: {
         name: {
           value: "",
@@ -91,7 +92,7 @@ export default defineComponent({
     this.setupFieldsValues();
   },
   methods: {
-    ...mapActions(["fetchUserById", "updateUserSettings"]),
+    ...mapActions(["fetchUserById", "updateUserSettings", "addSocial"]),
     ...mapMutations(["updateGlobalToast"]),
     editSettings() {
       requestAnimationFrame(() => {
@@ -100,6 +101,7 @@ export default defineComponent({
     },
     cancelSettings() {
       this.isSettingsEditing = false;
+      this.isShowingModal = false;
       this.setupFieldsValues();
     },
     async saveSettings() {
@@ -125,6 +127,7 @@ export default defineComponent({
         isShowing: true,
       });
       this.isSettingsEditing = false;
+      this.isShowingModal = false;
     },
     openSocialPopup() {
       this.isShowingModal = true;
@@ -166,9 +169,39 @@ export default defineComponent({
       }
       window.open(link, "_blank");
     },
-    addSocial(social: any) {
-      console.log("addSocial");
-      console.log(social);
+    isValidSocial(url: string): boolean {
+      const a = this.VALID_SOCIALS.some((s) => {
+        return url.toLowerCase().includes(s);
+      });
+      return a;
+    },
+    async addNewSocial(social: any) {
+      if (!this.isValidSocial(social)) {
+        this.updateGlobalToast({
+          message:
+            "Invalid social link. Currently, only Facebook, Twitter, and LinkedIn are supported",
+          type: TOAST_TYPES.Error,
+          duration: 5000,
+          isShowing: true,
+        });
+      } else {
+        const res = await this.addSocial({
+          userId: this.getLoggedInUser._id,
+          socialURL: social,
+        });
+        this.updateGlobalToast({
+          message: res.message,
+          type:
+            res.status == 400
+              ? TOAST_TYPES.Error
+              : res.status == 403
+              ? TOAST_TYPES.Warning
+              : TOAST_TYPES.Success,
+          duration: 3000,
+          isShowing: true,
+        });
+        this.isShowingModal = false;
+      }
     },
   },
   watch: {

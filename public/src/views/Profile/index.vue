@@ -34,7 +34,7 @@
           :prompt="'Enter the url:'"
           :name="'socialURLInput'"
           :type="'text'"
-          @clicked="addSocial"
+          @clicked="addNewSocial"
         />
         <content-dropdown
           class="settings"
