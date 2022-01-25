@@ -3,10 +3,11 @@ import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
 
 export default defineComponent({
-  name: "row-card",
+  name: "post-card",
   data() {
     return {
       authorName: "No Author Found",
+      themedStyle: { backgroundColor: "#00f" },
     };
   },
   props: {
@@ -19,9 +20,10 @@ export default defineComponent({
   },
   async created() {
     this.authorName = (await this.fetchUserById(this.authorID)).name;
+    this.themedStyle = { backgroundColor: this.getPrimaryColor };
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLogo"]),
+    ...mapGetters(["getIsLoggedIn", "getLogo", "getPrimaryColor"]),
   },
   methods: {
     ...mapActions(["fetchUserById"]),

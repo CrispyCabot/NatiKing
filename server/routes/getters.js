@@ -1,5 +1,17 @@
 const router = require("express").Router();
 
+//Settings getters
+const Settings = require("../models/settings-model");
+router.route("/colors").get((req, res) => {
+    Settings.find({}, async(err, response) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        res.json(response);
+    });
+});
+
 //User getters
 const Users = require("../models/user-model");
 router.route("/users").get((req, res) => {

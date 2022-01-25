@@ -12,4 +12,5 @@ export default reactive({
   isUsingMockData: false,
   mockOverride: false,
   webSocketConnection: null as any,
+  primaryColor: "#0f0",
 });

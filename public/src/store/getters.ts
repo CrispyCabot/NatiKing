@@ -47,4 +47,7 @@ export default {
   getWebSocketConnection(): any {
     return state.webSocketConnection;
   },
+  getPrimaryColor(): String {
+    return state.primaryColor;
+  },
 };

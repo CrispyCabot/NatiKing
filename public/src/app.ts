@@ -29,6 +29,9 @@ export default defineComponent({
         "Authorization"
       ] = `Bearer ${res.accessToken}`;
     }
+    this.fetchColors().then((colors: any) => {
+      this.updatePrimaryColor(colors[0].primaryColor);
+    });
   },
   mounted() {
     this.setIsMobileView();
@@ -53,12 +56,17 @@ export default defineComponent({
     ]),
   },
   methods: {
-    ...mapActions(["retrieveRefreshToken", "closeWebSocketConnection"]),
+    ...mapActions([
+      "retrieveRefreshToken",
+      "closeWebSocketConnection",
+      "fetchColors",
+    ]),
     ...mapMutations([
       "updateIsLoggedIn",
       "updateLoggedInUser",
       "updateGlobalToast",
       "setIsUsingMockData",
+      "updatePrimaryColor",
     ]),
     closingGlobalToast() {
       if (this.getGlobalToastIsShowing) {

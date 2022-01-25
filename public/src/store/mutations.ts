@@ -34,4 +34,7 @@ export default {
   setWebSocketConnection(state: any, connection: any) {
     state.webSocketConnection = connection;
   },
+  updatePrimaryColor(state: any, color: string) {
+    state.primaryColor = color;
+  },
 };
