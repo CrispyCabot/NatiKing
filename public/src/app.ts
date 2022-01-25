@@ -29,7 +29,7 @@ export default defineComponent({
         "Authorization"
       ] = `Bearer ${res.accessToken}`;
     }
-    this.fetchColors().then((colors: any) => {
+    await this.fetchColors().then((colors: any) => {
       this.updatePrimaryColor(colors[0].primaryColor);
     });
   },

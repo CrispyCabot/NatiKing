@@ -8,7 +8,7 @@ export default defineComponent({
     return {};
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLogo"]),
+    ...mapGetters(["getIsLoggedIn", "getLogo", "getPrimaryColor"]),
   },
   methods: {
     redirect(link: string) {
@@ -17,6 +17,17 @@ export default defineComponent({
       } else {
         this.$router.push(link);
       }
+    },
+  },
+  watch: {
+    getPrimaryColor() {
+      const css = `
+      .footer-container .flex-container {
+      background-color: ${this.getPrimaryColor};
+    }`;
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode(css));
+      document.getElementsByTagName("head")[0].appendChild(style);
     },
   },
 });

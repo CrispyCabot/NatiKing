@@ -7,7 +7,6 @@ export default defineComponent({
   data() {
     return {
       authorName: "No Author Found",
-      themedStyle: { backgroundColor: "#00f" },
     };
   },
   props: {
@@ -20,8 +19,11 @@ export default defineComponent({
   },
   async created() {
     this.authorName = (await this.fetchUserById(this.authorID)).name;
-    this.themedStyle = { backgroundColor: this.getPrimaryColor };
-    const css = `.post-card::before {
+    const css = `
+    .post-card .rhs .tags p {
+      background-color: ${this.getPrimaryColor};
+    }
+    .post-card::before {
       background-color: ${this.getPrimaryColor};
     }`;
     const style = document.createElement("style");

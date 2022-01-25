@@ -8,7 +8,7 @@
         {{ likeAmt }} like(s)
       </h5>
       <div class="tags">
-        <p :style="themedStyle" v-for="tag in tags" :key="tag.name">
+        <p v-for="tag in tags" :key="tag.name">
           {{ tag }}
         </p>
       </div>

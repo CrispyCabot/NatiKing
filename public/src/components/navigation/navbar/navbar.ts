@@ -33,7 +33,12 @@ export default defineComponent({
     }
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLoggedInUser", "getLogo"]),
+    ...mapGetters([
+      "getIsLoggedIn",
+      "getLoggedInUser",
+      "getLogo",
+      "getPrimaryColor",
+    ]),
     notificationCount(): Number {
       let count = 0;
       if (this.getLoggedInUser && this.getLoggedInUser.notifications) {
@@ -61,5 +66,19 @@ export default defineComponent({
   },
   unmounted() {
     window.removeEventListener("resize", this.setIsMobileView);
+  },
+  watch: {
+    getPrimaryColor() {
+      const css = `
+    .navbar-container_desktop p {
+      color: ${this.getPrimaryColor};
+    }
+    .navbar-container_desktop p:hover {
+      color: #fff;
+    }`;
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode(css));
+      document.getElementsByTagName("head")[0].appendChild(style);
+    },
   },
 });
