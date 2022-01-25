@@ -19,16 +19,6 @@ export default defineComponent({
   },
   async created() {
     this.authorName = (await this.fetchUserById(this.authorID)).name;
-    const css = `
-    .post-card .rhs .tags p {
-      background-color: ${this.getPrimaryColor};
-    }
-    .post-card::before {
-      background-color: ${this.getPrimaryColor};
-    }`;
-    const style = document.createElement("style");
-    style.appendChild(document.createTextNode(css));
-    document.getElementsByTagName("head")[0].appendChild(style);
   },
   computed: {
     ...mapGetters(["getIsLoggedIn", "getLogo", "getPrimaryColor"]),
@@ -37,6 +27,20 @@ export default defineComponent({
     ...mapActions(["fetchUserById"]),
     redirect(link: string) {
       this.$router.push(link);
+    },
+  },
+  watch: {
+    getPrimaryColor() {
+      const css = `
+    .post-card .rhs .tags p {
+      background-color: ${this.getPrimaryColor};
+    }
+    .post-card::before {
+      background-color: ${this.getPrimaryColor};
+    }`;
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode(css));
+      document.getElementsByTagName("head")[0].appendChild(style);
     },
   },
 });

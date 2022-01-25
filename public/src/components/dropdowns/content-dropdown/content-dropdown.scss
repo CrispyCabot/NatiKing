@@ -1,64 +1,59 @@
 .content-dropdown {
-  width: calc(100% - .55rem);
-  &_label {
-    cursor: pointer;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: $accent_red;
-    padding: .5rem;
-    color: $off_white;
-    border-bottom: .2rem solid $accent_light_red;
-    transition: .3s;
-    &:hover {
-      background-color: $accent_red_hover;
-      border-color: darken($accent_light_red, 15);
+    width: calc(100% - 0.55rem);
+    &_label {
+        cursor: pointer;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: $accent_red;
+        padding: 0.5rem;
+        color: $off_white;
+        border-bottom: 0.2rem solid $accent_light_red;
+        transition: 0.3s;
+        &:hover {
+            background-color: $accent_red_hover;
+            border-color: darken($accent_light_red, 15);
+        }
+        &_text {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: calc(100% - 2rem);
+            p {
+                text-align: left;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                margin-left: 0.5rem;
+            }
+        }
+        &_arrow {
+            transition: 0.2s;
+        }
+        &.open {
+            .content-dropdown_label_arrow {
+                transform: rotate(180deg);
+            }
+        }
     }
-    &_text {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      width: calc(100% - 2rem);
-      p {
-        text-align: left;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        overflow: hidden;
-        margin-left: .5rem;
-      }
+    // Slide Transitions
+    .slide-and-grow-enter-from,
+    .slide-and-grow-leave-to {
+        height: 0;
+        opacity: 0;
     }
-    &_arrow {
-      transition: .2s;
+    .slide-and-grow-enter-to,
+    .slide-and-grow-leave-from {
+        height: max-content;
+        opacity: 1;
     }
-
-    &.open {
-      .content-dropdown_label_arrow {
-        transform: rotate(180deg);
-      }
+    .slide-and-grow-enter-active,
+    .slide-and-grow-leave-active {
+        transition: height 0.3s;
     }
-  }
-
-  // Slide Transitions
-  .slide-and-grow-enter-from,
-  .slide-and-grow-leave-to {
-    height: 0;
-    opacity: 0;
-  }
-  
-  .slide-and-grow-enter-to,
-  .slide-and-grow-leave-from {
-    height: max-content;
-    opacity: 1;
-  }
-  
-  .slide-and-grow-enter-active,
-  .slide-and-grow-leave-active {
-    transition: height 0.3s;
-  }
-
-  &_content {
-    border: .2rem solid $accent_light_red;
-    border-top: none;
-  }
+    &_content {
+        border: 0.2rem solid $accent_light_red;
+        border-top: none;
+    }
 }
