@@ -52,7 +52,7 @@ router.route("/posts").get((req, res) => {
             return;
         }
         res.json(response);
-    });
+    }).sort({ date: -1 });
 });
 router.route("/posts/:id").get((req, res) => {
     const { id } = req.params;

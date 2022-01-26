@@ -30,4 +30,20 @@ export const PostActions = {
         });
     });
   },
+
+  createNewPost({ getters }: any, payload: any) {
+    const { ownerID, title, description, tags } = payload;
+    const isUsingMockData = getters.getIsUsingMockData;
+    const route = isUsingMockData ? `/mock/posts/create` : `/posts/create`;
+    return new Promise((resolve, reject) => {
+      api
+        .post(route, { ownerID, title, description, tags })
+        .then(({ data }) => {
+          resolve(data);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  },
 };

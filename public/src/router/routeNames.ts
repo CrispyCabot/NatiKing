@@ -7,4 +7,5 @@ export default {
   Article: "article",
   Writers: "writers",
   Writer: "writer",
+  CreatePost: "create-post",
 };

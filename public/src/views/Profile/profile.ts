@@ -88,8 +88,6 @@ export default defineComponent({
     this.setIsMobileView();
     this.userID = this.getLoggedInUser._id;
     this.setupFieldsValues();
-    this.updateCSS();
-    console.log(this.getLoggedInUser.access_level);
   },
   mounted() {
     this.setupFieldsValues();
@@ -206,28 +204,12 @@ export default defineComponent({
         this.isShowingModal = false;
       }
     },
-    updateCSS() {
-      const darkerColor = shadeColor(this.getPrimaryColor, 0.8);
-      const css = `
-      .profile .profile-info .btn {
-        background-color: ${this.getPrimaryColor};
-      }
-      .profile .profile-info .btn::before {
-        background-color: ${darkerColor}
-      }`;
-      const style = document.createElement("style");
-      style.appendChild(document.createTextNode(css));
-      document.getElementsByTagName("head")[0].appendChild(style);
-    },
   },
   watch: {
     getLoggedInUser() {
       if (this.fields) {
         this.setupFieldsValues();
       }
-    },
-    getPrimaryColor() {
-      this.updateCSS();
     },
   },
   unmounted() {

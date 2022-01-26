@@ -4,6 +4,7 @@ import CustomFooter from "@/components/navigation/custom-footer/index.vue";
 import Toast from "@/components/popups/toast/index.vue";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 import { defineComponent } from "@vue/runtime-core";
+import { shadeColor } from "@/utils/globalFunctions";
 
 export default defineComponent({
   name: "app",
@@ -53,6 +54,7 @@ export default defineComponent({
       "getAccessToken",
       "getMockOverride",
       "getWebSocketConnection",
+      "getPrimaryColor",
     ]),
   },
   methods: {
@@ -74,6 +76,19 @@ export default defineComponent({
           isShowing: false,
         });
       }
+    },
+    updateCSS() {
+      const darkerColor = shadeColor(this.getPrimaryColor, 0.8);
+      const css = `
+      .btn {
+        background-color: ${this.getPrimaryColor};
+      }
+      .btn::before {
+        background-color: ${darkerColor}
+      }`;
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode(css));
+      document.getElementsByTagName("head")[0].appendChild(style);
     },
     setIsMobileView() {
       this.isMobileView = Boolean(window.outerWidth <= 576);
@@ -105,6 +120,9 @@ export default defineComponent({
       if (window.location.href.includes("mock") || this.getMockOverride)
         this.setIsUsingMockData(true);
       else this.setIsUsingMockData(false);
+    },
+    getPrimaryColor() {
+      this.updateCSS();
     },
   },
 });

@@ -123,4 +123,27 @@ router.route("/users/logout").post(async(req, res) => {
     });
 });
 
+const Posts = require("../models/post-model");
+//Post setters
+router.route("/posts/create").post(async(req, res) => {
+    const { ownerID, title, description, tags } = req.body;
+
+    const post = await Posts.create({
+        owner_id: ownerID,
+        title: title,
+        description: description,
+        tags: tags,
+        image_path: "default.png",
+        likes: [],
+        comments: [],
+        date: Date.now(),
+    });
+
+    res.json({
+        post: post,
+        status: 200,
+        message: "Successfully created post",
+    });
+});
+
 module.exports = router;

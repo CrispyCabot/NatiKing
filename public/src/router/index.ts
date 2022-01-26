@@ -7,7 +7,8 @@ import Login from "../views/Login/index.vue";
 import Profile from "../views/Profile/index.vue";
 import Article from "../views/Article/index.vue";
 import Writers from "../views/Writers/index.vue";
-import Writer from "../views/Writer/index.vue"; //TODO
+import Writer from "../views/Writer/index.vue";
+import CreatePost from "../views/CreatePost/index.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -44,6 +45,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/writers/:writerId",
     name: routeNames.Writer,
     component: Writer,
+  },
+  {
+    path: "/create-post",
+    name: routeNames.CreatePost,
+    component: CreatePost,
   },
   // Catch All Routes
   {

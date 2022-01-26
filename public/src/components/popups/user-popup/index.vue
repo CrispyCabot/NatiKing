@@ -13,12 +13,23 @@
           ></font-awesome-icon>
           <p>My profile</p>
         </div>
-        <div class="link" @click="redirectLink('/notifications')">
+        <div class="link" @click="redirectLink('/request-access')">
           <font-awesome-icon
             class="icon"
             :icon="['fas', 'pen']"
           ></font-awesome-icon>
           <p>Request Access</p>
+        </div>
+        <div
+          v-if="getLoggedInUser.access_level >= 10"
+          class="link"
+          @click="redirectLink('/create-post')"
+        >
+          <font-awesome-icon
+            class="icon"
+            :icon="['fas', 'pen']"
+          ></font-awesome-icon>
+          <p>Create Post</p>
         </div>
         <div class="link" @click="redirectLink('/logout')">
           <font-awesome-icon

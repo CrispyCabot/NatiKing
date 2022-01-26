@@ -7,11 +7,11 @@ export default defineComponent({
     alignment: { type: String, default: "right" },
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLoggedInPlayer"]),
+    ...mapGetters(["getIsLoggedIn", "getLoggedInUser", "getPrimaryColor"]),
   },
   methods: {
     ...mapActions(["logUserOut"]),
-    ...mapMutations(["updateIsLoggedIn", "updateLoggedInPlayer"]),
+    ...mapMutations(["updateIsLoggedIn", "updateLoggedInUser"]),
     async redirectLink(link: string) {
       this.$emit("link-click");
 
