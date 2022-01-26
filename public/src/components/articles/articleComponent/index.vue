@@ -7,10 +7,13 @@
         By: {{ authorName }}
       </h5>
       <div class="tags">
-        <p v-for="tag in postInfo.tags" :key="tag.name">{{ tag }}</p>
+        <p v-for="tag in postInfo.tags" :key="tag.name">
+          {{ tag }}
+        </p>
       </div>
+      <p>{{ date }}</p>
       <p>{{ numLikes }} like(s)</p>
-      <p>{{ postInfo.description }}</p>
+      <span v-html="postInfo.description"></span>
     </div>
     <h3>Comments</h3>
     <CommentCard

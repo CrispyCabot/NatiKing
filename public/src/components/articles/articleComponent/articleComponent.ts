@@ -13,6 +13,7 @@ export default defineComponent({
         likes: [],
         tags: [],
         comments: [],
+        date: Object(),
       },
       authorName: "No Author Found",
       authorID: "",
@@ -39,6 +40,12 @@ export default defineComponent({
   },
   computed: {
     ...mapGetters(["getIsLoggedIn", "getLogo"]),
+    date(): string {
+      const date = new Date(this.postInfo.date);
+      return (
+        date.getMonth() + 1 + "/" + date.getDate() + "/" + date.getFullYear()
+      );
+    },
   },
   methods: {
     ...mapActions(["fetchPostById", "fetchUserById"]),
