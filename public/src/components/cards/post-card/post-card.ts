@@ -19,6 +19,7 @@ export default defineComponent({
   },
   async created() {
     this.authorName = (await this.fetchUserById(this.authorID)).name;
+    this.updateCSS();
   },
   computed: {
     ...mapGetters(["getIsLoggedIn", "getLogo", "getPrimaryColor"]),
@@ -28,19 +29,22 @@ export default defineComponent({
     redirect(link: string) {
       this.$router.push(link);
     },
-  },
-  watch: {
-    getPrimaryColor() {
+    updateCSS() {
       const css = `
-    .post-card .rhs .tags p {
-      background-color: ${this.getPrimaryColor};
-    }
-    .post-card::before {
-      background-color: ${this.getPrimaryColor};
-    }`;
+      .post-card .rhs .tags p {
+        background-color: ${this.getPrimaryColor};
+      }
+      .post-card::before {
+        background-color: ${this.getPrimaryColor};
+      }`;
       const style = document.createElement("style");
       style.appendChild(document.createTextNode(css));
       document.getElementsByTagName("head")[0].appendChild(style);
+    },
+  },
+  watch: {
+    getPrimaryColor() {
+      this.updateCSS();
     },
   },
 });

@@ -6,6 +6,7 @@ import ModalInput from "@/components/inputs/modal-input/index.vue";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 import { TOAST_TYPES } from "@/utils/toastTypes";
 import { faThumbsDown } from "@fortawesome/free-solid-svg-icons";
+import { shadeColor } from "@/utils/globalFunctions";
 import LogoIcons from "@/utils/socialIcons";
 
 export default defineComponent({
@@ -65,7 +66,7 @@ export default defineComponent({
     };
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLoggedInUser"]),
+    ...mapGetters(["getIsLoggedIn", "getLoggedInUser", "getPrimaryColor"]),
     confirmPassMatch(): Boolean {
       return Boolean(this.fields.password.value == this.fields.confirm.value);
     },
@@ -87,6 +88,8 @@ export default defineComponent({
     this.setIsMobileView();
     this.userID = this.getLoggedInUser._id;
     this.setupFieldsValues();
+    this.updateCSS();
+    console.log(this.getLoggedInUser.access_level);
   },
   mounted() {
     this.setupFieldsValues();
@@ -203,12 +206,28 @@ export default defineComponent({
         this.isShowingModal = false;
       }
     },
+    updateCSS() {
+      const darkerColor = shadeColor(this.getPrimaryColor, 0.8);
+      const css = `
+      .profile .profile-info .btn {
+        background-color: ${this.getPrimaryColor};
+      }
+      .profile .profile-info .btn::before {
+        background-color: ${darkerColor}
+      }`;
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode(css));
+      document.getElementsByTagName("head")[0].appendChild(style);
+    },
   },
   watch: {
     getLoggedInUser() {
       if (this.fields) {
         this.setupFieldsValues();
       }
+    },
+    getPrimaryColor() {
+      this.updateCSS();
     },
   },
   unmounted() {
