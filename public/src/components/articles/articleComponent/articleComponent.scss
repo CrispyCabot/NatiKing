@@ -31,6 +31,20 @@
             position: relative;
         }
     }
+    .like-btn {
+        width: 10%;
+        height: 10%;
+        display: block;
+        margin: 10px;
+        margin-left: auto;
+        margin-right: 10px;
+    }
+    .not-liked {
+        color: $dark_background;
+    }
+    .liked {
+        color: $toast_green;
+    }
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -41,6 +55,10 @@
             h1 {
                 font-size: 20px;
             }
+        }
+        .like-btn {
+            width: 5%;
+            height: 5%;
         }
     }
 }

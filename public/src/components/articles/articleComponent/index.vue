@@ -13,7 +13,20 @@
       </div>
       <p>{{ date }}</p>
       <p>{{ numLikes }} like(s)</p>
+      <br />
       <span v-html="postInfo.description"></span>
+      <font-awesome-icon
+        v-if="!isLiked"
+        class="like-btn not-liked"
+        :icon="['fas', 'thumbs-up']"
+        @click="likePost"
+      ></font-awesome-icon>
+      <font-awesome-icon
+        v-if="isLiked"
+        class="like-btn liked"
+        :icon="['fas', 'thumbs-up']"
+        @click="unlikePost"
+      ></font-awesome-icon>
     </div>
     <h3>Comments</h3>
     <CommentCard

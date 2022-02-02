@@ -19,6 +19,7 @@ export default defineComponent({
       authorID: "",
       imagePath: "default.png",
       numLikes: 0,
+      isLiked: false,
     };
   },
   components: {
@@ -37,9 +38,18 @@ export default defineComponent({
     if (this.postInfo.likes != null) {
       this.numLikes = this.postInfo.likes.length;
     }
+    this.updateCSS();
+    if (this.getLoggedInUser._id in this.postInfo.likes) {
+      this.isLiked = true;
+    }
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLogo"]),
+    ...mapGetters([
+      "getIsLoggedIn",
+      "getLogo",
+      "getPrimaryColor",
+      "getLoggedInUser",
+    ]),
     date(): string {
       const date = new Date(this.postInfo.date);
       return (
@@ -52,9 +62,25 @@ export default defineComponent({
     redirect(link: string) {
       this.$router.push(link);
     },
-    generateKey(id: string, comment: string) {
-      const uniqueKey = `${id}-${comment}`;
-      return uniqueKey;
+    updateCSS() {
+      const css = `
+      .article-component .tags p {
+        background-color: ${this.getPrimaryColor};
+      }`;
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode(css));
+      document.getElementsByTagName("head")[0].appendChild(style);
+    },
+    likePost() {
+      this.isLiked = true;
+    },
+    unlikePost() {
+      this.isLiked = false;
+    },
+  },
+  watch: {
+    getPrimaryColor() {
+      this.updateCSS();
     },
   },
 });

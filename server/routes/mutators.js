@@ -3,6 +3,7 @@ const bcrypt = require("bcryptjs");
 const authChecker = require("./utils/auth-checker");
 
 const Users = require("../models/user-model");
+const Posts = require("../models/post-model");
 
 router.route("/users/update-profile").put(authChecker, async(req, res) => {
     const { userId, updates } = req.body;
@@ -63,13 +64,13 @@ router.route("/users/update-profile").put(authChecker, async(req, res) => {
     if (updatedUser) {
         res.send({
             status: 200,
-            message: "Player has successfully been updated",
+            message: "User has successfully been updated",
             user: updatedUser,
         });
     } else {
         res.send({
             status: 400,
-            message: "Player has unsuccessfully been updated",
+            message: "User has unsuccessfully been updated",
         });
     }
 });
@@ -90,13 +91,13 @@ router.route("/users/delete-social").put(authChecker, async(req, res) => {
     if (updatedUser) {
         res.send({
             status: 200,
-            message: "Player has successfully been updated",
+            message: "User has successfully been updated",
             user: updatedUser,
         });
     } else {
         res.send({
             status: 400,
-            message: "Player has unsuccessfully been updated",
+            message: "User has unsuccessfully been updated",
         });
     }
 });
@@ -118,13 +119,58 @@ router.route("/users/add-social").put(authChecker, async(req, res) => {
     if (updatedUser) {
         res.send({
             status: 200,
-            message: "Player has successfully been updated",
+            message: "User has successfully been updated",
             user: updatedUser,
         });
     } else {
         res.send({
             status: 400,
-            message: "Player has unsuccessfully been updated",
+            message: "User has unsuccessfully been updated",
+        });
+    }
+});
+
+//Posts mutators
+router.route("/posts/update-post").put(authChecker, async(req, res) => {
+    const { userId, postId, updates } = req.body;
+    let updatedPost = false;
+    console.log(req.userData);
+
+    await Posts.findOneAndUpdate({ _id: postId }, {...updates });
+    updatedPost = await Posts.findOne({ _id: userId });
+
+    if (updatedPost) {
+        res.send({
+            status: 200,
+            message: "Post has successfully been updated",
+            post: updatedPost,
+        });
+    } else {
+        res.send({
+            status: 400,
+            message: "Post has unsuccessfully been updated",
+        });
+    }
+});
+
+router.route("/posts/like-post").put(authChecker, async(req, res) => {
+    const { postId, userId } = req.body;
+
+    const preUpdatePost = Posts.findOne({ _id: postId });
+
+    await Posts.findOneAndUpdate({ _id: postId }, {...updates });
+    updatedPost = await Posts.findOne({ _id: userId });
+
+    if (updatedPost) {
+        res.send({
+            status: 200,
+            message: "Post liked successfully",
+            post: updatedPost,
+        });
+    } else {
+        res.send({
+            status: 400,
+            message: "Post has unsuccessfully been liked",
         });
     }
 });
