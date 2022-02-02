@@ -10,6 +10,7 @@ import Writers from "../views/Writers/index.vue";
 import Writer from "../views/Writer/index.vue";
 import CreatePost from "../views/CreatePost/index.vue";
 import Contact from "../views/Contact/index.vue";
+import Shop from "../views/Shop/index.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -56,6 +57,16 @@ const routes: Array<RouteRecordRaw> = [
     path: "/contact",
     name: routeNames.Contact,
     component: Contact,
+  },
+  {
+    path: "/shop",
+    name: routeNames.Shop,
+    component: Shop,
+  },
+  {
+    path: "/about",
+    name: routeNames.About,
+    component: Shop,
   },
   // Catch All Routes
   {

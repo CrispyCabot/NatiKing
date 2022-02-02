@@ -9,4 +9,6 @@ export default {
   Writer: "writer",
   CreatePost: "create-post",
   Contact: "contact",
+  Shop: "shop",
+  About: "about",
 };
