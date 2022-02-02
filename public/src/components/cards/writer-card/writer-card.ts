@@ -1,7 +1,7 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
-import LogoIcons from "@/utils/socialIcons";
+import { getLogoSrc, redirectExternal } from "@/utils/globalFunctions";
 
 export default defineComponent({
   name: "writer-card",
@@ -41,22 +41,10 @@ export default defineComponent({
   methods: {
     ...mapActions(["fetchUserById"]),
     getLogoSrc(url: string) {
-      if (url.includes("twitter")) {
-        return LogoIcons.TWITTER;
-      } else if (url.includes("facebook")) {
-        return LogoIcons.FACEBOOK;
-      } else if (url.includes("linkedin")) {
-        return LogoIcons.LINKEDIN;
-      } else if (url.includes("instagram")) {
-        return LogoIcons.INSTAGRAM;
-      }
-      return LogoIcons.DEFAULT;
+      return getLogoSrc(url);
     },
     redirectExternal(link: string) {
-      if (!link.includes("https")) {
-        link = "https://" + link;
-      }
-      window.open(link, "_blank");
+      redirectExternal(link);
     },
     redirect(link: string) {
       this.$router.push(link);

@@ -9,6 +9,7 @@ import Article from "../views/Article/index.vue";
 import Writers from "../views/Writers/index.vue";
 import Writer from "../views/Writer/index.vue";
 import CreatePost from "../views/CreatePost/index.vue";
+import Contact from "../views/Contact/index.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -50,6 +51,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/create-post",
     name: routeNames.CreatePost,
     component: CreatePost,
+  },
+  {
+    path: "/contact",
+    name: routeNames.Contact,
+    component: Contact,
   },
   // Catch All Routes
   {

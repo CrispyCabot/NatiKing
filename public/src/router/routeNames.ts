@@ -8,4 +8,5 @@ export default {
   Writers: "writers",
   Writer: "writer",
   CreatePost: "create-post",
+  Contact: "contact",
 };

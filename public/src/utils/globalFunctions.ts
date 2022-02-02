@@ -1,3 +1,5 @@
+import LogoIcons from "@/utils/socialIcons";
+
 export function shadeColor(color: string, percent: number): string {
   let rgb = [];
   rgb.push(parseInt(color.substring(1, 3), 16));
@@ -17,4 +19,24 @@ export function shadeColor(color: string, percent: number): string {
     return stringVal;
   });
   return "#" + stringRGB.join("");
+}
+
+export function getLogoSrc(url: string) {
+  if (url.includes("twitter")) {
+    return LogoIcons.TWITTER;
+  } else if (url.includes("facebook")) {
+    return LogoIcons.FACEBOOK;
+  } else if (url.includes("linkedin")) {
+    return LogoIcons.LINKEDIN;
+  } else if (url.includes("instagram")) {
+    return LogoIcons.INSTAGRAM;
+  }
+  return LogoIcons.DEFAULT;
+}
+
+export function redirectExternal(link: string) {
+  if (!link.includes("https")) {
+    link = "https://" + link;
+  }
+  window.open(link, "_blank");
 }
