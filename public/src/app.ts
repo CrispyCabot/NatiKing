@@ -21,16 +21,24 @@ export default defineComponent({
     };
   },
   async created() {
-    const res = await this.retrieveRefreshToken();
-    console.log("token refreshed", res);
-    if (res.ok) {
-      this.updateIsLoggedIn(true);
-      this.updateLoggedInUser(res.user);
-      api.defaults.headers.common[
-        "Authorization"
-      ] = `Bearer ${res.accessToken}`;
-    }
+    console.log("here");
+    await this.retrieveRefreshToken()
+      .then((res) => {
+        if (res.ok) {
+          this.updateIsLoggedIn(true);
+          this.updateLoggedInUser(res.user);
+          api.defaults.headers.common[
+            "Authorization"
+          ] = `Bearer ${res.accessToken}`;
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    console.log("token refreshed");
+
     await this.fetchColors().then((colors: any) => {
+      console.log("fetching colors");
       this.updatePrimaryColor(colors[0].primaryColor);
     });
   },
