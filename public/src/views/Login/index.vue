@@ -2,7 +2,7 @@
   <div class="login-container">
     <div class="login-container_title">
       <img :src="getLogo" />
-      <h1 class="site-title">Wiffle Ninja</h1>
+      <h1 class="site-title">Nati King</h1>
     </div>
     <div class="login-container_fields">
       <div
