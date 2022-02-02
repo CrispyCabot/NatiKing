@@ -35,7 +35,6 @@ export default defineComponent({
       .catch((error) => {
         console.log(error);
       });
-    console.log("token refreshed");
 
     await this.fetchColors().then((colors: any) => {
       console.log("fetching colors");
