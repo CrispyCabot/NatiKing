@@ -1,22 +1,5 @@
 .footer-container {
     width: 100vw;
-    // height: 10rem;
-    // &:after {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   height: inherit;
-    //   width: inherit;
-    //   background-image: url("../../../assets/footer_background.png");
-    //   background-size: cover;
-    //   background-repeat: no-repeat;
-    //   background-position: center;
-    //   background-attachment: fixed;
-    //   background-blend-mode: multiply;
-    //   mix-blend-mode: multiply;
-    //   z-index: 1;
-    // }
     .footer-margin {
         position: relative;
         width: 100px;
@@ -64,6 +47,9 @@
                         cursor: pointer;
                         color: $accent_light_red;
                     }
+                }
+                img {
+                    width: 20%;
                 }
             }
             .tiny-stuff {

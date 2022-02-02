@@ -1,5 +1,6 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapGetters } from "vuex";
+import LogoIcons from "@/utils/socialIcons";
 
 export default defineComponent({
   name: "custom-footer",
@@ -17,6 +18,24 @@ export default defineComponent({
       } else {
         this.$router.push(link);
       }
+    },
+    getLogoSrc(url: string) {
+      if (url.includes("twitter")) {
+        return LogoIcons.TWITTER;
+      } else if (url.includes("facebook")) {
+        return LogoIcons.FACEBOOK;
+      } else if (url.includes("linkedin")) {
+        return LogoIcons.LINKEDIN;
+      } else if (url.includes("instagram")) {
+        return LogoIcons.INSTAGRAM;
+      }
+      return LogoIcons.DEFAULT;
+    },
+    redirectExternal(link: string) {
+      if (!link.includes("https")) {
+        link = "https://" + link;
+      }
+      window.open(link, "_blank");
     },
   },
   watch: {

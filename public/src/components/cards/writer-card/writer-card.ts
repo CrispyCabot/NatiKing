@@ -47,6 +47,8 @@ export default defineComponent({
         return LogoIcons.FACEBOOK;
       } else if (url.includes("linkedin")) {
         return LogoIcons.LINKEDIN;
+      } else if (url.includes("instagram")) {
+        return LogoIcons.INSTAGRAM;
       }
       return LogoIcons.DEFAULT;
     },
