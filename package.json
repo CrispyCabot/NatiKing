@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "npm run pull && start npm run f && start npm run b",
-        "pull": "git pull",
+        "pull": "echo hello",
         "f": "cd ./public && npm run serve",
         "b": "cd ./server && npm run dev"
     },
