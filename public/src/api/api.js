@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const local = "http://localhost:5000";
-const prod = "https://stormy-cove-30343.herokuapp.com";
+const prod = "https://stark-basin-40795.herokuapp.com";
 
 let httpClient = axios.create({
     baseURL: window.location.hostname === "localhost" ? local : prod,
