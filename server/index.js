@@ -34,6 +34,7 @@ const uri = `mongodb+srv://natiking:${encodeURI(
 )}@cluster0.aw5gd.mongodb.net/${encodeURI(
   process.env.MONGO_ATLAS_DB
 )}?retryWrites=true&w=majority`;
+console.log("attempting to connect");
 mongoose.connect(
     uri, {
         useNewUrlParser: true,
@@ -44,6 +45,7 @@ mongoose.connect(
         else console.log("Connected to DB");
     }
 );
+console.log("here");
 
 // Express endpoints setup
 const PORT = process.env.PORT || 5000;
