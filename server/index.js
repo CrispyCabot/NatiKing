@@ -57,7 +57,10 @@ app.use(function(req, res, next) {
     // if (allowedOrigins.includes(origin)) {
     //     res.setHeader("Access-Control-Allow-Origin", origin);
     // }
-    res.setHeader("Access-Control-Allow-Origin", "https://natiking.com/");
+    res.setHeader(
+        "Access-Control-Allow-Origin",
+        "https://stark-basin-40795.herokuapp.com"
+    );
     res.setHeader(
         "Access-Control-Allow-Methods",
         "GET, POST, OPTIONS, PUT, PATCH, DELETE"
