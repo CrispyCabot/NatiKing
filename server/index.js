@@ -13,10 +13,8 @@ const allowedOrigins = [
     "http://localhost:8081",
     "http://localhost:5000",
     "http://localhost:5001",
-    "http://wiffle.ninja",
-    "https://wiffle.ninja",
-    "http://mock.wiffle.ninja",
-    "https://mock.wiffle.ninja",
+    "http://natiking.com",
+    "https://www.natiking.com",
 ];
 app.use(cors());
 app.use(bodyParser.json({ limit: "1000mb" }));
