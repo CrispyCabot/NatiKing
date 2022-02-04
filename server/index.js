@@ -69,7 +69,7 @@ app.get("/", (req, res) => {
     res.send("Connected");
 });
 
-app.route("/*").get(function(req, res) {
+app.route("/writers").get(function(req, res) {
     res.sendFile(path.join(__dirname + "/front-end/index.html"));
 });
 
