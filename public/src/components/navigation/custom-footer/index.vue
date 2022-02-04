@@ -9,6 +9,7 @@
         <div class="links">
           <p class="link" @click="redirect('top')">Top</p>
           <p class="link" @click="redirect('writers')">Writers</p>
+          <p class="link" @click="redirect('/')">Home</p>
           <img
             :src="getLogoSrc('twitter')"
             @click="redirectExternal('https://twitter.com/thenatiking')"
