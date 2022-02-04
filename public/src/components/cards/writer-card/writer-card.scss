@@ -8,7 +8,7 @@
     display: flex;
     flex-direction: row;
     img {
-        width: 100%;
+        width: 5rem;
     }
     .rhs {
         display: flex;
@@ -36,6 +36,9 @@
 @media (min-width: 576px) {
     .writer-card {
         width: 85%;
+        img {
+            width: 8rem;
+        }
         .rhs {
             h1 {
                 font-size: 20px;
@@ -48,9 +51,6 @@
 @media (min-width: 768px) {
     .writer-card {
         width: 75%;
-        img {
-            width: 75%;
-        }
         .rhs {
             h1 {
                 font-size: 24px;
