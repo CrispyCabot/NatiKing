@@ -52,7 +52,7 @@ app.listen(PORT, () => {
 app.use(express.static("front-end"));
 app.use(function(req, res, next) {
     // Request methods you wish to allow
-    const origin = "natiking.com";
+    const origin = req.headers.origin;
     if (allowedOrigins.includes(origin)) {
         res.setHeader("Access-Control-Allow-Origin", origin);
     }
