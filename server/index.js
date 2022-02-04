@@ -46,21 +46,21 @@ app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
 });
 app.use(express.static("front-end"));
-app.use(function(req, res, next) {
-    // Request methods you wish to allow
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-        res.setHeader("Access-Control-Allow-Origin", origin);
-    }
-    res.setHeader(
-        "Access-Control-Allow-Methods",
-        "GET, POST, OPTIONS, PUT, PATCH, DELETE"
-    );
-    res.setHeader("Access-Control-Allow-Headers", "*");
-    res.setHeader("Access-Control-Allow-Credentials", true);
-    // Pass to next layer of middleware
-    next();
-});
+// app.use(function(req, res, next) {
+//     // Request methods you wish to allow
+//     const origin = req.headers.origin;
+//     if (allowedOrigins.includes(origin)) {
+//         res.setHeader("Access-Control-Allow-Origin", origin);
+//     }
+//     res.setHeader(
+//         "Access-Control-Allow-Methods",
+//         "GET, POST, OPTIONS, PUT, PATCH, DELETE"
+//     );
+//     res.setHeader("Access-Control-Allow-Headers", "*");
+//     res.setHeader("Access-Control-Allow-Credentials", true);
+//     // Pass to next layer of middleware
+//     next();
+// });
 
 // Default route to log when connected to db
 app.get("/", (req, res) => {
