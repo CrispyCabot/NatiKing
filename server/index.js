@@ -29,6 +29,8 @@ app.use(cookieParser()); // process.env.COOKIE_SECRET set secret as env var
 app.use(express.json());
 
 // Mongoose methods
+console.log(process.env.MONGO_ATLAS_PASSWORD);
+console.log(process.env.MONGO_ATLAS_DB);
 const uri = `mongodb+srv://natiking:${encodeURI(
   process.env.MONGO_ATLAS_PASSWORD
 )}@cluster0.aw5gd.mongodb.net/${encodeURI(
