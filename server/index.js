@@ -69,10 +69,6 @@ app.get("/", (req, res) => {
     res.send("Connected");
 });
 
-app.route("/writers").get(function(req, res) {
-    res.sendFile(path.join(__dirname + "/front-end/index.html"));
-});
-
 // Routes
 const router = express.Router();
 const getters = require("./routes/getters");
@@ -81,6 +77,10 @@ const mutators = require("./routes/mutators");
 app.use(router.use("/api/", getters));
 app.use(router.use("/api/", setters));
 app.use(router.use("/api/", mutators));
+
+app.route("/*").get(function(req, res) {
+    res.sendFile(path.join(__dirname + "/front-end/index.html"));
+});
 
 // const mock_getters = require("./routes/mock-routes/getters");
 // const mock_setters = require("./routes/mock-routes/setters");
