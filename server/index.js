@@ -78,9 +78,9 @@ const router = express.Router();
 const getters = require("./routes/getters");
 const setters = require("./routes/setters");
 const mutators = require("./routes/mutators");
-app.use(router.use("/", getters));
-app.use(router.use("/", setters));
-app.use(router.use("/", mutators));
+app.use(router.use("/api/", getters));
+app.use(router.use("/api/", setters));
+app.use(router.use("/api/", mutators));
 
 // const mock_getters = require("./routes/mock-routes/getters");
 // const mock_setters = require("./routes/mock-routes/setters");
