@@ -29,34 +29,28 @@ app.use(cookieParser()); // process.env.COOKIE_SECRET set secret as env var
 app.use(express.json());
 
 // Mongoose methods
-console.log(process.env.MONGO_ATLAS_PASSWORD);
-console.log(process.env.MONGO_ATLAS_DB);
 const uri = `mongodb+srv://natiking:${encodeURI(
   process.env.MONGO_ATLAS_PASSWORD
 )}@cluster0.aw5gd.mongodb.net/${encodeURI(
   process.env.MONGO_ATLAS_DB
 )}?retryWrites=true&w=majority`;
-console.log("attempting to connect");
 mongoose.connect(
     uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     },
     function(error) {
-        console.log("ERROR: " + error);
         if (error) console.log(error);
         else console.log("Connected to DB");
     }
 );
-console.log("here");
 
 // Express endpoints setup
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
     console.log(`Listening on port ${PORT}`);
-    console.log(process.env.MONGO_ATLAS_DB);
 });
-app.use(express.static("server_html"));
+app.use(express.static("front-end"));
 app.use(function(req, res, next) {
     // Request methods you wish to allow
     const origin = req.headers.origin;
