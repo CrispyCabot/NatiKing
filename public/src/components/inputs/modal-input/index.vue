@@ -11,7 +11,8 @@
           :type="type"
         />
       </div>
-      <button @click="emitClick">Submit</button>
+      <button class="btn-inverted" @click="emitClick">Submit</button>
+      <button class="btn-inverted" @click="cancel">Cancel</button>
     </div>
   </div>
 </template>

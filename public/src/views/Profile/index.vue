@@ -16,6 +16,7 @@
         <p>{{ bio }}</p>
         <div class="socials">
           <SocialInput
+            class="social"
             v-for="social in getLoggedInUser.socials"
             :key="social.url"
             :url="social.url"

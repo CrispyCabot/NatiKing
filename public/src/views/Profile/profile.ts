@@ -177,6 +177,10 @@ export default defineComponent({
       return a;
     },
     async addNewSocial(social: any) {
+      if (social == "cancel") {
+        this.isShowingModal = false;
+        return;
+      }
       if (!this.isValidSocial(social)) {
         this.updateGlobalToast({
           message:

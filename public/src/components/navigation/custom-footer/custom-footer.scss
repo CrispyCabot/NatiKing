@@ -53,6 +53,16 @@
                 img {
                     width: 2rem;
                 }
+                img:hover {
+                    cursor: pointer;
+                }
+            }
+            .fa-twitter-square {
+                color: #55adee;
+                &:hover {
+                    color: #3674a1;
+                    cursor: pointer;
+                }
             }
             .tiny-stuff {
                 width: 100%;

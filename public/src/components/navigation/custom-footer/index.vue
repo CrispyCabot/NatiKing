@@ -10,10 +10,10 @@
           <p class="link" @click="redirect('top')">Top</p>
           <p class="link" @click="redirect('writers')">Writers</p>
           <p class="link" @click="redirect('/')">Home</p>
-          <img
-            :src="getLogoSrc('twitter')"
+          <i
             @click="redirectExternal('https://twitter.com/thenatiking')"
-          />
+            class="fab fa-twitter-square fa-3x"
+          ></i>
         </div>
       </div>
       <div v-if="!getIsLoggedIn" class="login-signup-links">

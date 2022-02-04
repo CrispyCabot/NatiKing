@@ -5,22 +5,29 @@ import LogoIcons from "@/utils/socialIcons";
 export default defineComponent({
   name: "social-input",
   data() {
-    return {};
+    return {
+      iconClass: "fab fa-twitter-square fa-4x",
+    };
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLoggedInUser"]),
+    ...mapGetters(["getIsLoggedIn", "getLoggedInUser", "getPrimaryColor"]),
+  },
+  async created() {
+    //Update icon class
+    this.updateLogoClass();
+    this.updateCSS();
   },
   methods: {
     ...mapActions(["fetchUserById", "deleteSocial"]),
-    getLogoSrc(url: string) {
-      if (url.includes("twitter")) {
-        return LogoIcons.TWITTER;
-      } else if (url.includes("facebook")) {
-        return LogoIcons.FACEBOOK;
-      } else if (url.includes("linkedin")) {
-        return LogoIcons.LINKEDIN;
-      } else if (url.includes("instagram")) {
-        return LogoIcons.INSTAGRAM;
+    updateLogoClass() {
+      if (this.url.includes("twitter")) {
+        this.iconClass = "fab fa-twitter-square fa-4x";
+      } else if (this.url.includes("facebook")) {
+        this.iconClass = "fab fa-facebook-square fa-4x";
+      } else if (this.url.includes("linkedin")) {
+        this.iconClass = "fab fa-linkedin fa-4x";
+      } else if (this.url.includes("instagram")) {
+        this.iconClass = "fab fa-instagram-square fa-4x";
       }
       return LogoIcons.DEFAULT;
     },
@@ -36,9 +43,23 @@ export default defineComponent({
         socialURL: url,
       });
     },
+    updateCSS() {
+      const css = `
+        .fab {
+          color: ${this.getPrimaryColor};
+        }`;
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode(css));
+      document.getElementsByTagName("head")[0].appendChild(style);
+    },
   },
   props: {
     url: { type: String, default: () => "" },
     isEditing: { type: Boolean, default: () => false },
+  },
+  watch: {
+    getPrimaryColor() {
+      this.updateCSS();
+    },
   },
 });
