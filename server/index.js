@@ -6,23 +6,18 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 require("dotenv").config();
 
-const allowedOrigins = [
-    "http://127.0.0.1:8080",
-    "http://localhost:8080",
-    "http://localhost:8081",
-    "http://localhost:5000",
-    "http://localhost:5001",
-    "http://wiffle.ninja",
-    "https://wiffle.ninja",
-    "http://mock.wiffle.ninja",
-    "https://mock.wiffle.ninja",
-];
-app.use(
-    cors({
-        origin: [...allowedOrigins],
-        credentials: true,
-    })
-);
+// const allowedOrigins = [
+//     "http://127.0.0.1:8080",
+//     "http://localhost:8080",
+//     "http://localhost:8081",
+//     "http://localhost:5000",
+//     "http://localhost:5001",
+//     "http://wiffle.ninja",
+//     "https://wiffle.ninja",
+//     "http://mock.wiffle.ninja",
+//     "https://mock.wiffle.ninja",
+// ];
+app.use(cors());
 app.use(bodyParser.json({ limit: "1000mb" }));
 app.use(bodyParser.urlencoded({ limit: "1000mb", extended: false }));
 app.use(cookieParser()); // process.env.COOKIE_SECRET set secret as env var
