@@ -4,19 +4,20 @@ const app = express();
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+const path = require("path");
 require("dotenv").config();
 
-// const allowedOrigins = [
-//     "http://127.0.0.1:8080",
-//     "http://localhost:8080",
-//     "http://localhost:8081",
-//     "http://localhost:5000",
-//     "http://localhost:5001",
-//     "http://wiffle.ninja",
-//     "https://wiffle.ninja",
-//     "http://mock.wiffle.ninja",
-//     "https://mock.wiffle.ninja",
-// ];
+const allowedOrigins = [
+    "http://127.0.0.1:8080",
+    "http://localhost:8080",
+    "http://localhost:8081",
+    "http://localhost:5000",
+    "http://localhost:5001",
+    "http://wiffle.ninja",
+    "https://wiffle.ninja",
+    "http://mock.wiffle.ninja",
+    "https://mock.wiffle.ninja",
+];
 app.use(cors());
 app.use(bodyParser.json({ limit: "1000mb" }));
 app.use(bodyParser.urlencoded({ limit: "1000mb", extended: false }));
@@ -61,6 +62,10 @@ app.use(express.static("front-end"));
 //     // Pass to next layer of middleware
 //     next();
 // });
+
+app.route("/*").get(function(req, res) {
+    res.sendFile(path.join(__dirname + "/front_end/index.html"));
+});
 
 // Default route to log when connected to db
 app.get("/", (req, res) => {
