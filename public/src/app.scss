@@ -99,55 +99,12 @@ body {
     transform: translateX(0);
 }
 
-.red_btn {
-    background-color: $accent_red;
-    color: $off_white;
-    padding: 0.5rem 1.5rem;
-    border-radius: 50rem;
-    font-weight: 600;
-    font-style: italic;
-    cursor: pointer;
-    transition: 0.3s;
-    &:hover {
-        background-color: $light-grey;
-    }
-    &.disabled {
-        pointer-events: none;
-        background-color: $light-grey;
-    }
-}
-
 .site-title {
     color: $off_white;
     margin: 0.5rem 0;
     font-style: italic;
     font-size: 2.5rem;
     text-align: center;
-}
-
-.default-input {
-    padding: 0.5rem 0.5rem;
-    color: $dark_background;
-    outline: none;
-    border: 1px solid transparent;
-    border-bottom: 0.2rem solid $light-grey;
-    border-radius: 0.25rem;
-    &:focus {
-        border: 1px solid $accent_light_red;
-    }
-}
-
-.white_card_background {
-    background-color: $off_white;
-    padding: 1rem 0;
-    width: 90%;
-    margin: 0 auto;
-    margin-bottom: 4rem;
-    border-radius: 0.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
 }
 
 // Extra small devices (portrait phones, less than 576px)

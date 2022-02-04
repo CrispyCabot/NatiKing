@@ -32,10 +32,10 @@ export default defineComponent({
     updateCSS() {
       console.log(this.getPrimaryColor);
       const css = `
-      .post-card .rhs .tags p {
+      .post-card .inner-post-card .rhs .tags p {
         background-color: ${this.getPrimaryColor};
       }
-      .post-card::before {
+      .post-card .inner-post-card::before {
         background-color: ${this.getPrimaryColor};
       }`;
       const style = document.createElement("style");
