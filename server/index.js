@@ -7,18 +7,6 @@ const cors = require("cors");
 const path = require("path");
 require("dotenv").config();
 
-const allowedOrigins = [
-    "http://127.0.0.1:8080",
-    "http://localhost:8080",
-    "http://localhost:8081",
-    "http://localhost:5000",
-    "http://localhost:5001",
-    "http://www.natiking.com",
-    "https://www.natiking.com",
-    "http://natiking.com",
-    "https://natiking.com",
-    "https://stark-basin-40795.herokuapp.com",
-];
 app.use(cors());
 app.use(bodyParser.json({ limit: "1000mb" }));
 app.use(bodyParser.urlencoded({ limit: "1000mb", extended: false }));
@@ -51,9 +39,8 @@ app.use(express.static("front-end"));
 app.use(function(req, res, next) {
     // Request methods you wish to allow
     const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-        res.setHeader("Access-Control-Allow-Origin", origin);
-    }
+    //Allow everything
+    res.setHeader("Access-Control-Allow-Origin", origin);
     res.setHeader(
         "Access-Control-Allow-Methods",
         "GET, POST, OPTIONS, PUT, PATCH, DELETE"
