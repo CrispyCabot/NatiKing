@@ -70,7 +70,7 @@ export default defineComponent({
     ...mapActions(["createNewUser"]),
     ...mapMutations([
       "updateIsLoggedIn",
-      "updateLoggedInPlayer",
+      "updateLoggedInUser",
       "updateGlobalToast",
     ]),
     async signUp() {
@@ -82,7 +82,7 @@ export default defineComponent({
 
       if (res.status == 200) {
         this.updateIsLoggedIn(true);
-        this.updateLoggedInPlayer(res.player);
+        this.updateLoggedInUser(res.player);
         api.defaults.headers.common[
           "Authorization"
         ] = `Bearer ${res.accessToken}`;

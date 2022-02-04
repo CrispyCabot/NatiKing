@@ -34,7 +34,7 @@ router.route("/users/:id").get((req, res) => {
     });
 });
 router.route("/writers").get((req, res) => {
-    Users.find({ access_level: 3 }, async(err, response) => {
+    Users.find({ access_level: { $gte: 10 } }, async(err, response) => {
         if (err) {
             console.log(err);
             return;
