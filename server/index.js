@@ -13,8 +13,11 @@ const allowedOrigins = [
     "http://localhost:8081",
     "http://localhost:5000",
     "http://localhost:5001",
-    "http://natiking.com",
+    "http://www.natiking.com",
     "https://www.natiking.com",
+    "http://natiking.com",
+    "https://natiking.com",
+    "https://stark-basin-40795.herokuapp.com",
 ];
 app.use(cors());
 app.use(bodyParser.json({ limit: "1000mb" }));
