@@ -20,6 +20,7 @@ const allowedOrigins = [
     "www.natiking.com",
     "natiking.com",
     "https://stark-basin-40795.herokuapp.com",
+    "https://jamenwalz.github.io/",
 ];
 app.use(cors());
 app.use(bodyParser.json({ limit: "1000mb" }));
