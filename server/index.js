@@ -20,7 +20,7 @@ const allowedOrigins = [
     "www.natiking.com",
     "natiking.com",
     "https://stark-basin-40795.herokuapp.com",
-    "https://jamenwalz.github.io/",
+    "https://jamenwalz.github.io",
 ];
 app.use(cors());
 app.use(bodyParser.json({ limit: "1000mb" }));
@@ -53,10 +53,11 @@ app.listen(PORT, () => {
 app.use(express.static("front-end"));
 app.use(function(req, res, next) {
     // Request methods you wish to allow
-    const origin = req.headers.origin;
-    if (allowedOrigins.includes(origin)) {
-        res.setHeader("Access-Control-Allow-Origin", origin);
-    }
+    // const origin = req.headers.origin;
+    // if (allowedOrigins.includes(origin)) {
+    //     res.setHeader("Access-Control-Allow-Origin", origin);
+    // }
+    res.setHeader("Access-Control-Allow-Origin", "https://natiking.com/");
     res.setHeader(
         "Access-Control-Allow-Methods",
         "GET, POST, OPTIONS, PUT, PATCH, DELETE"
