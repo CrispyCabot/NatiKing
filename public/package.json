@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
-        "build": "cleanDir.bat && vue-cli-service build --no-clean",
+        "build": "cleanDir.bat && vue-cli-service build --no-clean && finalSteps.bat",
         "lint": "vue-cli-service lint"
     },
     "dependencies": {
