@@ -4,6 +4,7 @@ import { defineComponent } from "@vue/runtime-core";
 import { mapActions } from "vuex";
 import { mapGetters } from "vuex";
 import LogoIcons from "@/utils/socialIcons";
+import { shadeColor } from "@/utils/globalFunctions";
 
 export default defineComponent({
   name: "home",
@@ -23,10 +24,12 @@ export default defineComponent({
       name: "",
       bio: "",
       imagePath: "default.png",
-      socials: [],
+      socials: [{ url: "" }],
+      socialsWithClass: [] as Object[],
     };
   },
   async created() {
+    this.updateCSS();
     this.writerID = String(this.$route.params.writerId);
     this.writer = await this.fetchUserById(this.writerID);
     this.name = this.writer.name != null ? this.writer.name : "No Name Found";
@@ -34,9 +37,24 @@ export default defineComponent({
     this.imagePath =
       this.writer.image_path != null ? this.writer.image_path : "default.png";
     this.socials = this.writer.socials != null ? this.writer.socials : [];
+    this.socials.map((social) => {
+      const url = social.url;
+      console.log(url);
+      const newSocial = { url: url, class: "fas fa-ban" };
+      if (url.includes("twitter")) {
+        newSocial.class = "fab fa-twitter-square fa-3x";
+      } else if (url.includes("facebook")) {
+        newSocial.class = "fab fa-facebook-square fa-3x";
+      } else if (url.includes("linkedin")) {
+        newSocial.class = "fab fa-linkedin fa-3x";
+      } else if (url.includes("instagram")) {
+        newSocial.class = "fab fa-instagram-square fa-3x";
+      }
+      this.socialsWithClass.push(newSocial);
+    });
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLogo"]),
+    ...mapGetters(["getIsLoggedIn", "getLogo", "getPrimaryColor"]),
   },
   methods: {
     ...mapActions(["fetchUserById"]),
@@ -55,11 +73,29 @@ export default defineComponent({
       }
       return LogoIcons.DEFAULT;
     },
+    updateCSS() {
+      const darkerColor = shadeColor(this.getPrimaryColor, 0.8);
+      const css = `
+        .fab {
+          color: ${this.getPrimaryColor};
+        }
+        .fab:hover {
+          color: ${darkerColor};
+        }`;
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode(css));
+      document.getElementsByTagName("head")[0].appendChild(style);
+    },
     redirectExternal(link: string) {
       if (!link.includes("https")) {
         link = "https://" + link;
       }
       window.open(link, "_blank");
+    },
+  },
+  watch: {
+    getPrimaryColor() {
+      this.updateCSS();
     },
   },
 });

@@ -2,6 +2,12 @@
     position: relative;
     padding-bottom: unset;
     text-align: center;
+    .fab {
+        margin: 5px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
     .writer-content {
         background: $off_white;
         margin: 5px auto;
