@@ -6,12 +6,14 @@
       <h5>
         {{ bio }}
       </h5>
-      <img
-        v-for="social in socials"
-        :key="social.url"
-        :src="getLogoSrc(social.url)"
-        @click="redirectExternal(social.url)"
-      />
+      <div class="socials">
+        <i
+          v-for="social in socialsWithClass"
+          :key="social.url"
+          :class="social.class"
+          @click="redirectExternal(social.url)"
+        ></i>
+      </div>
     </div>
   </div>
 </template>

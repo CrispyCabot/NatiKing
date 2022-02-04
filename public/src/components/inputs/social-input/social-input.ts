@@ -1,6 +1,7 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapActions, mapGetters } from "vuex";
 import LogoIcons from "@/utils/socialIcons";
+import { shadeColor } from "@/utils/globalFunctions";
 
 export default defineComponent({
   name: "social-input",
@@ -29,7 +30,7 @@ export default defineComponent({
       } else if (this.url.includes("instagram")) {
         this.iconClass = "fab fa-instagram-square fa-4x";
       }
-      return LogoIcons.DEFAULT;
+      return "fas fa-ban";
     },
     redirectExternal(link: string) {
       if (!link.includes("https")) {
@@ -44,9 +45,13 @@ export default defineComponent({
       });
     },
     updateCSS() {
+      const darkerColor = shadeColor(this.getPrimaryColor, 0.8);
       const css = `
         .fab {
           color: ${this.getPrimaryColor};
+        }
+        .fab:hover {
+          color: ${darkerColor};
         }`;
       const style = document.createElement("style");
       style.appendChild(document.createTextNode(css));

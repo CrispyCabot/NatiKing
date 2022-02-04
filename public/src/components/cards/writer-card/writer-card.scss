@@ -8,7 +8,13 @@
     display: flex;
     flex-direction: row;
     img {
-        width: 5rem;
+        width: 7rem;
+    }
+    .fab {
+        margin: 5px;
+        &:hover {
+            cursor: pointer;
+        }
     }
     .rhs {
         display: flex;

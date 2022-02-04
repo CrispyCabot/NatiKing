@@ -2,6 +2,7 @@ import { defineComponent } from "@vue/runtime-core";
 import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
 import { getLogoSrc, redirectExternal } from "@/utils/globalFunctions";
+import { shadeColor } from "@/utils/globalFunctions";
 
 export default defineComponent({
   name: "writer-card",
@@ -18,25 +19,39 @@ export default defineComponent({
       imagePath: "default.png",
       name: "",
       bio: "",
-      socials: [],
+      socials: [{ url: "" }],
+      socialsWithClass: [] as Object[],
     };
   },
   props: {
     writerID: { type: String, default: () => "" },
   },
   async created() {
+    this.updateCSS();
     this.writer = await this.fetchUserById(this.writerID);
-    // if (this.writer.image_path != null) {
-    //   this.imagePath = this.writer.image_path;
-    // }
     this.imagePath =
       this.writer.image_path != null ? this.writer.image_path : "default.png";
     this.name = this.writer.name != null ? this.writer.name : "No Name Found";
     this.bio = this.writer.bio != null ? this.writer.bio : "No bio found";
     this.socials = this.writer.socials != null ? this.writer.socials : [];
+    this.socials.map((social) => {
+      const url = social.url;
+      console.log(url);
+      const newSocial = { url: url, class: "fas fa-ban" };
+      if (url.includes("twitter")) {
+        newSocial.class = "fab fa-twitter-square fa-3x";
+      } else if (url.includes("facebook")) {
+        newSocial.class = "fab fa-facebook-square fa-3x";
+      } else if (url.includes("linkedin")) {
+        newSocial.class = "fab fa-linkedin fa-3x";
+      } else if (url.includes("instagram")) {
+        newSocial.class = "fab fa-instagram-square fa-3x";
+      }
+      this.socialsWithClass.push(newSocial);
+    });
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLogo"]),
+    ...mapGetters(["getIsLoggedIn", "getLogo", "getPrimaryColor"]),
   },
   methods: {
     ...mapActions(["fetchUserById"]),
@@ -48,6 +63,24 @@ export default defineComponent({
     },
     redirect(link: string) {
       this.$router.push(link);
+    },
+    updateCSS() {
+      const darkerColor = shadeColor(this.getPrimaryColor, 0.8);
+      const css = `
+        .writer-card .fab {
+          color: ${this.getPrimaryColor};
+        }
+        .writer-card .fab:hover {
+          color: ${darkerColor};
+        }`;
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode(css));
+      document.getElementsByTagName("head")[0].appendChild(style);
+    },
+  },
+  watch: {
+    getPrimaryColor() {
+      this.updateCSS();
     },
   },
 });

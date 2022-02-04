@@ -8,8 +8,7 @@
         right: 1rem;
         width: 30px;
     }
-    img {
-        width: 3rem;
-        margin: 0.5rem;
+    &:hover {
+        cursor: pointer;
     }
 }
