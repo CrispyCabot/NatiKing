@@ -6,7 +6,8 @@
     "scripts": {
         "start": "npm run pull && start npm run f && start npm run b",
         "pull": "echo hello",
-        "f": "cd ./public && npm run serve",
+        "build": "cd public && npm run build",
+        "f": "cd /public && npm run serve",
         "b": "cd ./server && npm run dev"
     },
     "repository": {
