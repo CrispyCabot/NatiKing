@@ -17,6 +17,8 @@ const allowedOrigins = [
     "https://www.natiking.com",
     "http://natiking.com",
     "https://natiking.com",
+    "www.natiking.com",
+    "natiking.com",
     "https://stark-basin-40795.herokuapp.com",
 ];
 app.use(cors());
