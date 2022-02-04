@@ -22,7 +22,12 @@ const allowedOrigins = [
     "https://stark-basin-40795.herokuapp.com",
     "https://jamenwalz.github.io",
 ];
-app.use(cors());
+app.use(
+    cors({
+        origin: [...allowedOrigins],
+        credentials: true,
+    })
+);
 app.use(bodyParser.json({ limit: "1000mb" }));
 app.use(bodyParser.urlencoded({ limit: "1000mb", extended: false }));
 app.use(cookieParser()); // process.env.COOKIE_SECRET set secret as env var
@@ -54,9 +59,9 @@ app.use(express.static("front-end"));
 app.use(function(req, res, next) {
     // Request methods you wish to allow
     const origin = req.headers.origin;
-    // if (allowedOrigins.includes(origin)) {
-    res.setHeader("Access-Control-Allow-Origin", origin);
-    // }
+    if (allowedOrigins.includes(origin)) {
+        res.setHeader("Access-Control-Allow-Origin", origin);
+    }
     res.setHeader(
         "Access-Control-Allow-Methods",
         "GET, POST, OPTIONS, PUT, PATCH, DELETE"
