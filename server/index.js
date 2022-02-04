@@ -69,6 +69,10 @@ app.get("/", (req, res) => {
     res.send("Connected");
 });
 
+app.route("/*").get(function(req, res) {
+    res.sendFile(path.join(__dirname + "/front-end/index.html"));
+});
+
 // Routes
 const router = express.Router();
 const getters = require("./routes/getters");
