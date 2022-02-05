@@ -3,7 +3,7 @@
     <img class="comment-card_img" :src="require(`@/uploads/${imagePath}`)" />
     <div class="rhs">
       <h5>{{ authorName }}</h5>
-      <p>{{ comment }}</p>
+      <span v-html="comment"></span>
     </div>
   </div>
 </template>

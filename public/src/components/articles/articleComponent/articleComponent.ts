@@ -2,6 +2,7 @@ import { defineComponent } from "@vue/runtime-core";
 import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
 import CommentCard from "@/components/cards/comment-card/index.vue";
+import TextEditor from "@/components/text-editor/index.vue";
 
 export default defineComponent({
   name: "article-component",
@@ -20,10 +21,12 @@ export default defineComponent({
       imagePath: "default.png",
       numLikes: 0,
       isLiked: false,
+      commentContent: "",
     };
   },
   components: {
     CommentCard,
+    TextEditor,
   },
   props: {
     postID: { type: String, default: () => "" },
@@ -58,7 +61,7 @@ export default defineComponent({
     },
   },
   methods: {
-    ...mapActions(["fetchPostById", "fetchUserById"]),
+    ...mapActions(["fetchPostById", "fetchUserById", "updatePost"]),
     redirect(link: string) {
       this.$router.push(link);
     },
@@ -76,6 +79,22 @@ export default defineComponent({
     },
     unlikePost() {
       this.isLiked = false;
+    },
+    generateKey(id: string, comment: string): string {
+      return id + comment;
+    },
+    async postComment() {
+      Promise.resolve(this.postInfo.comments).then((newComments: any) => {
+        console.log(newComments);
+        newComments.push({
+          user_id: this.getLoggedInUser._id,
+          comment: this.commentContent,
+        });
+        const res = this.updatePost({
+          postId: this.postID,
+          updates: { comments: newComments },
+        });
+      });
     },
   },
   watch: {

@@ -132,12 +132,11 @@ router.route("/users/add-social").put(authChecker, async(req, res) => {
 
 //Posts mutators
 router.route("/posts/update-post").put(authChecker, async(req, res) => {
-    const { userId, postId, updates } = req.body;
+    const { postId, updates } = req.body;
     let updatedPost = false;
-    console.log(req.userData);
 
     await Posts.findOneAndUpdate({ _id: postId }, {...updates });
-    updatedPost = await Posts.findOne({ _id: userId });
+    updatedPost = await Posts.findOne({ _id: postId });
 
     if (updatedPost) {
         res.send({

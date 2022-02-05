@@ -46,4 +46,29 @@ export const PostActions = {
         });
     });
   },
+
+  updatePost({ commit, getters }: any, payload: any) {
+    const { postId, updates } = payload;
+    console.log("here");
+    console.log(postId);
+    console.log(updates);
+    const isUsingMockData = getters.getIsUsingMockData;
+    const route = isUsingMockData
+      ? `/mock/posts/update-post`
+      : `/posts/update-post`;
+    return new Promise((resolve, reject) => {
+      api
+        .put(route, { postId, updates })
+        .then(({ data }) => {
+          if (data.status == 200) {
+            resolve(data);
+          } else {
+            throw "Invalid logout";
+          }
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  },
 };

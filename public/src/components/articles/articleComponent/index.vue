@@ -28,13 +28,19 @@
         @click="unlikePost"
       ></font-awesome-icon>
     </div>
-    <h3>Comments</h3>
+    <h3 v-if="postInfo.comments.length == 0">No Comments</h3>
+    <h3 v-if="postInfo.comments.length != 0">Comments</h3>
     <CommentCard
       v-for="comment in postInfo.comments"
       :key="generateKey(comment.user_id, comment.comment)"
       :uid="comment.user_id"
       :comment="comment.comment"
     />
+    <div v-if="getIsLoggedIn" class="comment-editor">
+      <h5>Enter a comment below</h5>
+      <TextEditor v-model="commentContent" />
+      <button @click="postComment" class="btn">Post</button>
+    </div>
   </div>
 </template>
 

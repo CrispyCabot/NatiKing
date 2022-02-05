@@ -45,6 +45,15 @@
     .liked {
         color: $toast_green;
     }
+    .comment-editor {
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+        background-color: $off_white;
+        border-radius: 10px;
+        h5 {
+            padding: 1rem;
+        }
+    }
 }
 
 // Small devices (landscape phones, 576px and up)
