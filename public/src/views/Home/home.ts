@@ -1,4 +1,5 @@
 import PostCard from "@/components/cards/post-card/index.vue";
+import SkeletonCard from "@/components/cards/skeleton-card/index.vue";
 import PaginationMixin from "@/mixins/pagination-mixin";
 import { defineComponent } from "@vue/runtime-core";
 import { mapActions } from "vuex";
@@ -8,21 +9,22 @@ export default defineComponent({
   name: "home",
   components: {
     PostCard,
+    SkeletonCard,
   },
   mixins: [PaginationMixin],
   data() {
     return {
       users: [],
       posts: [],
-      tableLoading: false,
+      isLoading: true,
       splicedPosts: [],
     };
   },
   async created() {
-    this.tableLoading = true;
+    this.isLoading = true;
     this.posts = await this.fetchPosts();
     this.splicedPosts = this.posts.splice(0, 10);
-    this.tableLoading = false;
+    this.isLoading = false;
     window.addEventListener("scroll", this.updateInfScroll);
   },
   computed: {

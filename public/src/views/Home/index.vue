@@ -11,6 +11,12 @@
       :likeAmt="post.likes.length"
       @click="redirect('/articles/' + post._id)"
     />
+    <div v-if="isLoading">
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+    </div>
   </div>
 </template>
 
