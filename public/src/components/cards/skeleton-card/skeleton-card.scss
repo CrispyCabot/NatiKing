@@ -2,7 +2,7 @@
     background: $dark_grey;
     width: 95%;
     height: 6rem;
-    margin: 5px auto;
+    margin: 1rem auto;
     border-radius: 10px;
     position: relative;
     overflow: hidden;
@@ -27,48 +27,30 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-    .post-card {
+    .skeleton-card {
         width: 85%;
-        .rhs {
-            h1 {
-                font-size: 20px;
-            }
-        }
     }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    .post-card {
+    .skeleton-card {
         width: 75%;
-        .rhs {
-            h1 {
-                font-size: 24px;
-            }
-        }
+        height: 10rem;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    .post-card {
+    .skeleton-card {
         width: 55%;
-        .rhs {
-            h1 {
-                font-size: 24px;
-            }
-        }
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-    .post-card {
+    .skeleton-card {
         width: 45%;
-        .rhs {
-            h1 {
-                font-size: 24px;
-            }
-        }
+        height: 14rem;
     }
 }
