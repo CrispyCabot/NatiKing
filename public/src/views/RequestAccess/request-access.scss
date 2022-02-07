@@ -1,0 +1,11 @@
+.request-access {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(90vh - 8.5rem);
+    height: inherit;
+    .title {
+        text-align: center;
+    }
+}

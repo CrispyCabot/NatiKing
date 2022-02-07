@@ -5,6 +5,7 @@
       <h5>{{ authorName }}</h5>
       <span v-html="comment"></span>
     </div>
+    <!-- <i class="fa fa-trash"></i> -->
   </div>
 </template>
 

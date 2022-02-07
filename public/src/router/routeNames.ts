@@ -11,4 +11,5 @@ export default {
   Contact: "contact",
   Shop: "shop",
   About: "about",
+  RequestAccess: "request-access",
 };
