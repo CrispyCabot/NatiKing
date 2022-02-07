@@ -21,7 +21,6 @@ export default defineComponent({
     };
   },
   async created() {
-    console.log("here");
     await this.retrieveRefreshToken()
       .then((res) => {
         if (res.ok) {
@@ -37,7 +36,6 @@ export default defineComponent({
       });
 
     await this.fetchColors().then((colors: any) => {
-      console.log("fetching colors");
       this.updatePrimaryColor(colors[0].primaryColor);
     });
   },

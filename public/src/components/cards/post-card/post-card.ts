@@ -30,7 +30,6 @@ export default defineComponent({
       this.$router.push(link);
     },
     updateCSS() {
-      console.log(this.getPrimaryColor);
       const css = `
       .post-card .inner-post-card .rhs .tags p {
         background-color: ${this.getPrimaryColor};
@@ -45,7 +44,6 @@ export default defineComponent({
   },
   watch: {
     getPrimaryColor() {
-      console.log(this.getPrimaryColor);
       this.updateCSS();
     },
   },

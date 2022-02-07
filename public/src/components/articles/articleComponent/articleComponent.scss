@@ -32,6 +32,8 @@
         }
     }
     .like-btn {
+        display: block;
+        position: relative;
         width: 10%;
         height: 10%;
         display: block;
@@ -40,10 +42,17 @@
         margin-right: 10px;
     }
     .not-liked {
-        color: $dark_background;
+        color: $dark_grey;
+        &:hover {
+            color: $dark_background;
+            cursor: pointer;
+        }
     }
     .liked {
         color: $toast_green;
+        &:hover {
+            cursor: pointer;
+        }
     }
     .comment-editor {
         margin: 1rem 0;

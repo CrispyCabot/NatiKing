@@ -1,8 +1,9 @@
 import { defineComponent } from "@vue/runtime-core";
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 import { mapActions } from "vuex";
 import CommentCard from "@/components/cards/comment-card/index.vue";
 import TextEditor from "@/components/text-editor/index.vue";
+import { TOAST_TYPES } from "@/utils/toastTypes";
 
 export default defineComponent({
   name: "article-component",
@@ -11,7 +12,7 @@ export default defineComponent({
       postInfo: {
         owner_id: "",
         image_path: "",
-        likes: [],
+        likes: [] as string[],
         tags: [],
         comments: [],
         date: Object(),
@@ -20,8 +21,8 @@ export default defineComponent({
       authorID: "",
       imagePath: "default.png",
       numLikes: 0,
-      isLiked: false,
       commentContent: "",
+      isLiked: false,
     };
   },
   components: {
@@ -41,10 +42,8 @@ export default defineComponent({
     if (this.postInfo.likes != null) {
       this.numLikes = this.postInfo.likes.length;
     }
+    this.isLiked = this.postInfo.likes.includes(this.getLoggedInUser._id);
     this.updateCSS();
-    if (this.getLoggedInUser._id in this.postInfo.likes) {
-      this.isLiked = true;
-    }
   },
   computed: {
     ...mapGetters([
@@ -62,6 +61,7 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(["fetchPostById", "fetchUserById", "updatePost"]),
+    ...mapMutations(["updateGlobalToast"]),
     redirect(link: string) {
       this.$router.push(link);
     },
@@ -69,23 +69,61 @@ export default defineComponent({
       const css = `
       .article-component .tags p {
         background-color: ${this.getPrimaryColor};
+      }
+      .liked {
+        color: ${this.getPrimaryColor} !important;
       }`;
       const style = document.createElement("style");
       style.appendChild(document.createTextNode(css));
       document.getElementsByTagName("head")[0].appendChild(style);
     },
-    likePost() {
-      this.isLiked = true;
+    async likePost() {
+      this.postInfo.likes.push(this.getLoggedInUser._id);
+      const newLikes: string[] = this.postInfo.likes;
+      const res = await this.updatePost({
+        postId: this.postID,
+        updates: { likes: newLikes },
+      });
+      if (res.status == 200) {
+        this.isLiked = true;
+        this.numLikes += 1;
+        this.postInfo = await this.fetchPostById(this.postID);
+      } else {
+        this.updateGlobalToast({
+          message: "Couldn't like post",
+          type: TOAST_TYPES.Error,
+          duration: 3000,
+          isShowing: true,
+        });
+      }
     },
-    unlikePost() {
-      this.isLiked = false;
+    async unlikePost() {
+      const newLikes = this.postInfo.likes.filter(
+        (id: string) => id !== this.getLoggedInUser._id
+      );
+
+      const res = await this.updatePost({
+        postId: this.postID,
+        updates: { likes: newLikes },
+      });
+      if (res.status == 200) {
+        this.isLiked = false;
+        this.numLikes -= 1;
+        this.postInfo = await this.fetchPostById(this.postID);
+      } else {
+        this.updateGlobalToast({
+          message: "Couldn't unlike post",
+          type: TOAST_TYPES.Error,
+          duration: 3000,
+          isShowing: true,
+        });
+      }
     },
     generateKey(id: string, comment: string): string {
       return id + comment;
     },
     async postComment() {
       Promise.resolve(this.postInfo.comments).then((newComments: any) => {
-        console.log(newComments);
         newComments.push({
           user_id: this.getLoggedInUser._id,
           comment: this.commentContent,

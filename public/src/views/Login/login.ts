@@ -60,8 +60,6 @@ export default defineComponent({
         email: this.fields.email.value,
         password: this.fields.password.value,
       });
-      console.log("RESPONSE");
-      console.log(res);
       if (res.status == 200) {
         this.updateIsLoggedIn(true);
         this.updateLoggedInUser(res.user);

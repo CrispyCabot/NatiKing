@@ -20,7 +20,6 @@ export default defineComponent({
     comment: { type: String, default: () => "default.png" },
   },
   async created() {
-    console.log(this.uid);
     this.writer = await this.fetchUserById(this.uid);
     this.authorName = this.writer.name;
     if (this.writer.image_path != null) {
