@@ -12,7 +12,7 @@
           <p class="link" @click="redirect('/')">Home</p>
           <i
             @click="redirectExternal('https://twitter.com/thenatiking')"
-            class="fab fa-twitter-square fa-3x"
+            class="fab fa-twitter-square fa-2x"
           ></i>
         </div>
       </div>
