@@ -14,7 +14,7 @@ export default defineComponent({
         image_path: "",
         likes: [] as string[],
         tags: [],
-        comments: [],
+        comments: [] as object[],
         date: Object(),
       },
       authorName: "No Author Found",
@@ -123,16 +123,72 @@ export default defineComponent({
       return id + comment;
     },
     async postComment() {
-      Promise.resolve(this.postInfo.comments).then((newComments: any) => {
-        newComments.push({
-          user_id: this.getLoggedInUser._id,
-          comment: this.commentContent,
-        });
-        const res = this.updatePost({
-          postId: this.postID,
-          updates: { comments: newComments },
-        });
+      this.postInfo.comments.push({
+        user_id: this.getLoggedInUser._id,
+        comment: this.commentContent,
       });
+      const newComments: object[] = this.postInfo.comments;
+      const res = await this.updatePost({
+        postId: this.postID,
+        updates: { comments: newComments },
+      });
+      if (res.status == 200) {
+        this.postInfo = await this.fetchPostById(this.postID);
+        this.commentContent = "";
+      } else {
+        this.updateGlobalToast({
+          message: "Something went wrong, couldn't comment",
+          type: TOAST_TYPES.Error,
+          duration: 3000,
+          isShowing: true,
+        });
+      }
+    },
+    async deleteComment(commentId: string) {
+      const newComments = this.postInfo.comments.filter(
+        (comment: any) => comment._id != commentId
+      );
+
+      const res = await this.updatePost({
+        postId: this.postID,
+        updates: { comments: newComments },
+      });
+      if (res.status == 200) {
+        this.postInfo = await this.fetchPostById(this.postID);
+      } else {
+        this.updateGlobalToast({
+          message: "Couldn't delete comment",
+          type: TOAST_TYPES.Error,
+          duration: 3000,
+          isShowing: true,
+        });
+      }
+    },
+    async updateComment(commentId: string, newContent: any) {
+      const comment: any = this.postInfo.comments.find(
+        (comment: any) => comment._id == commentId
+      );
+      this.postInfo.comments.map((comment: any) => {
+        if (comment._id == commentId) {
+          comment.comment = newContent;
+        }
+      });
+
+      const res = await this.updatePost({
+        postId: this.postID,
+        updates: { comments: this.postInfo.comments },
+      });
+      if (res.status == 200) {
+        this.postInfo = await this.fetchPostById(this.postID);
+        this.commentContent = "";
+      } else {
+        this.updateGlobalToast({
+          message: "Something went wrong, couldn't edit comment",
+          type: TOAST_TYPES.Error,
+          duration: 3000,
+          isShowing: true,
+        });
+      }
     },
   },
   watch: {

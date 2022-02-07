@@ -1,9 +1,13 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
+import TextEditor from "@/components/text-editor/index.vue";
 
 export default defineComponent({
   name: "comment-card",
+  components: {
+    TextEditor,
+  },
   data() {
     return {
       authorName: "No Author Found",
@@ -13,6 +17,8 @@ export default defineComponent({
         name: "",
       },
       imagePath: "default.png",
+      isEditing: false,
+      commentContent: "",
     };
   },
   props: {
@@ -25,14 +31,25 @@ export default defineComponent({
     if (this.writer.image_path != null) {
       this.imagePath = this.writer.image_path;
     }
+    this.commentContent = this.comment;
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLogo"]),
+    ...mapGetters(["getIsLoggedIn", "getLogo", "getLoggedInUser"]),
   },
   methods: {
-    ...mapActions(["fetchUserById"]),
+    ...mapActions(["fetchUserById", "updatePost"]),
     redirect(link: string) {
       this.$router.push(link);
+    },
+    deleteComment() {
+      this.$emit("deleted");
+    },
+    saveComment() {
+      this.$emit("edit", this.commentContent);
+      this.isEditing = false;
+    },
+    editComment() {
+      this.isEditing = true;
     },
   },
 });

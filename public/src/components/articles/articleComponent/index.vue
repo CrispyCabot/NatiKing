@@ -35,6 +35,8 @@
       :key="generateKey(comment.user_id, comment.comment)"
       :uid="comment.user_id"
       :comment="comment.comment"
+      @deleted="deleteComment(comment._id)"
+      @edit="updateComment(comment._id, $event)"
     />
     <div v-if="getIsLoggedIn" class="comment-editor">
       <h5>Enter a comment below</h5>

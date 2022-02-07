@@ -8,7 +8,7 @@ const user_schema = new Schema({
     is_admin_user: Boolean,
     name: String,
     access_level: Number,
-    socials: [{ username: String, url: String }],
+    socials: [{ url: String }],
 }, { strict: false });
 
 module.exports = user_schema;

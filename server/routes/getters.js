@@ -40,7 +40,7 @@ router.route("/writers").get((req, res) => {
             return;
         }
         res.json(response);
-    });
+    }).sort({ access_level: -1 });
 });
 
 //Posts getters

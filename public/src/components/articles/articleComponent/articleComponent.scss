@@ -4,7 +4,8 @@
     margin-top: 15px;
     margin-bottom: 15px;
     img {
-        width: 50%;
+        height: 12rem;
+        object-fit: scale-down;
     }
     .article-top {
         background: white;
@@ -78,6 +79,9 @@
             width: 5%;
             height: 5%;
         }
+        img {
+            height: 12rem;
+        }
     }
 }
 
@@ -86,7 +90,7 @@
     .article-component {
         width: 75%;
         img {
-            width: 75%;
+            height: 15rem;
         }
         .rhs {
             h1 {
@@ -116,6 +120,9 @@
             h1 {
                 font-size: 24px;
             }
+        }
+        img {
+            height: 20rem;
         }
     }
 }
