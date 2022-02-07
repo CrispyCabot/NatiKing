@@ -9,4 +9,17 @@
     .ProseMirror-trailingBreak {
         outline: none;
     }
+    .bubble-menu {
+        position: relative;
+        top: 5rem;
+        .bubble-icon {
+            padding: 5px;
+            margin: 0 2px;
+            background-color: $light_grey;
+            border-radius: 4px;
+        }
+        .is-active {
+            border: 2px solid $dark_grey;
+        }
+    }
 }

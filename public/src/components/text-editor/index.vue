@@ -1,7 +1,8 @@
 <template>
   <div class="text-editor">
-    <bubble-menu :editor="editor" v-if="editor">
-      <button
+    <bubble-menu class="bubble-menu" :editor="editor" v-if="editor">
+      <i
+        class="fas fa-bold bubble-icon"
         @click="
           editor
             .chain()
@@ -11,9 +12,9 @@
         "
         :class="{ 'is-active': editor.isActive('bold') }"
       >
-        bold
-      </button>
-      <button
+      </i>
+      <i
+        class="fas fa-italic bubble-icon"
         @click="
           editor
             .chain()
@@ -23,9 +24,9 @@
         "
         :class="{ 'is-active': editor.isActive('italic') }"
       >
-        italic
-      </button>
-      <button
+      </i>
+      <i
+        class="fas fa-strikethrough bubble-icon"
         @click="
           editor
             .chain()
@@ -35,8 +36,19 @@
         "
         :class="{ 'is-active': editor.isActive('strike') }"
       >
-        strike
-      </button>
+      </i>
+      <i
+        class="fas fa-underline bubble-icon"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .toggleUnderline()
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive('underline') }"
+      >
+      </i>
     </bubble-menu>
     <editor-content :editor="editor" />
   </div>
@@ -45,6 +57,7 @@
 <script>
 import { Editor, EditorContent, BubbleMenu } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit";
+import Underline from "@tiptap/extension-underline";
 
 export default {
   components: {
@@ -65,7 +78,7 @@ export default {
   mounted() {
     this.editor = new Editor({
       content: this.modelValue,
-      extensions: [StarterKit],
+      extensions: [StarterKit, Underline],
       onUpdate: () => {
         // HTML
         this.$emit("update:modelValue", this.editor.getHTML());

@@ -14,6 +14,7 @@
         "@fortawesome/vue-fontawesome": "^3.0.0-4",
         "@tiptap/extension-bubble-menu": "^2.0.0-beta.55",
         "@tiptap/extension-text-align": "^2.0.0-beta.29",
+        "@tiptap/extension-underline": "^2.0.0-beta.23",
         "@tiptap/starter-kit": "^2.0.0-beta.177",
         "@tiptap/vue-3": "^2.0.0-beta.90",
         "axios": "^0.21.1",

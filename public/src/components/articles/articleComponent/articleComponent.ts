@@ -165,9 +165,6 @@ export default defineComponent({
       }
     },
     async updateComment(commentId: string, newContent: any) {
-      const comment: any = this.postInfo.comments.find(
-        (comment: any) => comment._id == commentId
-      );
       this.postInfo.comments.map((comment: any) => {
         if (comment._id == commentId) {
           comment.comment = newContent;
