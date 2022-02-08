@@ -43,6 +43,7 @@ mongoose.connect(
     uri, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
+        useFindAndModify: false,
     },
     function(error) {
         if (error) console.log(error);
