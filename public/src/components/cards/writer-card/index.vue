@@ -3,9 +3,9 @@
     <img :src="require(`@/uploads/${imagePath}`)" />
     <div class="rhs">
       <h1 @click="redirect('/writers/' + writerID)">{{ name }}</h1>
-      <h5>
+      <p>
         {{ bio }}
-      </h5>
+      </p>
       <div class="socials">
         <i
           v-for="social in socialsWithClass"

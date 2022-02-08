@@ -55,7 +55,10 @@
         </div>
       </div>
     </div>
-
+    <h4>
+      Go to edit your profile afterwards and you can create a bio and add some
+      social media accounts!
+    </h4>
     <button
       class="btn red_btn"
       :class="{ disabled: !enabledSignUpButton }"
