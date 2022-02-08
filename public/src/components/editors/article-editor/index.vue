@@ -3,6 +3,7 @@
     <div class="editor-controls" :editor="editor" v-if="editor">
       <i
         class="fas fa-bold editor-icon"
+        title="Toggle Bold"
         @click="
           editor
             .chain()
@@ -15,6 +16,7 @@
       </i>
       <i
         class="fas fa-italic editor-icon"
+        title="Toggle Italic"
         @click="
           editor
             .chain()
@@ -27,6 +29,7 @@
       </i>
       <i
         class="fas fa-strikethrough editor-icon"
+        title="Toggle Strikethrough"
         @click="
           editor
             .chain()
@@ -39,6 +42,7 @@
       </i>
       <i
         class="fas fa-underline editor-icon"
+        title="Toggle Underline"
         @click="
           editor
             .chain()
@@ -51,6 +55,7 @@
       </i>
       <i
         class="fas fa-highlighter editor-icon"
+        title="Highlight Text"
         @click="
           editor
             .chain()
@@ -64,6 +69,7 @@
       <span class="separator">|</span>
       <p
         class="editor-icon"
+        title="Create Heading 1"
         @click="
           editor
             .chain()
@@ -77,6 +83,7 @@
       </p>
       <p
         class="editor-icon"
+        title="Create Heading 2"
         @click="
           editor
             .chain()
@@ -90,6 +97,7 @@
       </p>
       <i
         class="fas fa-paragraph editor-icon"
+        title="Toggle Paragraph"
         @click="
           editor
             .chain()
@@ -102,6 +110,7 @@
       </i>
       <i
         class="fas fa-list editor-icon"
+        title="Toggle Unordered List"
         @click="
           editor
             .chain()
@@ -114,6 +123,7 @@
       </i>
       <i
         class="fas fa-list-ol editor-icon"
+        title="Toggle Ordered List"
         @click="
           editor
             .chain()
@@ -125,6 +135,104 @@
       >
       </i>
       <span class="separator">|</span>
+      <i
+        class="fas fa-align-left editor-icon"
+        title="Align Left"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .setTextAlign('left')
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive({ textAlign: 'left' }) }"
+      >
+      </i>
+      <i
+        class="fas fa-align-center editor-icon"
+        title="Align Center"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .setTextAlign('center')
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive({ textAlign: 'center' }) }"
+      >
+      </i>
+      <i
+        class="fas fa-align-right editor-icon"
+        title="Align Right"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .setTextAlign('right')
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive({ textAlign: 'right' }) }"
+      >
+      </i>
+      <span class="separator">|</span>
+      <i
+        class="fas fa-quote-left editor-icon"
+        title="Insert blockquote"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .toggleBlockquote()
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive('blockquote') }"
+      >
+      </i>
+      <i
+        class="fas fa-grip-lines editor-icon"
+        title="Insert Horizontal Break"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .setHorizontalRule()
+            .run()
+        "
+      >
+      </i>
+      <span class="separator">|</span>
+      <i
+        title="Insert Image"
+        class="fas fa-image fa-lg editor-icon"
+        @click="addImage"
+      >
+      </i>
+      <i
+        class="fas fa-arrow-left editor-icon"
+        title="Undo"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .undo()
+            .run()
+        "
+        :disabled="!editor.can().undo()"
+      >
+      </i>
+      <i
+        class="fas fa-arrow-right editor-icon"
+        title="Redo"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .redo()
+            .run()
+        "
+        :disabled="!editor.can().redo()"
+      >
+      </i>
     </div>
 
     <editor-content class="editor-content" :editor="editor" />
@@ -140,6 +248,10 @@ import Heading from "@tiptap/extension-heading";
 import Paragraph from "@tiptap/extension-paragraph";
 import BulletList from "@tiptap/extension-bullet-list";
 import OrderedList from "@tiptap/extension-ordered-list";
+import TextAlign from "@tiptap/extension-text-align";
+import BlockQuote from "@tiptap/extension-blockquote";
+import HorizontalRule from "@tiptap/extension-horizontal-rule";
+import Image from "@tiptap/extension-image";
 
 export default {
   components: {
@@ -175,6 +287,25 @@ export default {
             class: "indent",
           },
         }),
+        TextAlign.configure({
+          types: ["heading", "paragraph"],
+        }),
+        BlockQuote.configure({
+          HTMLAttributes: {
+            class: "blockquote",
+          },
+        }),
+        HorizontalRule.configure({
+          HTMLAttributes: {
+            class: "horizontal-rule",
+          },
+        }),
+        Image.configure({
+          HTMLAttributes: {
+            class: "img",
+          },
+          inline: true,
+        }),
       ],
       onUpdate: () => {
         // HTML
@@ -187,6 +318,19 @@ export default {
   },
   beforeUnmount() {
     this.editor.destroy();
+  },
+  methods: {
+    addImage() {
+      const url = window.prompt("Enter the image url");
+
+      if (url) {
+        this.editor
+          .chain()
+          .focus()
+          .setImage({ src: url })
+          .run();
+      }
+    },
   },
   watch: {
     modelValue(value) {
