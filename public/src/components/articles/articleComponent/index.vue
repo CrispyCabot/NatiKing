@@ -14,7 +14,7 @@
       <p>{{ date }}</p>
       <p>{{ numLikes }} like(s)</p>
       <br />
-      <span v-html="postInfo.description"></span>
+      <span class="article-content" v-html="postInfo.description"></span>
       <font-awesome-icon
         v-if="!isLiked"
         class="like-btn not-liked"
