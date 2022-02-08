@@ -47,6 +47,7 @@ export default defineComponent({
       }
       .post-card .inner-post-card:hover .rhs {
         background-color: ${this.getPrimaryColor};
+        box-shadow: 0px 0px 100px ${this.getPrimaryColor};
       }`;
       const style = document.createElement("style");
       style.appendChild(document.createTextNode(css));
