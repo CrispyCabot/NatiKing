@@ -1,52 +1,57 @@
 .post-card {
     margin: auto;
     .inner-post-card {
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 200%;
-            height: 100%;
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     width: 200%;
+        //     height: 100%;
+        //     background-color: $accent_red;
+        //     transform: translateX(-120%) translateY(-150%);
+        //     opacity: 90%;
+        //     transition: all 0.5s;
+        // }
+        // &:hover::before {
+        //     transform: rotate(15deg) skew(-45deg) translateX(-10%) translateY(0);
+        // }
+        &:hover .rhs {
+            transform: scale(1.2);
+            font-style: italic;
+            color: $off_white;
             background-color: $accent_red;
-            transform: translateX(-120%) translateY(-150%);
-            opacity: 90%;
-            transition: all 0.5s;
+            padding: 10px;
+            border-radius: 10px;
+            .tags {
+                p {
+                    background-color: $dark_background;
+                }
+            }
         }
-        &:hover::before {
-            transform: rotate(15deg) skew(-45deg) translateX(-10%) translateY(0);
-        }
-        &:hover h1,
-        &:hover h5 {
-            transform: scale(1.2) translateX(10%);
-            color: $off_white;
-        }
-        &:hover h1::before,
-        &:hover h5::before {
-            transform: skew(-45deg) translateX(-10%);
-            color: $off_white;
-        }
-        &:hover .tags {
-            transform: translateY(30%);
-        }
-        h1::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 110%;
-            height: 100%;
-            background-color: $dark_background;
-            transform: translateX(150%);
-            opacity: 100%;
-            transition: all 0.5s;
-            z-index: -1;
-        }
+        // &:hover h1::before,
+        // &:hover h5::before {
+        //     transform: skew(-45deg) translateX(-10%);
+        //     color: $off_white;
+        // }
+        // h1::before {
+        //     content: "";
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        //     width: 110%;
+        //     height: 100%;
+        //     background-color: $dark_background;
+        //     transform: translateX(150%);
+        //     opacity: 100%;
+        //     transition: all 0.5s;
+        //     z-index: -1;
+        // }
         &:hover {
             cursor: pointer;
-            background-color: $default_grey;
+            background-color: $dark_grey;
         }
-        overflow: hidden;
+        overflow: initial;
         background: $off_white;
         width: 95%;
         margin: auto;
