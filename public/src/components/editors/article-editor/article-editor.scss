@@ -37,6 +37,12 @@
     }
     .editor-content {
         padding: 1rem;
+        .ProseMirror {
+            min-height: 10rem;
+            &:focus {
+                outline: none;
+            }
+        }
     }
     .bubble-menu {
         position: relative;

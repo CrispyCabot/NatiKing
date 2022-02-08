@@ -124,18 +124,6 @@
         :class="{ 'is-active': editor.isActive('orderedList') }"
       >
       </i>
-      <i
-        class="fas fa-clipboard-check editor-icon"
-        @click="
-          editor
-            .chain()
-            .focus()
-            .toggleOrderedList()
-            .run()
-        "
-        :class="{ 'is-active': editor.isActive('orderedList') }"
-      >
-      </i>
       <span class="separator">|</span>
     </div>
 
@@ -152,7 +140,6 @@ import Heading from "@tiptap/extension-heading";
 import Paragraph from "@tiptap/extension-paragraph";
 import BulletList from "@tiptap/extension-bullet-list";
 import OrderedList from "@tiptap/extension-ordered-list";
-// import TaskList from "@tiptap/extension-task-list";
 
 export default {
   components: {
@@ -188,11 +175,6 @@ export default {
             class: "indent",
           },
         }),
-        // TaskList.configure({
-        //   HTMLAttributes: {
-        //     class: "indent",
-        //   },
-        // }),
       ],
       onUpdate: () => {
         // HTML
