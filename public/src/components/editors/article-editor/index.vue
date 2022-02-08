@@ -1,8 +1,8 @@
 <template>
   <div class="article-editor">
-    <bubble-menu class="bubble-menu" :editor="editor" v-if="editor">
+    <div class="editor-controls" :editor="editor" v-if="editor">
       <i
-        class="fas fa-bold bubble-icon"
+        class="fas fa-bold editor-icon"
         @click="
           editor
             .chain()
@@ -14,7 +14,7 @@
       >
       </i>
       <i
-        class="fas fa-italic bubble-icon"
+        class="fas fa-italic editor-icon"
         @click="
           editor
             .chain()
@@ -26,7 +26,7 @@
       >
       </i>
       <i
-        class="fas fa-strikethrough bubble-icon"
+        class="fas fa-strikethrough editor-icon"
         @click="
           editor
             .chain()
@@ -38,7 +38,7 @@
       >
       </i>
       <i
-        class="fas fa-underline bubble-icon"
+        class="fas fa-underline editor-icon"
         @click="
           editor
             .chain()
@@ -49,20 +49,114 @@
         :class="{ 'is-active': editor.isActive('underline') }"
       >
       </i>
-    </bubble-menu>
-    <editor-content :editor="editor" />
+      <i
+        class="fas fa-highlighter editor-icon"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .toggleHighlight()
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive('highlighter') }"
+      >
+      </i>
+      <span class="separator">|</span>
+      <p
+        class="editor-icon"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .toggleHeading({ level: 1 })
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive('heading', { level: 1 }) }"
+      >
+        H1
+      </p>
+      <p
+        class="editor-icon"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .toggleHeading({ level: 2 })
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive('heading', { level: 2 }) }"
+      >
+        H2
+      </p>
+      <i
+        class="fas fa-paragraph editor-icon"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .setParagraph()
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive('paragraph') }"
+      >
+      </i>
+      <i
+        class="fas fa-list editor-icon"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .toggleBulletList()
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive('bulletList') }"
+      >
+      </i>
+      <i
+        class="fas fa-list-ol editor-icon"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .toggleOrderedList()
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive('orderedList') }"
+      >
+      </i>
+      <i
+        class="fas fa-clipboard-check editor-icon"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .toggleOrderedList()
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive('orderedList') }"
+      >
+      </i>
+      <span class="separator">|</span>
+    </div>
+
+    <editor-content class="editor-content" :editor="editor" />
   </div>
 </template>
 
 <script>
-import { Editor, EditorContent, BubbleMenu } from "@tiptap/vue-3";
+import { Editor, EditorContent } from "@tiptap/vue-3";
 import StarterKit from "@tiptap/starter-kit";
 import Underline from "@tiptap/extension-underline";
+import Highlight from "@tiptap/extension-highlight";
+import Heading from "@tiptap/extension-heading";
+import Paragraph from "@tiptap/extension-paragraph";
+import BulletList from "@tiptap/extension-bullet-list";
+import OrderedList from "@tiptap/extension-ordered-list";
+// import TaskList from "@tiptap/extension-task-list";
 
 export default {
   components: {
     EditorContent,
-    BubbleMenu,
   },
   data() {
     return {
@@ -78,7 +172,28 @@ export default {
   mounted() {
     this.editor = new Editor({
       content: this.modelValue,
-      extensions: [StarterKit, Underline],
+      extensions: [
+        StarterKit,
+        Underline,
+        Highlight,
+        Heading.configure({ levels: [1, 2] }),
+        Paragraph,
+        BulletList.configure({
+          HTMLAttributes: {
+            class: "indent",
+          },
+        }),
+        OrderedList.configure({
+          HTMLAttributes: {
+            class: "indent",
+          },
+        }),
+        // TaskList.configure({
+        //   HTMLAttributes: {
+        //     class: "indent",
+        //   },
+        // }),
+      ],
       onUpdate: () => {
         // HTML
         this.$emit("update:modelValue", this.editor.getHTML());

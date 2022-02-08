@@ -4,8 +4,8 @@
       <h1 class="site-title">Create a Post</h1>
       <h4>Image upload here</h4>
       <div class="editor">
-        <input v-model="title" placeholder="Title" />
-        <Article v-model="content" />
+        <input v-model="title" placeholder="Enter a title..." />
+        <ArticleEditor v-model="content" />
         <input
           v-model="tags"
           v-on:input="formatTags"

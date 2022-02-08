@@ -1,13 +1,42 @@
-.text-editor {
-    padding: 1rem;
+.article-editor {
     margin: 0 auto;
-    width: 95%;
+    width: 100%;
     border-radius: 10px;
     text-align: left;
-    border: 1px solid black;
-    outline: none;
-    .ProseMirror-trailingBreak {
-        outline: none;
+    border: 1px solid $dark_background;
+    .editor-controls {
+        margin: 0;
+        padding: 5px;
+        display: flex;
+        flex-flow: row wrap;
+        .editor-icon {
+            width: fit-content;
+            height: 100%;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 3px;
+            color: $dark_background;
+            &:hover {
+                background-color: $light_grey;
+                cursor: pointer;
+            }
+        }
+        border-bottom: 1px solid $dark_background;
+        .is-active {
+            background-color: $dark_background;
+            color: $off_white;
+            &:hover {
+                background-color: $dark_grey;
+            }
+        }
+        .separator {
+            color: $dark_background;
+            font-size: 22px;
+            margin: auto 0;
+        }
+    }
+    .editor-content {
+        padding: 1rem;
     }
     .bubble-menu {
         position: relative;
@@ -22,4 +51,8 @@
             border: 2px solid $dark_grey;
         }
     }
+}
+
+.indent {
+    padding-left: 30px;
 }
