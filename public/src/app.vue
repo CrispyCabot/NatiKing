@@ -25,50 +25,36 @@
       <div>
         <img
           src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
-          height="75px"
-          width="75px"
         />
       </div>
       <div>
         <img
           src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
-          height="75px"
-          width="75px"
         />
       </div>
       <div>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Cincinnati_Bengals_logo.svg/1280px-Cincinnati_Bengals_logo.svg.png"
-          height="75px"
-          width="75px"
         />
       </div>
       <div>
         <img
           src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
-          height="75px"
-          width="75px"
         />
       </div>
       <div>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Cincinnati_Bengals_logo.svg/1280px-Cincinnati_Bengals_logo.svg.png"
-          height="75px"
-          width="75px"
         />
       </div>
       <div>
         <img
           src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
-          height="75px"
-          width="75px"
         />
       </div>
       <div>
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Cincinnati_Bengals_logo.svg/1280px-Cincinnati_Bengals_logo.svg.png"
-          height="75px"
-          width="75px"
         />
       </div>
     </div>

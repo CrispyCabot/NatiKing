@@ -64,6 +64,11 @@ body {
         height: 100%;
         top: 0;
         left: 0;
+        div img {
+            width: 10rem;
+            height: 10rem;
+            opacity: 0.5;
+        }
     }
     .leaf div {
         position: absolute;

@@ -67,6 +67,8 @@
             transition: all 1s;
             border-right: 1px solid black;
             margin-right: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
         }
         .rhs {
             display: flex;
