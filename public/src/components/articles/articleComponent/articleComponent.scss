@@ -35,28 +35,53 @@
             position: relative;
         }
     }
-    .like-btn {
-        display: block;
-        position: relative;
-        width: 10%;
-        height: 10%;
-        display: block;
-        margin: 10px;
-        margin-left: auto;
-        margin-right: 0;
-        left: 15px;
-    }
-    .not-liked {
-        color: $dark_grey;
-        &:hover {
-            color: $dark_background;
-            cursor: pointer;
+    .article-icons {
+        margin: 20px 0;
+        display: grid;
+        grid-auto-rows: 10px;
+        align-items: center;
+        .modify-icons {
+            justify-self: start;
+            .delete-article {
+                position: relative;
+                top: 10px;
+                padding: 5px;
+                &:hover {
+                    color: red;
+                    cursor: pointer;
+                }
+            }
+            .edit-article {
+                padding: 5px;
+                position: relative;
+                top: 10px;
+                &:hover {
+                    cursor: pointer;
+                    color: $dark_grey;
+                }
+            }
         }
-    }
-    .liked {
-        color: $toast_green;
-        &:hover {
-            cursor: pointer;
+        .like-btn {
+            justify-self: end;
+            display: block;
+            position: relative;
+            width: 2rem;
+            height: 2rem;
+            display: block;
+            left: 15px;
+        }
+        .not-liked {
+            color: $dark_grey;
+            &:hover {
+                color: $dark_background;
+                cursor: pointer;
+            }
+        }
+        .liked {
+            color: $toast_green;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
     .comment-editor {

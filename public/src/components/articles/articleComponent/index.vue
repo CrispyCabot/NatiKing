@@ -14,19 +14,43 @@
       <p>{{ date }}</p>
       <p>{{ numLikes }} like(s)</p>
       <br />
-      <span class="article-content" v-html="postInfo.description"></span>
-      <font-awesome-icon
-        v-if="!isLiked"
-        class="like-btn not-liked"
-        :icon="['fas', 'thumbs-up']"
-        @click="likePost"
-      ></font-awesome-icon>
-      <font-awesome-icon
-        v-if="isLiked"
-        class="like-btn liked"
-        :icon="['fas', 'thumbs-up']"
-        @click="unlikePost"
-      ></font-awesome-icon>
+      <div v-if="!isEditing">
+        <span class="article-content" v-html="postInfo.description"></span>
+        <div class="article-icons">
+          <div class="modify-icons">
+            <i
+              v-if="
+                getLoggedInUser.access_level >= 15 ||
+                  getLoggedInUser._id === postInfo.owner_id
+              "
+              class="fa fa-trash fa-lg delete-article"
+              @click="deleteArticlePrompt"
+            ></i>
+            <i
+              v-if="getLoggedInUser._id == postInfo.owner_id"
+              class="fas fa-edit fa-lg edit-article"
+              @click="editArticle"
+            ></i>
+          </div>
+          <font-awesome-icon
+            v-if="!isLiked"
+            class="like-btn not-liked"
+            :icon="['fas', 'thumbs-up']"
+            @click="likePost"
+          ></font-awesome-icon>
+          <font-awesome-icon
+            v-if="isLiked"
+            class="like-btn liked"
+            :icon="['fas', 'thumbs-up']"
+            @click="unlikePost"
+          ></font-awesome-icon>
+        </div>
+      </div>
+      <div v-if="isEditing">
+        <ArticleEditor v-model="newArticleContent" />
+        <button class="btn" @click="saveArticle">Save</button>
+        <button class="btn" @click="cancelEdit">Cancel</button>
+      </div>
     </div>
     <h3 v-if="postInfo.comments.length == 0">No Comments</h3>
     <h3 v-if="postInfo.comments.length != 0">Comments</h3>

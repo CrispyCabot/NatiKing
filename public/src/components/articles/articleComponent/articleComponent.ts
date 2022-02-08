@@ -3,6 +3,7 @@ import { mapGetters, mapMutations } from "vuex";
 import { mapActions } from "vuex";
 import CommentCard from "@/components/cards/comment-card/index.vue";
 import TextEditor from "@/components/editors/text-editor/index.vue";
+import ArticleEditor from "@/components/editors/article-editor/index.vue";
 import { TOAST_TYPES } from "@/utils/toastTypes";
 
 export default defineComponent({
@@ -16,6 +17,7 @@ export default defineComponent({
         tags: [],
         comments: [] as object[],
         date: Object(),
+        description: "",
       },
       authorName: "No Author Found",
       authorID: "",
@@ -23,17 +25,21 @@ export default defineComponent({
       numLikes: 0,
       commentContent: "",
       isLiked: false,
+      isEditing: false,
+      newArticleContent: "",
     };
   },
   components: {
     CommentCard,
     TextEditor,
+    ArticleEditor,
   },
   props: {
     postID: { type: String, default: () => "" },
   },
   async created() {
     this.postInfo = await this.fetchPostById(this.postID);
+    this.newArticleContent = this.postInfo.description;
     const writer = await this.fetchUserById(this.postInfo.owner_id);
     this.authorName = writer.name;
     if (this.postInfo.image_path != null) {
@@ -186,6 +192,37 @@ export default defineComponent({
           isShowing: true,
         });
       }
+    },
+    deleteArticlePrompt() {
+      if (confirm("Are you sure you want to delete this article?")) {
+        this.deleteArticle();
+      }
+    },
+    async deleteArticle() {},
+    editArticle() {
+      this.isEditing = true;
+    },
+    async saveArticle() {
+      this.postInfo.description = this.newArticleContent;
+      const res = await this.updatePost({
+        postId: this.postID,
+        updates: { description: this.postInfo.description },
+      });
+      if (res.status == 200) {
+        this.postInfo = await this.fetchPostById(this.postID);
+        this.isEditing = false;
+      } else {
+        this.updateGlobalToast({
+          message: "Something went wrong, couldn't save changes",
+          type: TOAST_TYPES.Error,
+          duration: 3000,
+          isShowing: true,
+        });
+      }
+    },
+    cancelEdit() {
+      this.isEditing = false;
+      this.newArticleContent = this.postInfo.description;
     },
   },
   watch: {
