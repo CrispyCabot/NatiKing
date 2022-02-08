@@ -22,9 +22,7 @@ export default defineComponent({
   async created() {
     this.authorName = (await this.fetchUserById(this.authorID)).name;
     this.updateCSS();
-    console.log(this.description);
     const imgSrcIndex = this.description.indexOf('src="');
-    console.log(imgSrcIndex);
     if (imgSrcIndex != -1) {
       let imgUrl = this.description.substring(imgSrcIndex + 5);
       imgUrl = imgUrl.substring(0, imgUrl.indexOf('"'));

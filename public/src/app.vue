@@ -21,8 +21,58 @@
     >
       <router-view />
     </div>
-
-    <inline-svg class="background-svg" :src="backgroundSvg"></inline-svg>
+    <div class="leaf">
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          height="75px"
+          width="75px"
+        />
+      </div>
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          height="75px"
+          width="75px"
+        />
+      </div>
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          height="75px"
+          width="75px"
+        />
+      </div>
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          height="75px"
+          width="75px"
+        />
+      </div>
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          height="75px"
+          width="75px"
+        />
+      </div>
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          height="75px"
+          width="75px"
+        />
+      </div>
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          height="75px"
+          width="75px"
+        />
+      </div>
+    </div>
+    <!-- <inline-svg class="background-svg" :src="backgroundSvg"></inline-svg> -->
     <span ref="footer_element">
       <CustomFooter
         :class="{ 'max-viewport-height-footer': isMaxViewportHeight }"

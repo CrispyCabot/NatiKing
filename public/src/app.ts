@@ -18,6 +18,8 @@ export default defineComponent({
       isMobileView: true,
       isMaxViewportHeight: true,
       backgroundSvg: require("@/assets/photon.svg"),
+      backgroundImg:
+        "https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png",
     };
   },
   async created() {
