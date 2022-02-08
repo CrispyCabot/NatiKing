@@ -3,7 +3,7 @@
     <div class="article-top">
       <img :src="require(`@/uploads/${imagePath}`)" />
       <h1>{{ postInfo.title }}</h1>
-      <h5 @click="redirect('/writers/' + postInfo.owner_id)">
+      <h5 @click="redirect('/users/' + postInfo.owner_id)">
         By: {{ authorName }}
       </h5>
       <div class="tags">

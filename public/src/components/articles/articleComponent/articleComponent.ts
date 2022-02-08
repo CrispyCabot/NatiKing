@@ -90,23 +90,27 @@ export default defineComponent({
       document.getElementsByTagName("head")[0].appendChild(style);
     },
     async likePost() {
-      this.postInfo.likes.push(this.getLoggedInUser._id);
-      const newLikes: string[] = this.postInfo.likes;
-      const res = await this.updatePost({
-        postId: this.postID,
-        updates: { likes: newLikes },
-      });
-      if (res.status == 200) {
-        this.isLiked = true;
-        this.numLikes += 1;
-        this.postInfo = await this.fetchPostById(this.postID);
-      } else {
-        this.updateGlobalToast({
-          message: "Couldn't like post",
-          type: TOAST_TYPES.Error,
-          duration: 3000,
-          isShowing: true,
+      if (this.getIsLoggedIn) {
+        this.postInfo.likes.push(this.getLoggedInUser._id);
+        const newLikes: string[] = this.postInfo.likes;
+        const res = await this.updatePost({
+          postId: this.postID,
+          updates: { likes: newLikes },
         });
+        if (res.status == 200) {
+          this.isLiked = true;
+          this.numLikes += 1;
+          this.postInfo = await this.fetchPostById(this.postID);
+        } else {
+          this.updateGlobalToast({
+            message: "Couldn't like post",
+            type: TOAST_TYPES.Error,
+            duration: 3000,
+            isShowing: true,
+          });
+        }
+      } else {
+        window.alert("You need to create an account to like posts!");
       }
     },
     async unlikePost() {
