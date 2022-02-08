@@ -1,7 +1,7 @@
 import { defineComponent } from "@vue/runtime-core";
 import { mapGetters } from "vuex";
 import { mapActions } from "vuex";
-import TextEditor from "@/components/text-editor/index.vue";
+import TextEditor from "@/components/editors/text-editor/index.vue";
 
 export default defineComponent({
   name: "comment-card",
