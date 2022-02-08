@@ -45,7 +45,7 @@ const routes: Array<RouteRecordRaw> = [
     component: Writers,
   },
   {
-    path: "/writers/:writerId",
+    path: "/users/:writerId",
     name: routeNames.Writer,
     component: Writer,
   },

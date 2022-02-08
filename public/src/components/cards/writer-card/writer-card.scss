@@ -9,6 +9,9 @@
     flex-direction: row;
     img {
         width: 7rem;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        margin-right: 10px;
     }
     .fab {
         margin: 5px;
@@ -23,9 +26,13 @@
         margin-bottom: auto;
         width: auto;
         h1 {
+            color: $dark_background;
             font-size: 18px;
             text-align: left;
             margin: 2px;
+            &:hover {
+                cursor: pointer;
+            }
         }
         p {
             font-size: 14px;

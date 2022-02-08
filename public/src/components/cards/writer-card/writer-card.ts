@@ -21,6 +21,7 @@ export default defineComponent({
       bio: "",
       socials: [{ url: "" }],
       socialsWithClass: [] as Object[],
+      imageSrc: require(`@/uploads/default.png`),
     };
   },
   props: {
@@ -29,8 +30,9 @@ export default defineComponent({
   async created() {
     this.updateCSS();
     this.writer = await this.fetchUserById(this.writerID);
-    this.imagePath =
-      this.writer.image_path != null ? this.writer.image_path : "default.png";
+    if (this.writer.image_path != "default.png") {
+      this.imageSrc = this.writer.image_path;
+    }
     this.name = this.writer.name != null ? this.writer.name : "No Name Found";
     this.bio = this.writer.bio != null ? this.writer.bio : "No bio found";
     this.socials = this.writer.socials != null ? this.writer.socials : [];
@@ -72,6 +74,9 @@ export default defineComponent({
         }
         .writer-card .fab:hover {
           color: ${darkerColor};
+        }
+        .writer-card .rhs h1:hover {
+          color: ${this.getPrimaryColor};
         }`;
       const style = document.createElement("style");
       style.appendChild(document.createTextNode(css));

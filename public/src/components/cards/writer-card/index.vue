@@ -1,8 +1,8 @@
 <template>
   <div class="writer-card">
-    <img :src="require(`@/uploads/${imagePath}`)" />
+    <img :src="imageSrc" />
     <div class="rhs">
-      <h1 @click="redirect('/writers/' + writerID)">{{ name }}</h1>
+      <h1 @click="redirect('/users/' + writerID)">{{ name }}</h1>
       <p>
         {{ bio }}
       </p>

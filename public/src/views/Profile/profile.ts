@@ -48,6 +48,13 @@ export default defineComponent({
           isRequired: false,
           type: "input",
         },
+        profilePicURL: {
+          value: "",
+          placeholder: "Profile picture image url...",
+          name: "profilePicURL",
+          isRequired: false,
+          type: "input",
+        },
         password: {
           value: "",
           placeholder: "New password",
@@ -63,6 +70,7 @@ export default defineComponent({
           type: "input",
         },
       },
+      imageSrc: require(`@/uploads/default.png`),
     };
   },
   computed: {
@@ -106,15 +114,20 @@ export default defineComponent({
       this.setupFieldsValues();
     },
     async saveSettings() {
+      const updates = {
+        name: this.fields.name.value,
+        email: this.fields.email.value,
+        bio: this.fields.bio.value,
+        password: this.fields.password.value,
+        confirm_password: this.fields.confirm.value,
+        image_path: "default.png",
+      };
+      if (this.fields.profilePicURL.value != "") {
+        updates.image_path = this.fields.profilePicURL.value;
+      }
       const res = await this.updateUserSettings({
         userId: this.getLoggedInUser._id,
-        updates: {
-          name: this.fields.name.value,
-          email: this.fields.email.value,
-          bio: this.fields.bio.value,
-          password: this.fields.password.value,
-          confirm_password: this.fields.confirm.value,
-        },
+        updates: updates,
       });
       this.updateGlobalToast({
         message: res.message,
@@ -141,6 +154,8 @@ export default defineComponent({
           this.fields.name.value = this.getLoggedInUser.name;
           this.fields.email.value = this.getLoggedInUser.email;
           this.fields.bio.value = this.getLoggedInUser.bio;
+          const val = this.getLoggedInUser.image_path;
+          this.fields.profilePicURL.value = val == "default.png" ? "" : val;
         });
       }
     },
@@ -213,6 +228,9 @@ export default defineComponent({
     getLoggedInUser() {
       if (this.fields) {
         this.setupFieldsValues();
+      }
+      if (this.getLoggedInUser.image_path != "default.png") {
+        this.imageSrc = this.getLoggedInUser.image_path;
       }
     },
   },

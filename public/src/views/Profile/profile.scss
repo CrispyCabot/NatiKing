@@ -19,6 +19,12 @@
         margin: 10px auto;
         padding: 10px 5px;
         border-radius: 10px;
+        img {
+            max-height: 15rem;
+            margin: 5px auto;
+            display: block;
+            border-radius: 15px;
+        }
         h3 {
             text-align: center;
         }

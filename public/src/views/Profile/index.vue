@@ -12,6 +12,7 @@
     <div v-if="getIsLoggedIn">
       <h1 class="site-title">Your Profile</h1>
       <div class="profile-info">
+        <img :src="imageSrc" />
         <h3>{{ name }}</h3>
         <p>{{ bio }}</p>
         <div class="socials">
@@ -58,6 +59,13 @@
           <button v-if="!isSettingsEditing" class="btn" @click="editSettings">
             Edit
           </button>
+          <p v-if="isSettingsEditing">
+            Use the green plus above to add social media accounts!
+          </p>
+          <p v-if="isSettingsEditing">
+            Tip: Copy the image address of your twitter account's profile
+            picture and paste it into the profile pic url above.
+          </p>
           <button v-if="isSettingsEditing" class="btn" @click="saveSettings">
             Save
           </button>
