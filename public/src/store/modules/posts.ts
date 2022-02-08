@@ -68,4 +68,18 @@ export const PostActions = {
         });
     });
   },
+  deletePost({ getters }: any, postId: String) {
+    const isUsingMockData = getters.getIsUsingMockData;
+    const route = isUsingMockData ? `/mock/posts/delete` : `/posts/delete`;
+    return new Promise((resolve, reject) => {
+      api
+        .post(route, { postId })
+        .then(({ data }) => {
+          resolve(data);
+        })
+        .catch((error) => {
+          reject(error);
+        });
+    });
+  },
 };

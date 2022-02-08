@@ -11,6 +11,7 @@ export default defineComponent({
   data() {
     return {
       postInfo: {
+        _id: "",
         owner_id: "",
         image_path: "",
         likes: [] as string[],
@@ -66,7 +67,12 @@ export default defineComponent({
     },
   },
   methods: {
-    ...mapActions(["fetchPostById", "fetchUserById", "updatePost"]),
+    ...mapActions([
+      "fetchPostById",
+      "fetchUserById",
+      "updatePost",
+      "deletePost",
+    ]),
     ...mapMutations(["updateGlobalToast"]),
     redirect(link: string) {
       this.$router.push(link);
@@ -198,7 +204,25 @@ export default defineComponent({
         this.deleteArticle();
       }
     },
-    async deleteArticle() {},
+    async deleteArticle() {
+      const res = await this.deletePost(this.postID);
+      if (res.status == 200) {
+        this.$router.push("/");
+        this.updateGlobalToast({
+          message: "Article Successfully Deleted",
+          type: TOAST_TYPES.Success,
+          duration: 3000,
+          isShowing: true,
+        });
+      } else {
+        this.updateGlobalToast({
+          message: "Something went wrong, couldn't delete Article",
+          type: TOAST_TYPES.Error,
+          duration: 3000,
+          isShowing: true,
+        });
+      }
+    },
     editArticle() {
       this.isEditing = true;
     },

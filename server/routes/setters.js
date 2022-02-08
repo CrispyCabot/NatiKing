@@ -146,4 +146,17 @@ router.route("/posts/create").post(async(req, res) => {
     });
 });
 
+router.route("/posts/delete").post(authChecker, async(req, res) => {
+    const { postId } = req.body;
+
+    const doesPostExist = await Posts.exists({ _id: postId });
+    if (!doesPostExist) {
+        res.json({ status: 400, message: "League does not exist" });
+    } else {
+        await Posts.deleteOne({ _id: postId });
+
+        res.json({ status: 200, message: "Article successfully deleted" });
+    }
+});
+
 module.exports = router;
