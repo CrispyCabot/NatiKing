@@ -2,7 +2,7 @@
   <div class="comment-card">
     <img class="comment-card_img" :src="imageSrc" />
     <div class="rhs">
-      <h5>{{ authorName }}</h5>
+      <h5 @click="redirect('/users/' + uid)">{{ authorName }}</h5>
       <span v-if="!isEditing" v-html="comment"></span>
       <div v-if="isEditing">
         <TextEditor class="comment-text" v-model="commentContent" />

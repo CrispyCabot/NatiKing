@@ -2,7 +2,7 @@
   <div class="writer">
     <h1 class="site-title">{{ name }}</h1>
     <div class="writer-content">
-      <img class="writer_pic" :src="require(`@/uploads/${imagePath}`)" />
+      <img class="writer_pic" :src="imageSrc" />
       <p>{{ bio }}</p>
       <div class="socials">
         <i

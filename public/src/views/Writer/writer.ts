@@ -24,6 +24,7 @@ export default defineComponent({
       name: "",
       bio: "",
       imagePath: "default.png",
+      imageSrc: require(`@/uploads/default.png`),
       socials: [{ url: "" }],
       socialsWithClass: [] as Object[],
     };
@@ -34,8 +35,10 @@ export default defineComponent({
     this.writer = await this.fetchUserById(this.writerID);
     this.name = this.writer.name != null ? this.writer.name : "No Name Found";
     this.bio = this.writer.bio != null ? this.writer.bio : "No Bio Found";
-    this.imagePath =
-      this.writer.image_path != null ? this.writer.image_path : "default.png";
+    this.imageSrc =
+      this.writer.image_path == "default.png"
+        ? this.imageSrc
+        : this.writer.image_path;
     this.socials = this.writer.socials != null ? this.writer.socials : [];
     this.socials.map((social) => {
       const url = social.url;

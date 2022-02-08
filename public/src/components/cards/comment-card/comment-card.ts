@@ -33,9 +33,15 @@ export default defineComponent({
       this.imageSrc = this.writer.image_path;
     }
     this.commentContent = this.comment;
+    this.updateCSS();
   },
   computed: {
-    ...mapGetters(["getIsLoggedIn", "getLogo", "getLoggedInUser"]),
+    ...mapGetters([
+      "getIsLoggedIn",
+      "getLogo",
+      "getLoggedInUser",
+      "getPrimaryColor",
+    ]),
   },
   methods: {
     ...mapActions(["fetchUserById", "updatePost"]),
@@ -51,6 +57,20 @@ export default defineComponent({
     },
     editComment() {
       this.isEditing = true;
+    },
+    updateCSS() {
+      const css = `
+        .comment-card .rhs h5:hover {
+          color: ${this.getPrimaryColor};
+        }`;
+      const style = document.createElement("style");
+      style.appendChild(document.createTextNode(css));
+      document.getElementsByTagName("head")[0].appendChild(style);
+    },
+  },
+  watch: {
+    getPrimaryColor() {
+      this.updateCSS();
     },
   },
 });
