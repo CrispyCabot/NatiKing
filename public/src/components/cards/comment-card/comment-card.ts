@@ -19,6 +19,7 @@ export default defineComponent({
       imagePath: "default.png",
       isEditing: false,
       commentContent: "",
+      imageSrc: require(`@/uploads/default.png`),
     };
   },
   props: {
@@ -28,8 +29,8 @@ export default defineComponent({
   async created() {
     this.writer = await this.fetchUserById(this.uid);
     this.authorName = this.writer.name;
-    if (this.writer.image_path != null) {
-      this.imagePath = this.writer.image_path;
+    if (this.writer.image_path != "default.png") {
+      this.imageSrc = this.writer.image_path;
     }
     this.commentContent = this.comment;
   },
