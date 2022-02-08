@@ -1,7 +1,7 @@
 <template>
   <div class="post-card">
     <div class="inner-post-card">
-      <img :src="require(`@/uploads/${imagePath}`)" />
+      <img :src="imageSrc" />
       <div class="rhs">
         <h1>{{ title }}</h1>
         <h5>

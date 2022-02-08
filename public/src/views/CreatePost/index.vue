@@ -2,7 +2,6 @@
   <div class="create-post">
     <div v-if="getLoggedInUser.access_level >= 10">
       <h1 class="site-title">Create a Post</h1>
-      <h4>Image upload here</h4>
       <div class="editor">
         <input v-model="title" placeholder="Enter a title..." />
         <ArticleEditor v-model="content" />

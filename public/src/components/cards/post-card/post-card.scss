@@ -58,8 +58,10 @@
         position: relative;
         transition: all 1s;
         img {
-            width: 25%;
+            max-width: 10rem;
             transition: all 1s;
+            border-right: 1px solid black;
+            margin-right: 10px;
         }
         .rhs {
             display: flex;

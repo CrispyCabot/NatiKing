@@ -9,6 +9,7 @@
       :tags="post.tags"
       :commentAmt="post.comments.length"
       :likeAmt="post.likes.length"
+      :description="post.description"
       @click="redirect('/articles/' + post._id)"
     />
     <div v-if="isLoading">
