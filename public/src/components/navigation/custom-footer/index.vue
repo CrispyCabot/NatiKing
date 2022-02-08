@@ -3,7 +3,7 @@
     <div class="footer-margin"></div>
     <div class="flex-container">
       <div class="logo">
-        <img :src="getLogo" />
+        <img :src="getInvertedLogo" />
       </div>
       <div class="rhs">
         <div class="links">

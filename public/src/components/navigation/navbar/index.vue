@@ -4,7 +4,7 @@
       <Hamburger :links="links" />
     </div>
     <div v-else class="navbar-container_desktop">
-      <img :src="getLogo" @click="redirect({ redirect: '/' })" />
+      <img :src="getInvertedLogo" @click="redirect({ redirect: '/' })" />
       <p
         v-for="link in links"
         :key="link.redirect"

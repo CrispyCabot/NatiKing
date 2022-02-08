@@ -1,5 +1,6 @@
 import state from "./state";
 const Logo = require("@/assets/nklogo.png");
+const InvertedLogo = require("@/assets/nklogo-inverted.png");
 
 export default {
   getIsLoggedIn(): Boolean {
@@ -37,6 +38,9 @@ export default {
   },
   getLogo(): any {
     return Logo;
+  },
+  getInvertedLogo(): any {
+    return InvertedLogo;
   },
   getIsUsingMockData(): Boolean {
     return state.isUsingMockData;

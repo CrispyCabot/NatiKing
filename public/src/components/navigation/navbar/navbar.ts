@@ -37,6 +37,7 @@ export default defineComponent({
       "getIsLoggedIn",
       "getLoggedInUser",
       "getLogo",
+      "getInvertedLogo",
       "getPrimaryColor",
     ]),
     notificationCount(): Number {
