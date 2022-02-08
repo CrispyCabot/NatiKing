@@ -5,12 +5,12 @@ import { TOAST_TYPES } from "@/utils/toastTypes";
 import { faThumbsDown } from "@fortawesome/free-solid-svg-icons";
 import { shadeColor } from "@/utils/globalFunctions";
 import LogoIcons from "@/utils/socialIcons";
-import TextEditor from "@/components/text-editor/index.vue";
+import ArticleEditor from "@/components/editors/article-editor/index.vue";
 
 export default defineComponent({
   name: "create-post",
   components: {
-    TextEditor,
+    ArticleEditor,
   },
   mixins: [PaginationMixin],
   data() {

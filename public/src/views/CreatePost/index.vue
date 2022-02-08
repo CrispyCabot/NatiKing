@@ -5,7 +5,7 @@
       <h4>Image upload here</h4>
       <div class="editor">
         <input v-model="title" placeholder="Title" />
-        <TextEditor v-model="content" />
+        <Article v-model="content" />
         <input
           v-model="tags"
           v-on:input="formatTags"

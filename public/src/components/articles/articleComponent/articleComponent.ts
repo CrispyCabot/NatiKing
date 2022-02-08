@@ -2,7 +2,7 @@ import { defineComponent } from "@vue/runtime-core";
 import { mapGetters, mapMutations } from "vuex";
 import { mapActions } from "vuex";
 import CommentCard from "@/components/cards/comment-card/index.vue";
-import TextEditor from "@/components/text-editor/index.vue";
+import TextEditor from "@/components/editors/text-editor/index.vue";
 import { TOAST_TYPES } from "@/utils/toastTypes";
 
 export default defineComponent({
