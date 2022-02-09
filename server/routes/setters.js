@@ -58,7 +58,7 @@ router.route("/users/create").post(async(req, res) => {
                 socials: [],
                 image_path: "default.png",
                 is_admin_user: false,
-                bio: "test bio",
+                bio: "No bio created",
                 access_level: 1,
                 token_version: 0,
             });
