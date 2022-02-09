@@ -2,15 +2,17 @@
   <div class="article-component">
     <div class="article-top">
       <img :src="require(`@/uploads/${imagePath}`)" />
-      <h1>{{ postInfo.title }}</h1>
+      <h1 v-if="!isEditing">{{ postInfo.title }}</h1>
+      <input v-if="isEditing" class="default-input" v-model="titleInput" />
       <h5 @click="redirect('/users/' + postInfo.owner_id)">
         By: {{ authorName }}
       </h5>
-      <div class="tags">
+      <div v-if="!isEditing" class="tags">
         <p v-for="tag in postInfo.tags" :key="tag.name">
           {{ tag }}
         </p>
       </div>
+      <TagInput v-if="isEditing" v-model="tagsArray" />
       <p>{{ date }}</p>
       <p>{{ numLikes }} like(s)</p>
       <br />

@@ -231,6 +231,9 @@ body {
     &:focus {
         border: 1px solid $accent_light_red;
     }
+    &:disabled {
+        background-color: $dark_grey;
+    }
 }
 
 // Extra small devices (portrait phones, less than 576px)

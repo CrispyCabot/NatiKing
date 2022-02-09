@@ -4,6 +4,7 @@ import { mapActions } from "vuex";
 import CommentCard from "@/components/cards/comment-card/index.vue";
 import TextEditor from "@/components/editors/text-editor/index.vue";
 import ArticleEditor from "@/components/editors/article-editor/index.vue";
+import TagInput from "@/components/inputs/tag-input/index.vue";
 import { TOAST_TYPES } from "@/utils/toastTypes";
 
 export default defineComponent({
@@ -16,6 +17,7 @@ export default defineComponent({
         image_path: "",
         likes: [] as string[],
         tags: [],
+        title: "",
         comments: [] as object[],
         date: Object(),
         description: "",
@@ -28,19 +30,23 @@ export default defineComponent({
       isLiked: false,
       isEditing: false,
       newArticleContent: "",
+      titleInput: "",
+      tagsInput: [],
+      tagsArray: [] as string[],
     };
   },
   components: {
     CommentCard,
     TextEditor,
     ArticleEditor,
+    TagInput,
   },
   props: {
     postID: { type: String, default: () => "" },
   },
   async created() {
     this.postInfo = await this.fetchPostById(this.postID);
-    this.newArticleContent = this.postInfo.description;
+    this.setupFieldValues();
     const writer = await this.fetchUserById(this.postInfo.owner_id);
     this.authorName = writer.name;
     if (this.postInfo.image_path != null) {
@@ -76,6 +82,11 @@ export default defineComponent({
     ...mapMutations(["updateGlobalToast"]),
     redirect(link: string) {
       this.$router.push(link);
+    },
+    setupFieldValues() {
+      this.newArticleContent = this.postInfo.description;
+      this.titleInput = this.postInfo.title;
+      this.tagsArray = JSON.parse(JSON.stringify(this.postInfo.tags));
     },
     updateCSS() {
       const css = `
@@ -234,7 +245,11 @@ export default defineComponent({
       this.postInfo.description = this.newArticleContent;
       const res = await this.updatePost({
         postId: this.postID,
-        updates: { description: this.postInfo.description },
+        updates: {
+          description: this.postInfo.description,
+          title: this.titleInput,
+          tags: this.tagsArray,
+        },
       });
       if (res.status == 200) {
         this.postInfo = await this.fetchPostById(this.postID);

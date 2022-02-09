@@ -6,24 +6,23 @@ import { faThumbsDown } from "@fortawesome/free-solid-svg-icons";
 import { shadeColor } from "@/utils/globalFunctions";
 import LogoIcons from "@/utils/socialIcons";
 import ArticleEditor from "@/components/editors/article-editor/index.vue";
+import TagInput from "@/components/inputs/tag-input/index.vue";
 
 export default defineComponent({
   name: "create-post",
   components: {
     ArticleEditor,
+    TagInput,
   },
   mixins: [PaginationMixin],
   data() {
     return {
       content: "Enter some text here...",
-      tags: "",
       tagsArray: [] as string[],
       title: "",
     };
   },
-  async created() {
-    this.updateCSS();
-  },
+  async created() {},
   computed: {
     ...mapGetters(["getIsLoggedIn", "getLoggedInUser", "getPrimaryColor"]),
   },
@@ -35,27 +34,6 @@ export default defineComponent({
       "createNewPost",
     ]),
     ...mapMutations(["updateGlobalToast"]),
-    formatTags() {
-      if (
-        (this.tags.includes(" ") || this.tags.includes(",")) &&
-        this.tags.length > 1
-      ) {
-        this.tagsArray.push(this.tags.trim());
-        this.tags = "";
-      }
-    },
-    removeTag(tag: string) {
-      this.tagsArray = this.tagsArray.filter((e) => e != tag);
-    },
-    updateCSS() {
-      const css = `
-      .create-post .tags .tag p {
-        background-color: ${this.getPrimaryColor};
-      }`;
-      const style = document.createElement("style");
-      style.appendChild(document.createTextNode(css));
-      document.getElementsByTagName("head")[0].appendChild(style);
-    },
     redirect(link: string) {
       if (link == "top") {
         window.scrollTo({ left: 0, top: 0, behavior: "smooth" });
@@ -90,11 +68,6 @@ export default defineComponent({
           isShowing: true,
         });
       }
-    },
-  },
-  watch: {
-    getPrimaryColor() {
-      this.updateCSS();
     },
   },
 });

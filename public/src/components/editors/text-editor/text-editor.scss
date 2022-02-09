@@ -9,6 +9,11 @@
     .ProseMirror-trailingBreak {
         outline: none;
     }
+    .ProseMirror {
+        &:focus {
+            outline: none;
+        }
+    }
     .bubble-menu {
         position: relative;
         top: 5rem;

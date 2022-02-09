@@ -96,6 +96,9 @@ export default defineComponent({
     this.setIsMobileView();
     this.userID = this.getLoggedInUser._id;
     this.setupFieldsValues();
+    if (this.getLoggedInUser.image_path != "default.png") {
+      this.imageSrc = this.getLoggedInUser.image_path;
+    }
   },
   mounted() {
     this.setupFieldsValues();
