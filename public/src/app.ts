@@ -23,6 +23,7 @@ export default defineComponent({
     };
   },
   async created() {
+    this.updateCSS();
     await this.retrieveRefreshToken()
       .then((res) => {
         if (res.ok) {

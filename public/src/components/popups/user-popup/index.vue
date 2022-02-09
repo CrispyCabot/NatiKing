@@ -31,6 +31,17 @@
           ></font-awesome-icon>
           <p>Create Post</p>
         </div>
+        <div
+          v-if="getLoggedInUser.access_level >= 20"
+          class="link"
+          @click="redirectLink('/admin')"
+        >
+          <font-awesome-icon
+            class="icon"
+            :icon="['fas', 'lock-open']"
+          ></font-awesome-icon>
+          <p>Admin Panel</p>
+        </div>
         <div class="link" @click="redirectLink('/logout')">
           <font-awesome-icon
             class="icon"

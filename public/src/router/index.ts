@@ -12,6 +12,7 @@ import CreatePost from "../views/CreatePost/index.vue";
 import Contact from "../views/Contact/index.vue";
 import Shop from "../views/Shop/index.vue";
 import RequestAccess from "../views/RequestAccess/index.vue";
+import Admin from "../views/Admin/index.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -73,6 +74,11 @@ const routes: Array<RouteRecordRaw> = [
     path: "/request-access",
     name: routeNames.RequestAccess,
     component: RequestAccess,
+  },
+  {
+    path: "/admin",
+    name: routeNames.Admin,
+    component: Admin,
   },
   // Catch All Routes
   {

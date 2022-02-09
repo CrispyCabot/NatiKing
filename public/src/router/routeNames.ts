@@ -12,4 +12,5 @@ export default {
   Shop: "shop",
   About: "about",
   RequestAccess: "request-access",
+  Admin: "admin",
 };

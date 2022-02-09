@@ -5,6 +5,39 @@ const authChecker = require("./utils/auth-checker");
 const Users = require("../models/user-model");
 const Posts = require("../models/post-model");
 
+//Settings getters
+const Settings = require("../models/settings-model");
+router.route("/colors").put(authChecker, async(req, res) => {
+    const { newColors } = req.body;
+    let valid = true;
+    const hexReg = /^#([0-9a-f]{3}){1,2}$/i;
+    // newColors.map((color) => {
+    //     if (!hexReg.test(color)) {
+    //         valid = false;
+    //     }
+    // });
+    const keys = Object.keys(newColors);
+    keys.map((key, index) => {
+        if (!hexReg.test(newColors[key])) {
+            valid = false;
+        }
+    });
+    if (!valid) {
+        res.send({
+            status: 400,
+            message: "Invalid hex code. Enter a valid hex code for the color",
+        });
+    } else {
+        await Settings.findOneAndUpdate({}, {...newColors });
+        res.send({
+            status: 200,
+            message: "Colors successfully updated",
+            colors: newColors,
+        });
+    }
+});
+
+//User getters
 router.route("/users/update-profile").put(authChecker, async(req, res) => {
     const { userId, updates } = req.body;
     const preUpdatePlayer = await Users.findOne({ _id: userId });
@@ -155,7 +188,7 @@ router.route("/posts/update-post").put(authChecker, async(req, res) => {
 router.route("/posts/like-post").put(authChecker, async(req, res) => {
     const { postId, userId } = req.body;
 
-    const preUpdatePost = Posts.findOne({ _id: postId });
+    let updatedPost = false;
 
     await Posts.findOneAndUpdate({ _id: postId }, {...updates });
     updatedPost = await Posts.findOne({ _id: userId });

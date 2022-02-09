@@ -19,6 +19,7 @@ export default defineComponent({
   },
   created() {
     this.setIsMobileView();
+    this.updateCSS();
     window.addEventListener("resize", this.setIsMobileView);
   },
   updated() {
@@ -64,12 +65,7 @@ export default defineComponent({
     redirect(link: any) {
       this.$router.push(link.redirect);
     },
-  },
-  unmounted() {
-    window.removeEventListener("resize", this.setIsMobileView);
-  },
-  watch: {
-    getPrimaryColor() {
+    updateCSS() {
       const css = `
     .navbar-container_desktop p {
       color: ${this.getPrimaryColor};
@@ -80,6 +76,14 @@ export default defineComponent({
       const style = document.createElement("style");
       style.appendChild(document.createTextNode(css));
       document.getElementsByTagName("head")[0].appendChild(style);
+    },
+  },
+  unmounted() {
+    window.removeEventListener("resize", this.setIsMobileView);
+  },
+  watch: {
+    getPrimaryColor() {
+      this.updateCSS();
     },
   },
 });

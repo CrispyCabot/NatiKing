@@ -16,6 +16,9 @@ export default defineComponent({
       "getInvertedLogo",
     ]),
   },
+  created() {
+    this.updateCSS();
+  },
   methods: {
     redirect(link: string) {
       if (link == "top") {
@@ -42,9 +45,7 @@ export default defineComponent({
       }
       window.open(link, "_blank");
     },
-  },
-  watch: {
-    getPrimaryColor() {
+    updateCSS() {
       const css = `
       .footer-container .flex-container {
       background-color: ${this.getPrimaryColor};
@@ -52,6 +53,11 @@ export default defineComponent({
       const style = document.createElement("style");
       style.appendChild(document.createTextNode(css));
       document.getElementsByTagName("head")[0].appendChild(style);
+    },
+  },
+  watch: {
+    getPrimaryColor() {
+      this.updateCSS();
     },
   },
 });
