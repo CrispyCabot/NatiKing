@@ -208,6 +208,12 @@
       >
       </i>
       <i
+        title="Insert IFrame/Video"
+        class="fas fa-video fa-lg editor-icon"
+        @click="addIframe"
+      >
+      </i>
+      <i
         class="fas fa-arrow-left editor-icon"
         title="Undo"
         @click="
@@ -252,6 +258,7 @@ import TextAlign from "@tiptap/extension-text-align";
 import BlockQuote from "@tiptap/extension-blockquote";
 import HorizontalRule from "@tiptap/extension-horizontal-rule";
 import Image from "@tiptap/extension-image";
+import Iframe from "./iframe";
 
 export default {
   components: {
@@ -306,6 +313,7 @@ export default {
           },
           inline: true,
         }),
+        Iframe,
       ],
       onUpdate: () => {
         // HTML
@@ -328,6 +336,21 @@ export default {
           .chain()
           .focus()
           .setImage({ src: url })
+          .run();
+      }
+    },
+    addIframe() {
+      const url = window.prompt(
+        `Enter the video url. Note for YouTube, you must change the 'watch' to 
+        'embed' and remove any special characters. For example, https://www.youtube.com/watch?v=rX1eg76Y0pc 
+        needs to become https://www.youtube.com/embed/rX1eg76Y0pc.`
+      );
+
+      if (url) {
+        this.editor
+          .chain()
+          .focus()
+          .setIframe({ src: url })
           .run();
       }
     },
