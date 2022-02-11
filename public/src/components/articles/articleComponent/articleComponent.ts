@@ -57,6 +57,14 @@ export default defineComponent({
     }
     this.isLiked = this.postInfo.likes.includes(this.getLoggedInUser._id);
     this.updateCSS();
+    // <meta name="twitter:card" content="summary" />
+    // <meta name="twitter:url" content="https://natiking.com" />
+    // <meta name="twitter:title" content="Nati King | Home" />
+    // <meta name="twitter:description" content="View the latest posts" />
+    // <meta name="twitter:image" content="https://natiking.com/img/default.9d5bda9c.png" />
+    document
+      .querySelector("meta[twitter:title]")
+      ?.setAttribute("content", this.postInfo.title);
   },
   computed: {
     ...mapGetters([
