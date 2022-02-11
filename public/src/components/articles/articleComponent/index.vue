@@ -1,6 +1,6 @@
 <template>
-  <div class="article-component">
-    <div class="article-top">
+  <div class="default-width article-component">
+    <div class="default-card article-top">
       <img :src="require(`@/uploads/${imagePath}`)" />
       <h1 v-if="!isEditing">{{ postInfo.title }}</h1>
       <input v-if="isEditing" class="default-input" v-model="titleInput" />

@@ -1,5 +1,5 @@
 <template>
-  <div class="comment-card">
+  <div class="default-card comment-card">
     <img class="comment-card_img" :src="imageSrc" />
     <div class="rhs">
       <h5 @click="redirect('/users/' + uid)">{{ authorName }}</h5>

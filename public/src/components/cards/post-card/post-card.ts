@@ -47,13 +47,10 @@ export default defineComponent({
     },
     updateCSS() {
       const css = `
-      .post-card .inner-post-card .rhs .tags p {
+      .post-card .rhs .tags p {
         background-color: ${this.getPrimaryColor};
       }
-      .post-card .inner-post-card::before {
-        background-color: ${this.getPrimaryColor};
-      }
-      .post-card .inner-post-card:hover .rhs {
+      .post-card:hover .rhs {
         background-color: ${this.getPrimaryColor};
         box-shadow: 0px 0px 100px ${this.getPrimaryColor};
       }`;

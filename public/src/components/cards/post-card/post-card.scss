@@ -1,105 +1,59 @@
 .post-card {
-    margin: auto;
-    .inner-post-card {
-        // &::before {
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     width: 200%;
-        //     height: 100%;
-        //     background-color: $accent_red;
-        //     transform: translateX(-120%) translateY(-150%);
-        //     opacity: 90%;
-        //     transition: all 0.5s;
-        // }
-        // &:hover::before {
-        //     transform: rotate(15deg) skew(-45deg) translateX(-10%) translateY(0);
-        // }
-        &:hover .rhs {
-            transform: scale(1.2);
-            font-style: italic;
-            color: $off_white;
-            background-color: $accent_red;
-            padding: 10px;
-            border-radius: 10px;
-            .tags {
-                p {
-                    background-color: $dark_background;
-                }
-            }
-        }
-        // &:hover h1::before,
-        // &:hover h5::before {
-        //     transform: skew(-45deg) translateX(-10%);
-        //     color: $off_white;
-        // }
-        // h1::before {
-        //     content: "";
-        //     position: absolute;
-        //     top: 0;
-        //     right: 0;
-        //     width: 110%;
-        //     height: 100%;
-        //     background-color: $dark_background;
-        //     transform: translateX(150%);
-        //     opacity: 100%;
-        //     transition: all 0.5s;
-        //     z-index: -1;
-        // }
-        &:hover {
-            cursor: pointer;
-            background-color: $dark_grey;
-        }
-        overflow: initial;
-        background: $off_white;
-        width: 95%;
-        margin: auto;
+    &:hover .rhs {
+        transform: scale(1.2);
+        font-style: italic;
+        color: $off_white;
+        background-color: $accent_red;
+        padding: 10px;
         border-radius: 10px;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        display: flex;
-        flex-direction: row;
-        position: relative;
-        transition: all 1s;
-        img {
-            max-width: 10rem;
-            transition: all 1s;
-            border-right: 1px solid black;
-            margin-right: 10px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
+        .tags {
+            p {
+                background-color: $dark_background;
+            }
         }
-        .rhs {
-            display: flex;
-            flex-direction: column;
-            margin-top: auto;
-            margin-bottom: auto;
-            width: 75%;
-            h1 {
-                transition: all 1s;
-                font-size: 18px;
-                text-align: left;
-                margin: 2px;
-            }
-            h5 {
-                transition: all 1s;
-                font-size: 12px;
-                text-align: left;
-                margin: 2px;
-            }
-            .tags {
-                transition: all 1s;
-                text-align: left;
-                p {
-                    display: inline-block;
-                    padding: 5px 12px;
-                    margin-right: 5px;
-                    border-radius: 20px;
-                    background: $accent_red;
-                    color: $off_white;
-                    margin-bottom: 5px;
-                }
+    }
+    &:hover {
+        cursor: pointer;
+        background-color: $dark_grey;
+    }
+    img {
+        width: 100%;
+        transition: all 1s;
+        border-bottom: 1px solid black;
+        margin-right: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    .rhs {
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 75%;
+        h1 {
+            transition: all 1s;
+            font-size: 18px;
+            text-align: left;
+            margin: 2px;
+        }
+        h5 {
+            transition: all 1s;
+            font-size: 12px;
+            text-align: left;
+            margin: 2px;
+        }
+        .tags {
+            transition: all 1s;
+            text-align: left;
+            p {
+                display: inline-block;
+                padding: 5px 12px;
+                margin-right: 5px;
+                border-radius: 20px;
+                background: $accent_red;
+                color: $off_white;
+                margin-bottom: 5px;
             }
         }
     }
@@ -108,7 +62,18 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     .post-card {
-        width: 85%;
+        img {
+            max-width: 10rem;
+            transition: all 1s;
+            border-right: 1px solid black;
+            border-bottom: none;
+            border-top-right-radius: 0;
+            margin-right: 10px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+        display: flex;
+        flex-direction: row;
         .rhs {
             h1 {
                 font-size: 20px;
@@ -120,7 +85,6 @@
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
     .post-card {
-        width: 75%;
         .rhs {
             h1 {
                 font-size: 24px;
@@ -132,7 +96,6 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     .post-card {
-        width: 55%;
         .rhs {
             h1 {
                 font-size: 24px;
@@ -144,7 +107,6 @@
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
     .post-card {
-        width: 45%;
         .rhs {
             h1 {
                 font-size: 24px;

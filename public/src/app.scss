@@ -237,28 +237,48 @@ body {
     }
 }
 
+.default-card {
+    margin: auto;
+    background: $off_white;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    transition: all 1s;
+}
+
+.default-width {
+    width: 95%;
+}
+
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+    .default-width {
+        width: 85%;
+    }
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-    .white_card_background {
-        width: 80%;
-    }
     .default-input {
         max-width: 25rem;
+    }
+    .default-width {
+        width: 80%;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-    .white_card_background {
-        padding: 2rem 1rem;
-        max-width: 60rem;
+    .default-width {
+        width: 75%;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    .default-width {
+        width: 70%;
+    }
+}
