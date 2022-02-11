@@ -239,6 +239,7 @@
         :disabled="!editor.can().redo()"
       >
       </i>
+      <p>To create blank spaces, use SHIFT + ENTER - NOT JUST ENTER</p>
     </div>
 
     <editor-content class="editor-content" :editor="editor" />
