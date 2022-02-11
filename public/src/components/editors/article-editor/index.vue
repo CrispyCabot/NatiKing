@@ -259,6 +259,7 @@ import TextAlign from "@tiptap/extension-text-align";
 import BlockQuote from "@tiptap/extension-blockquote";
 import HorizontalRule from "@tiptap/extension-horizontal-rule";
 import Image from "@tiptap/extension-image";
+import Link from "@tiptap/extension-link";
 import Iframe from "./iframe";
 
 export default {
@@ -315,6 +316,11 @@ export default {
           inline: true,
         }),
         Iframe,
+        Link.configure({
+          HTMLAttributes: {
+            class: "article-editor-link",
+          },
+        }),
       ],
       onUpdate: () => {
         // HTML

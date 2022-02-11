@@ -222,6 +222,14 @@ body {
     text-align: center;
 }
 
+.article-editor-link {
+    color: $accent_red;
+    &:hover {
+        cursor: pointer;
+        color: $accent_light_red;
+    }
+}
+
 .default-input {
     padding: 0.5rem 0.5rem;
     color: $dark_background;

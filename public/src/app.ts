@@ -93,7 +93,14 @@ export default defineComponent({
       }
       .btn::before {
         background-color: ${darkerColor}
-      }`;
+      }
+      .article-editor-link {
+        color: ${this.getPrimaryColor};
+      }
+      .article-editor-link:hover {
+            cursor: pointer;
+            color: ${darkerColor};
+        }`;
       const style = document.createElement("style");
       style.appendChild(document.createTextNode(css));
       document.getElementsByTagName("head")[0].appendChild(style);

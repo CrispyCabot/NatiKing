@@ -21,7 +21,7 @@
     >
       <router-view />
     </div>
-    <div v-if="!isMobileView" class="leaf">
+    <div class="leaf">
       <div>
         <img
           src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
