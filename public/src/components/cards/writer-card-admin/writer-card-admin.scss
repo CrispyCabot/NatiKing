@@ -1,0 +1,103 @@
+.writer-card-container {
+    .writer-card-admin {
+        background: $off_white;
+        width: 95%;
+        margin: auto;
+        border-radius: 10px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        display: flex;
+        flex-direction: row;
+        img {
+            width: 7rem;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            margin-right: 10px;
+            border-right: 1px solid $dark_background;
+        }
+        .fab {
+            margin: 5px;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .rhs {
+            display: flex;
+            flex-direction: column;
+            margin-top: auto;
+            margin-bottom: auto;
+            width: auto;
+            h1 {
+                color: $dark_background;
+                font-size: 18px;
+                text-align: left;
+                margin: 2px;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            p {
+                font-size: 14px;
+                text-align: left;
+                margin: 2px;
+            }
+            img {
+                width: 10%;
+            }
+            .socials {
+                text-align: left;
+            }
+        }
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    .writer-card {
+        width: 85%;
+        img {
+            width: 8rem;
+        }
+        .rhs {
+            h1 {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .writer-card {
+        width: 75%;
+        .rhs {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    .writer-card {
+        width: 55%;
+        .rhs {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    .writer-card {
+        width: 45%;
+        .rhs {
+            h1 {
+                font-size: 24px;
+            }
+        }
+    }
+}

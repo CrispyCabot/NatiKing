@@ -1,9 +1,5 @@
 .admin {
     .site-settings {
-        background-color: $off_white;
-        width: 95%;
-        margin: 10px auto;
-        border-radius: 10px;
         padding: 10px;
         p {
             margin: 0 0 5px 0;
@@ -19,6 +15,22 @@
             display: inline-block;
             margin: 10px 0px;
             margin-right: 5px;
+        }
+    }
+    .access-level-info {
+        padding: 10px;
+        p {
+            margin: 10px 0;
+        }
+    }
+    .access-levels {
+        margin: 20px auto;
+        background: $dark_background;
+        border-radius: 10px;
+        padding: 10px;
+        input {
+            display: block;
+            margin: 0 auto;
         }
     }
 }

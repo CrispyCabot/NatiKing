@@ -32,7 +32,7 @@
           <p>Create Post</p>
         </div>
         <div
-          v-if="getLoggedInUser.access_level >= 20"
+          v-if="getLoggedInUser.access_level >= 30"
           class="link"
           @click="redirectLink('/admin')"
         >

@@ -1,6 +1,6 @@
 import { defineComponent } from "@vue/runtime-core";
 import ContentDropdown from "@/components/dropdowns/content-dropdown/index.vue";
-import PaginationMixin from "@/mixins/pagination-mixin";
+import WriterCard from "@/components/cards/writer-card-admin/index.vue";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 import { TOAST_TYPES } from "@/utils/toastTypes";
 
@@ -8,11 +8,12 @@ export default defineComponent({
   name: "profile",
   components: {
     ContentDropdown,
+    WriterCard,
   },
-  mixins: [PaginationMixin],
   data() {
     return {
       isEditing: false,
+      isAccessEditing: false,
       fields: {
         primaryColor: {
           value: "",
@@ -22,21 +23,24 @@ export default defineComponent({
           type: "input",
         },
       },
+      users: [],
     };
   },
   computed: {
     ...mapGetters(["getIsLoggedIn", "getLoggedInUser", "getPrimaryColor"]),
   },
-  async created() {},
+  async created() {
+    this.users = await this.fetchUsers();
+  },
   mounted() {
-    if (this.getLoggedInUser.access_level < 20) {
+    if (this.getLoggedInUser.access_level < 30) {
       //If no access, redirect to 404 page
       this.redirect("alksjdf");
     }
     this.setupFieldValues();
   },
   methods: {
-    ...mapActions(["updateColors"]),
+    ...mapActions(["updateColors", "fetchUsers"]),
     ...mapMutations(["updateGlobalToast"]),
     redirect(link: string) {
       if (link == "top") {
@@ -52,7 +56,6 @@ export default defineComponent({
       this.isEditing = true;
     },
     async saveSettings() {
-      //TODO: Verify color is hexcode
       const colors = {
         primaryColor: this.fields.primaryColor.value,
       };

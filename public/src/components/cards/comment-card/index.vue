@@ -11,7 +11,7 @@
     </div>
     <div class="comment-icons">
       <i
-        v-if="getLoggedInUser.access_level >= 15 || getLoggedInUser._id === uid"
+        v-if="getLoggedInUser.access_level >= 20 || getLoggedInUser._id === uid"
         class="fa fa-trash fa-lg comment-icon delete"
         @click="deleteComment"
       ></i>

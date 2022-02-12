@@ -22,7 +22,7 @@
           <div class="modify-icons">
             <i
               v-if="
-                getLoggedInUser.access_level >= 15 ||
+                getLoggedInUser.access_level >= 20 ||
                   getLoggedInUser._id === postInfo.owner_id
               "
               class="fa fa-trash fa-lg delete-article"
@@ -64,7 +64,10 @@
       @deleted="deleteComment(comment._id)"
       @edit="updateComment(comment._id, $event)"
     />
-    <div v-if="getIsLoggedIn" class="comment-editor">
+    <div
+      v-if="getIsLoggedIn && getLoggedInUser.access_level >= 1"
+      class="comment-editor"
+    >
       <h5>Enter a comment below</h5>
       <TextEditor v-model="commentContent" />
       <button @click="postComment" class="btn">Post</button>

@@ -21,7 +21,7 @@ router.route("/users").get((req, res) => {
             return;
         }
         res.json(response);
-    });
+    }).sort({ access_level: -1 });
 });
 router.route("/users/:id").get((req, res) => {
     const { id } = req.params;

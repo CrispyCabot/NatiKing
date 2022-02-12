@@ -1,8 +1,9 @@
 import { defineComponent } from "@vue/runtime-core";
-import { mapGetters } from "vuex";
+import { mapGetters, mapMutations } from "vuex";
 import { mapActions } from "vuex";
 import { getLogoSrc, redirectExternal } from "@/utils/globalFunctions";
 import { shadeColor } from "@/utils/globalFunctions";
+import { TOAST_TYPES } from "@/utils/toastTypes";
 
 export default defineComponent({
   name: "writer-card",
@@ -15,6 +16,7 @@ export default defineComponent({
         name: "",
         bio: "",
         socials: [],
+        access_level: 1,
       },
       imagePath: "default.png",
       name: "",
@@ -22,6 +24,8 @@ export default defineComponent({
       socials: [{ url: "" }],
       socialsWithClass: [] as Object[],
       imageSrc: require(`@/uploads/default.png`),
+      isAccessEditing: false,
+      newAccessLevel: 1,
     };
   },
   props: {
@@ -30,6 +34,7 @@ export default defineComponent({
   async created() {
     this.updateCSS();
     this.writer = await this.fetchUserById(this.writerID);
+    this.newAccessLevel = this.writer.access_level;
     if (this.writer.image_path != "default.png") {
       this.imageSrc = this.writer.image_path;
     }
@@ -55,7 +60,8 @@ export default defineComponent({
     ...mapGetters(["getIsLoggedIn", "getLogo", "getPrimaryColor"]),
   },
   methods: {
-    ...mapActions(["fetchUserById"]),
+    ...mapActions(["fetchUserById", "updateUserSettings"]),
+    ...mapMutations(["updateGlobalToast"]),
     getLogoSrc(url: string) {
       return getLogoSrc(url);
     },
@@ -68,18 +74,45 @@ export default defineComponent({
     updateCSS() {
       const darkerColor = shadeColor(this.getPrimaryColor, 0.8);
       const css = `
-        .writer-card .fab {
+        .writer-card-container .writer-card-admin .fab {
           color: ${this.getPrimaryColor};
         }
-        .writer-card .fab:hover {
+        .writer-card-container .writer-card-admin .fab:hover {
           color: ${darkerColor};
         }
-        .writer-card .rhs h1:hover {
+        .writer-card-container .writer-card-admin .rhs h1:hover {
           color: ${this.getPrimaryColor};
         }`;
       const style = document.createElement("style");
       style.appendChild(document.createTextNode(css));
       document.getElementsByTagName("head")[0].appendChild(style);
+    },
+    editAccess() {
+      this.isAccessEditing = true;
+    },
+    async saveAccess() {
+      const updates = {
+        access_level: this.newAccessLevel,
+      };
+      const res = await this.updateUserSettings({
+        userId: this.writer._id,
+        updates: updates,
+      });
+      this.updateGlobalToast({
+        message: res.message,
+        type:
+          res.status == 400
+            ? TOAST_TYPES.Error
+            : res.status == 403
+            ? TOAST_TYPES.Warning
+            : TOAST_TYPES.Success,
+        duration: 5000,
+        isShowing: true,
+      });
+      this.isAccessEditing = false;
+    },
+    async cancelAccess() {
+      this.isAccessEditing = false;
     },
   },
   watch: {
