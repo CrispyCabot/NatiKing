@@ -230,6 +230,11 @@ body {
     }
 }
 
+.article-editor-img {
+    max-width: 100%;
+    border-radius: 15px;
+}
+
 .default-input {
     padding: 0.5rem 0.5rem;
     color: $dark_background;

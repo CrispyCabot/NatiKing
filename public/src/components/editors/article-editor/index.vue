@@ -311,7 +311,7 @@ export default {
         }),
         Image.configure({
           HTMLAttributes: {
-            class: "img",
+            class: "article-editor-img",
           },
           inline: true,
         }),
