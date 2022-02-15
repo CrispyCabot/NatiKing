@@ -86,7 +86,7 @@ export default defineComponent({
         if (document.querySelector("title") == null) {
           this.isMounted = true;
         }
-      }, 500);
+      }, 2000);
     },
     closingGlobalToast() {
       if (this.getGlobalToastIsShowing) {

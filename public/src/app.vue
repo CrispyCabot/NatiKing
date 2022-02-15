@@ -2,6 +2,9 @@
   <div class="app-container">
     <Teleport v-if="isMounted" to="head">
       <title>Nati King</title>
+      <meta name="twitter:url" content="https://natiking.com" />
+      <meta name="twitter:title" content="Nati King | Home" />
+      <meta name="twitter:description" content="View the latest posts" />
     </Teleport>
     <div v-if="getGlobalToastIsShowing" class="global-toast">
       <Toast
