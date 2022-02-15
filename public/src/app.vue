@@ -1,5 +1,8 @@
 <template>
   <div class="app-container">
+    <Teleport v-if="isMounted" to="head">
+      <title>Nati King</title>
+    </Teleport>
     <div v-if="getGlobalToastIsShowing" class="global-toast">
       <Toast
         :message="getGlobalToastMessage"
