@@ -1,21 +1,4 @@
 .post-card {
-    &:hover .rhs {
-        transform: scale(1.2);
-        font-style: italic;
-        color: $off_white;
-        background-color: $accent_red;
-        padding: 10px;
-        border-radius: 10px;
-        .tags {
-            p {
-                background-color: $dark_background;
-            }
-        }
-    }
-    &:hover {
-        cursor: pointer;
-        background-color: $dark_grey;
-    }
     img {
         width: 100%;
         transition: all 1s;
@@ -62,6 +45,23 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     .post-card {
+        &:hover .rhs {
+            transform: scale(1.2);
+            font-style: italic;
+            color: $off_white;
+            background-color: $accent_red;
+            padding: 10px;
+            border-radius: 10px;
+            .tags {
+                p {
+                    background-color: $dark_background;
+                }
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: $dark_grey;
+        }
         img {
             width: 10rem;
             transition: all 1s;
