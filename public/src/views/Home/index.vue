@@ -12,11 +12,8 @@
       :description="post.description"
       @click="redirect('/articles/' + post._id)"
     />
-    <div v-if="isLoading">
-      <SkeletonCard />
-      <SkeletonCard />
-      <SkeletonCard />
-      <SkeletonCard />
+    <div v-if="!isLoading">
+      <LoadingIcon />
     </div>
   </div>
 </template>
