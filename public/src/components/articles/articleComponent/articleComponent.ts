@@ -5,6 +5,7 @@ import CommentCard from "@/components/cards/comment-card/index.vue";
 import TextEditor from "@/components/editors/text-editor/index.vue";
 import ArticleEditor from "@/components/editors/article-editor/index.vue";
 import TagInput from "@/components/inputs/tag-input/index.vue";
+import ShareSocials from "@/components/Icons/share-socials/index.vue";
 import { TOAST_TYPES } from "@/utils/toastTypes";
 
 export default defineComponent({
@@ -40,6 +41,7 @@ export default defineComponent({
     TextEditor,
     ArticleEditor,
     TagInput,
+    ShareSocials,
   },
   props: {
     postID: { type: String, default: () => "" },

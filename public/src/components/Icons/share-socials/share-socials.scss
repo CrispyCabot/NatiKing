@@ -1,0 +1,33 @@
+.share-socials {
+    display: flex;
+    flex: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: fit-content;
+    &_icon {
+        font-size: 32px;
+        margin: 5px;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &_p {
+        font-style: italic;
+        font-size: 16px;
+        margin: 5px;
+        color: $dark_background;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}
