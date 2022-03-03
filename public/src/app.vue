@@ -1,5 +1,13 @@
 <template>
   <div class="app-container">
+    <metainfo>
+      <template v-slot:title="{ content, metainfo }">
+        {{ content }}{{ metainfo.nothing }}
+      </template>
+      <template v-slot:twitter="{ content, metainfo }">
+        {{ content }}{{ metainfo.nothing }}</template
+      >
+    </metainfo>
     <div v-if="getGlobalToastIsShowing" class="global-toast">
       <Toast
         :message="getGlobalToastMessage"

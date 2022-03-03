@@ -13,4 +13,5 @@ module.exports = {
     },
     outputDir: path.resolve(__dirname, "../../jamenwalz.github.io"),
     indexPath: "404.html",
+    transpileDependencies: ["vue-meta"],
 };

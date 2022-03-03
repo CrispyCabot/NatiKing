@@ -5,6 +5,7 @@ import Toast from "@/components/popups/toast/index.vue";
 import { mapActions, mapGetters, mapMutations } from "vuex";
 import { defineComponent } from "@vue/runtime-core";
 import { shadeColor } from "@/utils/globalFunctions";
+import { useActiveMeta, useMeta } from "vue-meta";
 
 export default defineComponent({
   name: "app",
@@ -12,6 +13,43 @@ export default defineComponent({
     Navbar,
     CustomFooter,
     Toast,
+  },
+  setup() {
+    const { meta } = useMeta({
+      title: "New Test",
+      nothing: "",
+      htmlAttrs: {
+        lang: "en",
+        amp: true,
+      },
+      //this doesn't work but its supposed to I think idk just gonna leave it
+      meta: [
+        { name: "twitter:card", vmid: "twitter:card", content: "summary" },
+        {
+          name: "twitter:url",
+          vmid: "twitter:url",
+          content: "https://natiking.com",
+        },
+        {
+          name: "twitter:title",
+          vmid: "twitter:title",
+          content: "Nati King | Home",
+        },
+        {
+          name: "twitter:description",
+          vmid: "twitter:description",
+          content: "View the latest articles",
+        },
+        {
+          name: "twitter:image",
+          content: "https://natiking.com/img/default.9d5bda9c.png",
+        },
+      ],
+    });
+
+    const metadata = useActiveMeta();
+    console.log(metadata);
+    return { metadata };
   },
   data() {
     return {
@@ -138,6 +176,9 @@ export default defineComponent({
     },
     getPrimaryColor() {
       this.updateCSS();
+    },
+    metadata(newValue) {
+      console.log("META UPDATED", newValue);
     },
   },
 });
