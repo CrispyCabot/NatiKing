@@ -16,7 +16,7 @@ export default defineComponent({
   },
   setup() {
     const { meta } = useMeta({
-      title: "New Test",
+      title: "Nati King",
       nothing: "",
       htmlAttrs: {
         lang: "en",
@@ -48,7 +48,6 @@ export default defineComponent({
     });
 
     const metadata = useActiveMeta();
-    console.log(metadata);
     return { metadata };
   },
   data() {
