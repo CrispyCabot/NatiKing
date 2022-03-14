@@ -32,7 +32,7 @@
     <div class="leaf">
       <div>
         <img
-          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          src="https://content.sportslogos.net/news/2022/03/2022-spring-training-primary-logo-baseball-transparent-sportslogosnet.png"
         />
       </div>
       <div>
@@ -43,7 +43,7 @@
       </div>
       <div>
         <img
-          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          src="https://content.sportslogos.net/news/2022/03/2022-spring-training-primary-logo-baseball-transparent-sportslogosnet.png"
         />
       </div>
       <div>
@@ -53,7 +53,7 @@
       </div>
       <div>
         <img
-          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          src="https://content.sportslogos.net/news/2022/03/2022-spring-training-primary-logo-baseball-transparent-sportslogosnet.png"
         />
       </div>
       <div>
