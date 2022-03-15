@@ -25,7 +25,7 @@ export default defineComponent({
     };
   },
   computed: {
-    ...mapGetters(["getLogo"]),
+    ...mapGetters(["getLogo", "getInvertedLogo"]),
     enabledLoginButton(): Boolean {
       return Boolean(
         this.fields.email.value &&

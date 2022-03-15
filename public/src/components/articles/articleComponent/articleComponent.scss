@@ -8,7 +8,7 @@
         object-fit: scale-down;
     }
     .article-top {
-        background: white;
+        background: $dark_background;
         border-radius: 10px;
         padding: 8px 30px;
         .article-content {
@@ -17,11 +17,23 @@
                 width: 100%;
                 height: 15rem;
             }
+            p {
+                color: $off_white;
+            }
         }
         .default-input {
             margin: 10px auto;
             font-size: 24px;
             display: block;
+        }
+        h1 {
+            color: $off_white;
+        }
+        h5 {
+            color: $off_white;
+        }
+        p {
+            color: $off_white;
         }
     }
     h3 {
@@ -56,6 +68,7 @@
             justify-self: start;
             .delete-article {
                 position: relative;
+                color: $off_white;
                 top: 10px;
                 padding: 5px;
                 &:hover {
@@ -67,6 +80,7 @@
                 padding: 5px;
                 position: relative;
                 top: 10px;
+                color: $off_white;
                 &:hover {
                     cursor: pointer;
                     color: $dark_grey;
@@ -83,9 +97,9 @@
             left: 15px;
         }
         .not-liked {
-            color: $dark_grey;
+            color: $off_white;
             &:hover {
-                color: $dark_background;
+                color: $dark_grey;
                 cursor: pointer;
             }
         }
@@ -97,12 +111,13 @@
         }
     }
     .comment-editor {
+        background: $dark_background;
         margin: 1rem 0;
         padding-bottom: 1rem;
-        background-color: $off_white;
         border-radius: 10px;
         h5 {
             padding: 1rem;
+            color: $off_white;
         }
     }
 }

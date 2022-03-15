@@ -10,7 +10,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Montserrat", Helvetica, Arial, sans-serif;
+    font-family: "Fredoka", Helvetica, Arial, sans-serif;
     transition-duration: 0.5s;
 }
 
@@ -18,7 +18,8 @@ body {
     width: 100vw;
     min-height: 100vh;
     position: absolute;
-    background: radial-gradient(rgb(110, 110, 110), #000);
+    // background: radial-gradient(#181a1b, #000);
+    background: $dark_background;
     .navbar-container {
         position: relative;
         z-index: 15;
@@ -73,6 +74,7 @@ body {
     .leaf div {
         position: absolute;
         display: block;
+        z-index: 5;
     }
     .leaf div:nth-child(1) {
         left: 20%;
@@ -217,9 +219,18 @@ body {
 .site-title {
     color: $off_white;
     margin: 0.5rem 0;
-    font-style: italic;
+    // font-style: italic;
+    font-family: "Garamond", "Lucida Console", Georgia;
     font-size: 2.5rem;
     text-align: center;
+}
+
+.h1-heading {
+    //charter, Georgia, Cambria, "Times New Roman", Times, serif;
+    //sohne, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Garamond", "Lucida Console", Georgia;
+    font-style: normal;
+    color: $off_white;
 }
 
 .article-editor-link {
@@ -231,7 +242,7 @@ body {
 }
 
 .blockquote {
-    background-color: $light_grey;
+    background-color: $dark_grey;
     width: fit-content;
     padding: 20px;
     border-radius: 10px;
@@ -262,6 +273,7 @@ body {
     border: 1px solid transparent;
     border-bottom: 0.2rem solid $light-grey;
     border-radius: 0.25rem;
+    z-index: 6;
     &:focus {
         border: 1px solid $accent_light_red;
     }
@@ -271,16 +283,14 @@ body {
 }
 
 .default-card {
-    margin: auto;
     background: $off_white;
-    border-radius: 10px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    // border-radius: 10px;
+    margin: 0 auto;
     transition: all 1s;
 }
 
 .default-width {
-    width: 95%;
+    width: 100%;
 }
 
 // Extra small devices (portrait phones, less than 576px)

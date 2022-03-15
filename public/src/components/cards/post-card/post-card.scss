@@ -1,19 +1,19 @@
 .post-card {
+    background: $dark_background;
     img {
         width: 100%;
         transition: all 1s;
         border-bottom: 1px solid black;
         margin-right: 10px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
     }
     .rhs {
-        padding-left: 10px;
+        padding: 20px;
+        padding-right: 5px;
         display: flex;
         flex-direction: column;
         margin-top: auto;
         margin-bottom: auto;
-        width: 75%;
+        width: 100%;
         h1 {
             transition: all 1s;
             font-size: 18px;
@@ -22,12 +22,15 @@
         }
         h5 {
             transition: all 1s;
-            font-size: 12px;
+            font-size: 14px;
             text-align: left;
             margin: 2px;
+            color: $off_white;
+            padding: 6px 0;
         }
         .tags {
             transition: all 1s;
+            padding: 10px 0;
             text-align: left;
             p {
                 display: inline-block;
@@ -67,10 +70,7 @@
             transition: all 1s;
             border-right: 1px solid black;
             border-bottom: none;
-            border-top-right-radius: 0;
             margin-right: 10px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
             object-fit: cover;
         }
         display: flex;

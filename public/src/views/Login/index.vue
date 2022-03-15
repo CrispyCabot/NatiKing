@@ -1,7 +1,7 @@
 <template>
   <div class="login-container">
     <div class="login-container_title">
-      <img :src="getLogo" />
+      <img :src="getInvertedLogo" />
       <h1 class="site-title">Nati King</h1>
     </div>
     <div class="login-container_fields">

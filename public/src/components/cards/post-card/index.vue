@@ -2,7 +2,7 @@
   <div class="default-card default-width post-card">
     <img :src="imageSrc" />
     <div class="rhs">
-      <h1>{{ title }}</h1>
+      <h1 class="h1-heading">{{ title }}</h1>
       <h5>
         By: {{ authorName }} | {{ commentAmt }} comment(s) |
         {{ likeAmt }} like(s)

@@ -4,6 +4,7 @@
     border-radius: 10px;
     text-align: left;
     border: 1px solid $dark_background;
+    background: $off_white;
     .editor-controls {
         margin: 0;
         padding: 5px;
@@ -41,6 +42,9 @@
     .editor-content {
         padding: 1rem;
         .ProseMirror {
+            p {
+                color: $dark_background;
+            }
             min-height: 10rem;
             &:focus {
                 outline: none;

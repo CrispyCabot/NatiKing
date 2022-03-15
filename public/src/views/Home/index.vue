@@ -11,6 +11,7 @@
       :likeAmt="post.likes.length"
       :description="post.description"
       @click="redirect('/articles/' + post._id)"
+      class="post-card"
     />
     <div v-if="isLoading">
       <LoadingIcon />

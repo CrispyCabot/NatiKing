@@ -29,7 +29,7 @@
     >
       <router-view />
     </div>
-    <div class="leaf">
+    <div v-if="!isMobileView" class="leaf">
       <div>
         <img
           src="https://content.sportslogos.net/news/2022/03/2022-spring-training-primary-logo-baseball-transparent-sportslogosnet.png"

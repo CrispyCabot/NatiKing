@@ -2,6 +2,12 @@
     position: relative;
     padding-bottom: unset;
     text-align: center;
+    .writer-card {
+        border-bottom: 1px solid $dark-grey;
+    }
+    .writer-card:last-child {
+        border-bottom: none;
+    }
 }
 
 // Extra small devices (portrait phones, less than 576px)
