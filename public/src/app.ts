@@ -57,9 +57,11 @@ export default defineComponent({
       backgroundSvg: require("@/assets/photon.svg"),
       backgroundImg:
         "https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png",
+      isMounted: false,
     };
   },
   async created() {
+    this.handleMeta();
     this.updateCSS();
     await this.retrieveRefreshToken()
       .then((res) => {
@@ -115,6 +117,14 @@ export default defineComponent({
       "setIsUsingMockData",
       "updatePrimaryColor",
     ]),
+    handleMeta() {
+      console.log(document.querySelector("title"));
+      setTimeout(() => {
+        if (document.querySelector("title") == null) {
+          this.isMounted = true;
+        }
+      }, 2000);
+    },
     closingGlobalToast() {
       if (this.getGlobalToastIsShowing) {
         this.updateGlobalToast({

@@ -34,6 +34,9 @@ export default defineComponent({
       titleInput: "",
       tagsInput: [],
       tagsArray: [] as string[],
+      isMounted: false,
+      pageTitle: "Nati King",
+      shortDesc: "",
     };
   },
   components: {
@@ -49,6 +52,7 @@ export default defineComponent({
   async created() {
     this.postInfo = await this.fetchPostById(this.postID);
     this.setupFieldValues();
+    this.handleMeta();
     const writer = await this.fetchUserById(this.postInfo.owner_id);
     this.authorName = writer.name;
     if (this.postInfo.image_path != null) {
@@ -89,6 +93,11 @@ export default defineComponent({
     ...mapMutations(["updateGlobalToast"]),
     redirect(link: string) {
       this.$router.push(link);
+    },
+    handleMeta() {
+      this.pageTitle = "Nati King | " + this.postInfo.title;
+      this.shortDesc = this.postInfo.description.substring(0, 25);
+      this.isMounted = true;
     },
     setupFieldValues() {
       this.newArticleContent = this.postInfo.description;
