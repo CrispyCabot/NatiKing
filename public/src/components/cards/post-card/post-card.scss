@@ -1,10 +1,11 @@
 .post-card {
     background: $dark_background;
     img {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
         transition: all 1s;
-        border-bottom: 1px solid black;
-        margin-right: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
     }
     .rhs {
         padding: 20px;
@@ -16,6 +17,7 @@
         width: 100%;
         h1 {
             transition: all 1s;
+            font-family: "Fredoka2", "Lucida Console", Georgia;
             font-size: 18px;
             text-align: left;
             margin: 2px;
@@ -72,6 +74,7 @@
             border-bottom: none;
             margin-right: 10px;
             object-fit: cover;
+            margin-bottom: 20px;
         }
         display: flex;
         flex-direction: row;
