@@ -51,6 +51,8 @@
 @media (min-width: 576px) {
     .post-card {
         &:hover .rhs {
+            //This doesn't work but I wish it did so I'm leaving it
+            z-index: 1000 !important;
             transform: scale(1.2);
             font-style: italic;
             color: $off_white;

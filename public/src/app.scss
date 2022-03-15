@@ -68,13 +68,15 @@ body {
         div img {
             width: 10rem;
             height: 10rem;
-            opacity: 0.5;
+            opacity: 0.3;
         }
     }
     .leaf div {
         position: absolute;
         display: block;
         z-index: 5;
+        //Prevents hover from overtaking another element
+        pointer-events: none;
     }
     .leaf div:nth-child(1) {
         left: 20%;
