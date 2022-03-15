@@ -1,13 +1,16 @@
 <template>
   <div class="app-container">
-    <metainfo>
+    <!-- <metainfo>
       <template v-slot:title="{ content, metainfo }">
         {{ content }}{{ metainfo.nothing }}
       </template>
       <template v-slot:twitter="{ content, metainfo }">
         {{ content }}{{ metainfo.nothing }}</template
       >
-    </metainfo>
+    </metainfo> -->
+    <Teleport to="head" v-if="isMounted">
+      <title>Nati King</title>
+    </Teleport>
     <div v-if="getGlobalToastIsShowing" class="global-toast">
       <Toast
         :message="getGlobalToastMessage"

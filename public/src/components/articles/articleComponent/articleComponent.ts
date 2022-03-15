@@ -7,9 +7,46 @@ import ArticleEditor from "@/components/editors/article-editor/index.vue";
 import TagInput from "@/components/inputs/tag-input/index.vue";
 import ShareSocials from "@/components/Icons/share-socials/index.vue";
 import { TOAST_TYPES } from "@/utils/toastTypes";
+import { useActiveMeta, useMeta } from "vue-meta";
 
 export default defineComponent({
   name: "article-component",
+  // setup() {
+  //   const { meta } = useMeta({
+  //     title: "Nati King",
+  //     nothing: "",
+  //     htmlAttrs: {
+  //       lang: "en",
+  //       amp: true,
+  //     },
+  //     //this doesn't work but its supposed to I think idk just gonna leave it
+  //     meta: [
+  //       { name: "twitter:card", vmid: "twitter:card", content: "summary" },
+  //       {
+  //         name: "twitter:url",
+  //         vmid: "twitter:url",
+  //         content: "https://natiking.com",
+  //       },
+  //       {
+  //         name: "twitter:title",
+  //         vmid: "twitter:title",
+  //         content: "Nati King | Home",
+  //       },
+  //       {
+  //         name: "twitter:description",
+  //         vmid: "twitter:description",
+  //         content: "View the latest articles",
+  //       },
+  //       {
+  //         name: "twitter:image",
+  //         content: "https://natiking.com/img/default.9d5bda9c.png",
+  //       },
+  //     ],
+  //   });
+
+  //   const metadata = useActiveMeta();
+  //   return { metadata };
+  // },
   data() {
     return {
       postInfo: {
@@ -95,7 +132,7 @@ export default defineComponent({
       this.$router.push(link);
     },
     handleMeta() {
-      this.pageTitle = "Nati King | " + this.postInfo.title;
+      this.pageTitle = this.postInfo.title;
       this.shortDesc = this.postInfo.description.substring(0, 25);
       this.isMounted = true;
     },

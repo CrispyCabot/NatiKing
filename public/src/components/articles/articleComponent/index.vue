@@ -1,15 +1,8 @@
 <template>
   <div class="default-width article-component">
-    <Teleport v-if="isMounted" to="head">
+    <teleport to="head" v-if="isMounted">
       <title>{{ pageTitle }}</title>
-      <meta name="twitter:url" :content="$router.name" />
-      <meta name="twitter:title" :content="pageTitle" />
-      <meta name="twitter:description" :content="shortDesc" />
-      <meta
-        name="twitter:image"
-        content="https://natiking.com/img/default.9d5bda9c.png"
-      />
-    </Teleport>
+    </teleport>
     <div class="default-card article-top">
       <img :src="require(`@/uploads/${imagePath}`)" />
       <h1 v-if="!isEditing">{{ postInfo.title }}</h1>

@@ -14,42 +14,42 @@ export default defineComponent({
     CustomFooter,
     Toast,
   },
-  setup() {
-    const { meta } = useMeta({
-      title: "Nati King",
-      nothing: "",
-      htmlAttrs: {
-        lang: "en",
-        amp: true,
-      },
-      //this doesn't work but its supposed to I think idk just gonna leave it
-      meta: [
-        { name: "twitter:card", vmid: "twitter:card", content: "summary" },
-        {
-          name: "twitter:url",
-          vmid: "twitter:url",
-          content: "https://natiking.com",
-        },
-        {
-          name: "twitter:title",
-          vmid: "twitter:title",
-          content: "Nati King | Home",
-        },
-        {
-          name: "twitter:description",
-          vmid: "twitter:description",
-          content: "View the latest articles",
-        },
-        {
-          name: "twitter:image",
-          content: "https://natiking.com/img/default.9d5bda9c.png",
-        },
-      ],
-    });
+  // setup() {
+  //   const { meta } = useMeta({
+  //     title: "Nati King | Home",
+  //     nothing: "",
+  //     htmlAttrs: {
+  //       lang: "en",
+  //       amp: true,
+  //     },
+  //     //this doesn't work but its supposed to I think idk just gonna leave it
+  //     meta: [
+  //       { name: "twitter:card", vmid: "twitter:card", content: "summary" },
+  //       {
+  //         name: "twitter:url",
+  //         vmid: "twitter:url",
+  //         content: "https://natiking.com",
+  //       },
+  //       {
+  //         name: "twitter:title",
+  //         vmid: "twitter:title",
+  //         content: "Nati King | Home",
+  //       },
+  //       {
+  //         name: "twitter:description",
+  //         vmid: "twitter:description",
+  //         content: "View the latest articles",
+  //       },
+  //       {
+  //         name: "twitter:image",
+  //         content: "https://natiking.com/img/default.9d5bda9c.png",
+  //       },
+  //     ],
+  //   });
 
-    const metadata = useActiveMeta();
-    return { metadata };
-  },
+  //   const metadata = useActiveMeta();
+  //   return { metadata };
+  // },
   data() {
     return {
       isMobileView: true,
@@ -118,12 +118,8 @@ export default defineComponent({
       "updatePrimaryColor",
     ]),
     handleMeta() {
-      console.log(document.querySelector("title"));
-      setTimeout(() => {
-        if (document.querySelector("title") == null) {
-          this.isMounted = true;
-        }
-      }, 2000);
+      console.log("HERE: " + this.$route.fullPath);
+      if (this.$route.path == "/") this.isMounted = true;
     },
     closingGlobalToast() {
       if (this.getGlobalToastIsShowing) {
