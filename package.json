@@ -19,5 +19,6 @@
     "bugs": {
         "url": "https://github.com/CrispyCabot/NatiKing/issues"
     },
-    "homepage": "https://github.com/CrispyCabot/NatiKing"
+    "homepage": "https://github.com/CrispyCabot/NatiKing",
+    "dependencies": {}
 }

@@ -4,6 +4,7 @@
     border-radius: 10px;
     text-align: left;
     border: 1px solid $dark_background;
+    background: $off_white;
     .editor-controls {
         margin: 0;
         padding: 5px;
@@ -41,23 +42,15 @@
     .editor-content {
         padding: 1rem;
         .ProseMirror {
+            p {
+                color: $dark_background;
+            }
             min-height: 10rem;
             &:focus {
                 outline: none;
             }
             .indent {
                 padding-left: 30px;
-            }
-            .blockquote {
-                background-color: $light_grey;
-                width: fit-content;
-                padding: 20px;
-                border-radius: 10px;
-                font-style: italic;
-            }
-            .img {
-                max-width: 100%;
-                border-radius: 15px;
             }
             .iframe-wrapper {
                 position: relative;

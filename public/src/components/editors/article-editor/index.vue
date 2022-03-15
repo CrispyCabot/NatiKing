@@ -189,6 +189,19 @@
       >
       </i>
       <i
+        class="fas fa-quote-right editor-icon"
+        title="Insert photo caption"
+        @click="
+          editor
+            .chain()
+            .focus()
+            .toggleCaption()
+            .run()
+        "
+        :class="{ 'is-active': editor.isActive('caption') }"
+      >
+      </i>
+      <i
         class="fas fa-grip-lines editor-icon"
         title="Insert Horizontal Break"
         @click="
@@ -261,6 +274,7 @@ import HorizontalRule from "@tiptap/extension-horizontal-rule";
 import Image from "@tiptap/extension-image";
 import Link from "@tiptap/extension-link";
 import Iframe from "./iframe";
+import PhotoCaption from "./photocaption.ts";
 
 export default {
   components: {
@@ -304,6 +318,11 @@ export default {
             class: "blockquote",
           },
         }),
+        PhotoCaption.configure({
+          HTMLAttributes: {
+            class: "photocaption",
+          },
+        }),
         HorizontalRule.configure({
           HTMLAttributes: {
             class: "horizontal-rule",
@@ -311,7 +330,7 @@ export default {
         }),
         Image.configure({
           HTMLAttributes: {
-            class: "img",
+            class: "article-editor-img",
           },
           inline: true,
         }),

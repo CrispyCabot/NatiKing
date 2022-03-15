@@ -2,7 +2,9 @@
   <div class="writer-card">
     <img :src="imageSrc" />
     <div class="rhs">
-      <h1 @click="redirect('/users/' + writerID)">{{ name }}</h1>
+      <h1 class="h1-heading" @click="redirect('/users/' + writerID)">
+        {{ name }}
+      </h1>
       <p>
         {{ bio }}
       </p>

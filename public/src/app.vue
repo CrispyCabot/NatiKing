@@ -1,11 +1,13 @@
 <template>
   <div class="app-container">
-    <Teleport v-if="isMounted" to="head">
-      <title>Nati King</title>
-      <meta name="twitter:url" content="https://natiking.com" />
-      <meta name="twitter:title" content="Nati King | Home" />
-      <meta name="twitter:description" content="View the latest posts" />
-    </Teleport>
+    <metainfo>
+      <template v-slot:title="{ content, metainfo }">
+        {{ content }}{{ metainfo.nothing }}
+      </template>
+      <template v-slot:twitter="{ content, metainfo }">
+        {{ content }}{{ metainfo.nothing }}</template
+      >
+    </metainfo>
     <div v-if="getGlobalToastIsShowing" class="global-toast">
       <Toast
         :message="getGlobalToastMessage"
@@ -27,15 +29,21 @@
     >
       <router-view />
     </div>
-    <div class="leaf">
+    <div v-if="!isMobileView" class="leaf">
       <div>
         <img
-          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          src="https://content.sportslogos.net/news/2022/03/2022-spring-training-primary-logo-baseball-transparent-sportslogosnet.png"
         />
       </div>
       <div>
+        <img src="https://i.gyazo.com/51d3ac2e3da92bd13c4d9949ad845c71.png" />
+      </div>
+      <div>
+        <img src="https://i.gyazo.com/51d3ac2e3da92bd13c4d9949ad845c71.png" />
+      </div>
+      <div>
         <img
-          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          src="https://content.sportslogos.net/news/2022/03/2022-spring-training-primary-logo-baseball-transparent-sportslogosnet.png"
         />
       </div>
       <div>
@@ -45,17 +53,7 @@
       </div>
       <div>
         <img
-          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
-        />
-      </div>
-      <div>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Cincinnati_Bengals_logo.svg/1280px-Cincinnati_Bengals_logo.svg.png"
-        />
-      </div>
-      <div>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/en/c/c6/Super_Bowl_LVI_logo.png"
+          src="https://content.sportslogos.net/news/2022/03/2022-spring-training-primary-logo-baseball-transparent-sportslogosnet.png"
         />
       </div>
       <div>

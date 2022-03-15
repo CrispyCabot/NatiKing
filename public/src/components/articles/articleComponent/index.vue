@@ -28,6 +28,7 @@
       <br />
       <div v-if="!isEditing">
         <span class="article-content" v-html="postInfo.description"></span>
+        <ShareSocials class="share-buttons" :message="postInfo.title" />
         <div class="article-icons">
           <div class="modify-icons">
             <i

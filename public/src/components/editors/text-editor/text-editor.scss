@@ -4,12 +4,14 @@
     width: 95%;
     border-radius: 10px;
     text-align: left;
-    border: 1px solid black;
+    border: 1px solid $off_white;
     outline: none;
+    background: $dark_grey;
     .ProseMirror-trailingBreak {
         outline: none;
     }
     .ProseMirror {
+        color: $off_white;
         &:focus {
             outline: none;
         }

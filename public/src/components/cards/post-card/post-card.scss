@@ -1,50 +1,38 @@
 .post-card {
-    &:hover .rhs {
-        transform: scale(1.2);
-        font-style: italic;
-        color: $off_white;
-        background-color: $accent_red;
-        padding: 10px;
-        border-radius: 10px;
-        .tags {
-            p {
-                background-color: $dark_background;
-            }
-        }
-    }
-    &:hover {
-        cursor: pointer;
-        background-color: $dark_grey;
-    }
+    background: $dark_background;
     img {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto;
         transition: all 1s;
-        border-bottom: 1px solid black;
-        margin-right: 10px;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        border-radius: 10px;
+        margin-top: 20px;
     }
     .rhs {
-        padding-left: 10px;
+        padding: 20px;
+        padding-right: 5px;
         display: flex;
         flex-direction: column;
         margin-top: auto;
         margin-bottom: auto;
-        width: 75%;
+        width: 100%;
         h1 {
             transition: all 1s;
+            font-family: "Fredoka2", "Lucida Console", Georgia;
             font-size: 18px;
             text-align: left;
             margin: 2px;
         }
         h5 {
             transition: all 1s;
-            font-size: 12px;
+            font-size: 14px;
             text-align: left;
             margin: 2px;
+            color: $off_white;
+            padding: 6px 0;
         }
         .tags {
             transition: all 1s;
+            padding: 10px 0;
             text-align: left;
             p {
                 display: inline-block;
@@ -62,15 +50,33 @@
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     .post-card {
+        &:hover .rhs {
+            //This doesn't work but I wish it did so I'm leaving it
+            z-index: 1000 !important;
+            transform: scale(1.2);
+            font-style: italic;
+            color: $off_white;
+            background-color: $accent_red;
+            padding: 10px;
+            border-radius: 10px;
+            .tags {
+                p {
+                    background-color: $dark_background;
+                }
+            }
+        }
+        &:hover {
+            cursor: pointer;
+            background-color: $dark_grey;
+        }
         img {
-            max-width: 10rem;
+            width: 10rem;
             transition: all 1s;
             border-right: 1px solid black;
             border-bottom: none;
-            border-top-right-radius: 0;
             margin-right: 10px;
-            border-top-left-radius: 10px;
-            border-bottom-left-radius: 10px;
+            object-fit: cover;
+            margin-bottom: 20px;
         }
         display: flex;
         flex-direction: row;
