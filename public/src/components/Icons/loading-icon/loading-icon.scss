@@ -14,7 +14,6 @@
         display: block;
         width: 5rem;
         animation: moveX 3.05s linear 0s infinite alternate, moveY 3.4s linear 0s infinite alternate;
-        border: 0.2rem inset $toast_green;
         position: absolute;
     }
     p {
