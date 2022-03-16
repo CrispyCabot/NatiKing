@@ -60,4 +60,4 @@ f = open(f'{ARTICLE_FOLDER_PATH}{articleID}.html', 'w')
 f.write(html)
 f.close()
 
-os.system(f'cd {ARTICLE_FOLDER_PATH} && git add * && git commit -m "added metadata tags" && git push')
+os.system(f'cd {ARTICLE_FOLDER_PATH} && git pull && git add * && git commit -m "added metadata tags" && git push')
