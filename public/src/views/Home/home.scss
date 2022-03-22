@@ -2,6 +2,26 @@
     position: relative;
     padding-bottom: unset;
     text-align: center;
+    .search-fields {
+        position: relative;
+        margin: auto;
+        .search-bar {
+            width: 90%;
+            margin: 10px 0;
+        }
+        .search-btn {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin: 3px 5% 3px 0;
+        }
+        .tag-input {
+            margin: auto 10px;
+            .tags .tag .x-icon {
+                color: $off_white;
+            }
+        }
+    }
     .post-card {
         border-bottom: 1px solid $dark-grey;
     }
@@ -13,7 +33,13 @@
 // Extra small devices (portrait phones, less than 576px)
 // No media query since this is the default
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {}
+@media (min-width: 576px) {
+    // .home {
+    //     .search-fields {
+    //         width: 80%;
+    //     }
+    // }
+}
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {}
