@@ -20,10 +20,10 @@ html = '''
     <script src="https://kit.fontawesome.com/6b953dceaa.js" crossorigin="anonymous"></script>
     <link rel="icon" href="/favicon.ico" />
     <script src="https://kit.fontawesome.com/6b953dceaa.js" crossorigin="anonymous"></script>
-    <link href="../css/app.5f5a1dcc.css" rel="preload" as="style" />
-    <link href="../js/app.85c956c4.js" rel="preload" as="script" />
-    <link href="../js/chunk-vendors.41d5b1b0.js" rel="preload" as="script" />
-    <link href="../css/app.5f5a1dcc.css" rel="stylesheet" />
+    <link href="../app.css" rel="preload" as="style" />
+    <link href="../app.js" rel="preload" as="script" />
+    <link href="../chunk-vendors.js" rel="preload" as="script" />
+    <link href="../app.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -33,8 +33,8 @@ html = '''
       ></noscript
     >
     <div id="app"></div>
-    <script src="../js/chunk-vendors.41d5b1b0.js"></script>
-    <script src="../js/app.85c956c4.js"></script>
+    <script src="../chunk-vendors.js"></script>
+    <script src="../app.js"></script>
   </body>
 </html>'''
 
