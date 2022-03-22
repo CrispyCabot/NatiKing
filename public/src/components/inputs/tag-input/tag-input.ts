@@ -26,7 +26,10 @@ export default defineComponent({
         (this.tags.includes(" ") || this.tags.includes(",")) &&
         this.tags.length > 1
       ) {
-        this.tagsArray.push(this.tags.trim());
+        let tag = this.tags.trim();
+        tag = tag.toLowerCase();
+        console.log(tag);
+        this.tagsArray.push(tag);
         this.tags = "";
         this.$emit("update:modelValue", this.tagsArray);
       }
@@ -51,9 +54,6 @@ export default defineComponent({
   watch: {
     getPrimaryColor() {
       this.updateCSS();
-    },
-    modelValue() {
-      console.log("here");
     },
   },
 });
