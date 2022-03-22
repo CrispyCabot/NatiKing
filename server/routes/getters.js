@@ -54,6 +54,20 @@ router.route("/posts").get((req, res) => {
         res.json(response);
     }).sort({ date: -1 });
 });
+router.route("/posts/:tags").get((req, res) => {
+    console.log(req.params);
+    const { tags } = req.params;
+    const tagsArray = tags.split(",");
+
+    //tags: { $in: tagsArray }
+    Posts.find({ tags: { $in: tagsArray } }, async(err, response) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        res.json(response);
+    }).sort({ date: -1 });
+});
 router.route("/posts/:id").get((req, res) => {
     const { id } = req.params;
     Posts.findOne({ _id: id }, async(err, response) => {

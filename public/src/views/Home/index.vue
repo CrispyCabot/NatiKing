@@ -1,6 +1,16 @@
 <template>
   <div class="home">
     <h1 class="site-title">Nati King</h1>
+    <div class="default-width search-fields">
+      <TagInput v-model="tagsArray" v-on:input="tagSearch" />
+      <button
+        @click="tagSearch"
+        v-if="tagsArray.length > 0"
+        class="btn search-btn"
+      >
+        Search
+      </button>
+    </div>
     <PostCard
       v-for="post in splicedPosts"
       :key="post._id"

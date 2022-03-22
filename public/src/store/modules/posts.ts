@@ -1,9 +1,14 @@
 import api from "@/api/api";
 
 export const PostActions = {
-  fetchPosts({ getters }: any) {
+  fetchPosts({ getters }: any, tags: string[]) {
     const isUsingMockData = getters.getIsUsingMockData;
-    const route = isUsingMockData ? `/mock/posts` : `/posts`;
+    let route = "";
+    if (tags.length == 0) {
+      route = isUsingMockData ? `/mock/posts` : `/posts`;
+    } else {
+      route = isUsingMockData ? `/mock/posts/${tags}` : `/posts/${tags}`;
+    }
     return new Promise((resolve, reject) => {
       api
         .get(route)
