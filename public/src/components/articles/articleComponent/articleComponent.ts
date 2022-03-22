@@ -87,7 +87,9 @@ export default defineComponent({
     postID: { type: String, default: () => "" },
   },
   async created() {
+    console.log(this.postID);
     this.postInfo = await this.fetchPostById(this.postID);
+    console.log(this.postInfo);
     this.setupFieldValues();
     this.handleMeta();
     const writer = await this.fetchUserById(this.postInfo.owner_id);

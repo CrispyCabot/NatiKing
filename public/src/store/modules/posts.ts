@@ -7,7 +7,9 @@ export const PostActions = {
     if (tags.length == 0) {
       route = isUsingMockData ? `/mock/posts` : `/posts`;
     } else {
-      route = isUsingMockData ? `/mock/posts/${tags}` : `/posts/${tags}`;
+      route = isUsingMockData
+        ? `/mock/postsByTag/${tags}`
+        : `/postsByTag/${tags}`;
     }
     return new Promise((resolve, reject) => {
       api
