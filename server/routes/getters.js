@@ -55,7 +55,6 @@ router.route("/posts").get((req, res) => {
     }).sort({ date: -1 });
 });
 router.route("/postsByTag/:tags").get((req, res) => {
-    console.log(req.params);
     const { tags } = req.params;
     const tagsArray = tags.split(",");
 
