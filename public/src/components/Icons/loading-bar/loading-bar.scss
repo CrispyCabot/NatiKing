@@ -1,0 +1,30 @@
+.loading-bar {
+    width: 90%;
+    margin: 10px auto;
+    #myProgress {
+        width: 100%;
+        background-color: $dark_background;
+        border: 2px solid $off_white;
+        display: block;
+    }
+    #myBar {
+        width: 0%;
+        height: 30px;
+        background-color: $light_grey;
+        text-align: center;
+        line-height: 30px;
+        color: $dark_background;
+    }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {}

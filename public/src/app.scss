@@ -34,7 +34,7 @@ body {
         max-width: 30rem;
     }
     .router-view {
-        z-index: 5;
+        z-index: 6;
         position: relative;
         transition: 0.3s;
         // min-height: calc(90vh - 20.25rem);
@@ -57,7 +57,7 @@ body {
     .footer-container {
         position: absolute;
         bottom: 0;
-        z-index: 5;
+        z-index: 7;
     }
     .leaf {
         position: absolute;
@@ -109,7 +109,7 @@ body {
         animation-delay: -10s;
     }
     .leaf div:nth-child(7) {
-        left: 90%;
+        left: 80%;
         animation: fall 15s linear infinite;
         animation-delay: -4s;
     }
@@ -297,7 +297,7 @@ body {
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
     .default-width {
-        width: 85%;
+        width: 85% !important;
     }
 }
 
@@ -307,20 +307,20 @@ body {
         max-width: 25rem;
     }
     .default-width {
-        width: 80%;
+        width: 80% !important;
     }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
     .default-width {
-        width: 75%;
+        width: 75% !important;
     }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
     .default-width {
-        width: 55%;
+        width: 55% !important;
     }
 }

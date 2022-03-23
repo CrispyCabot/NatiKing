@@ -8,6 +8,8 @@ import TagInput from "@/components/inputs/tag-input/index.vue";
 import ShareSocials from "@/components/Icons/share-socials/index.vue";
 import { TOAST_TYPES } from "@/utils/toastTypes";
 import { useActiveMeta, useMeta } from "vue-meta";
+import BigSkeletonCard from "@/components/cards/big-skeleton-card/index.vue";
+import LoadingBar from "@/components/Icons/loading-bar/index.vue";
 
 export default defineComponent({
   name: "article-component",
@@ -74,6 +76,7 @@ export default defineComponent({
       isMounted: false,
       pageTitle: "Nati King",
       shortDesc: "",
+      isLoading: true,
     };
   },
   components: {
@@ -82,6 +85,8 @@ export default defineComponent({
     ArticleEditor,
     TagInput,
     ShareSocials,
+    LoadingBar,
+    BigSkeletonCard,
   },
   props: {
     postID: { type: String, default: () => "" },
@@ -102,6 +107,7 @@ export default defineComponent({
     }
     this.isLiked = this.postInfo.likes.includes(this.getLoggedInUser._id);
     this.updateCSS();
+    this.isLoading = false;
     // <meta name="twitter:card" content="summary" />
     // <meta name="twitter:url" content="https://natiking.com" />
     // <meta name="twitter:title" content="Nati King | Home" />

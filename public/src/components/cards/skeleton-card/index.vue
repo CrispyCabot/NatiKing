@@ -1,5 +1,5 @@
 <template>
-  <div class="skeleton-card"></div>
+  <div class="default-width skeleton-card"></div>
 </template>
 
 <script src="./skeleton-card.ts"></script>

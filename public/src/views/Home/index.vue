@@ -17,7 +17,12 @@
       class="post-card"
     />
     <div v-if="isLoading">
-      <LoadingIcon />
+      <LoadingBar />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
+      <SkeletonCard />
     </div>
   </div>
 </template>

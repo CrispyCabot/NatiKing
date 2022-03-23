@@ -1,5 +1,7 @@
 import PostCard from "@/components/cards/post-card/index.vue";
 import LoadingIcon from "@/components/Icons/loading-icon/index.vue";
+import LoadingBar from "@/components/Icons/loading-bar/index.vue";
+import SkeletonCard from "@/components/cards/skeleton-card/index.vue";
 import TagInput from "@/components/inputs/tag-input/index.vue";
 import PaginationMixin from "@/mixins/pagination-mixin";
 import { defineComponent } from "@vue/runtime-core";
@@ -11,6 +13,8 @@ export default defineComponent({
   components: {
     PostCard,
     LoadingIcon,
+    SkeletonCard,
+    LoadingBar,
     TagInput,
   },
   mixins: [PaginationMixin],
