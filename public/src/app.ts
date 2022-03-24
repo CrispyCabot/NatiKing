@@ -6,6 +6,7 @@ import { mapActions, mapGetters, mapMutations } from "vuex";
 import { defineComponent } from "@vue/runtime-core";
 import { shadeColor } from "@/utils/globalFunctions";
 import { useActiveMeta, useMeta } from "vue-meta";
+import LogoBox from "@/components/3d/logo-box/index.vue";
 
 export default defineComponent({
   name: "app",
@@ -13,6 +14,7 @@ export default defineComponent({
     Navbar,
     CustomFooter,
     Toast,
+    LogoBox,
   },
   // setup() {
   //   const { meta } = useMeta({
