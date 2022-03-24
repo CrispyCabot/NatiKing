@@ -22,6 +22,7 @@
       />
     </div>
     <Navbar />
+    <LogoBox />
     <div
       ref="router_view"
       class="router-view"
