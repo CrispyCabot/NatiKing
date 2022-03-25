@@ -4,7 +4,7 @@
     <div class="writer-content">
       <img class="writer_pic" :src="imageSrc" />
       <p>{{ bio }}</p>
-      <div class="socials">
+      <div v-if="socialsWithClass.length > 0" class="socials">
         <i
           v-for="social in socialsWithClass"
           :key="social.url"
