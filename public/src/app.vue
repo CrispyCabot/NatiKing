@@ -22,7 +22,7 @@
       />
     </div>
     <Navbar />
-    <LogoBox />
+    <!-- <LogoBox /> -->
     <div
       ref="router_view"
       class="router-view"
@@ -47,17 +47,17 @@
       </div>
       <div>
         <img
-          src="https://content.sportslogos.net/news/2022/03/2022-spring-training-primary-logo-baseball-transparent-sportslogosnet.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cincinnati_Reds_Logo.svg/1280px-Cincinnati_Reds_Logo.svg.png"
         />
       </div>
       <div>
         <img
-          src="https://content.sportslogos.net/news/2022/03/2022-spring-training-primary-logo-baseball-transparent-sportslogosnet.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cincinnati_Reds_Logo.svg/1280px-Cincinnati_Reds_Logo.svg.png"
         />
       </div>
       <div>
         <img
-          src="https://content.sportslogos.net/news/2022/03/2022-spring-training-primary-logo-baseball-transparent-sportslogosnet.png"
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cincinnati_Reds_Logo.svg/1280px-Cincinnati_Reds_Logo.svg.png"
         />
       </div>
       <div>
