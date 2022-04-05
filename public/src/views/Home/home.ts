@@ -50,12 +50,22 @@ export default defineComponent({
     redirect(link: string) {
       this.$router.push(link);
     },
+    isInViewPort(element: any) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <=
+          (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <=
+          (window.innerWidth || document.documentElement.clientWidth)
+      );
+    },
     updateInfScroll() {
-      const bottomOfWindow =
-        document.documentElement.scrollTop + window.innerHeight ===
-        document.documentElement.offsetHeight;
-
-      if (bottomOfWindow) {
+      const lastCard = Array.from(
+        document.querySelectorAll(".post-card")
+      ).pop();
+      if (this.isInViewPort(lastCard)) {
         this.posts.splice(0, 10).map((item) => {
           this.splicedPosts.push(item);
         });
