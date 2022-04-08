@@ -66,6 +66,7 @@ img = input("Enter an image url (leave blank for default): ")
 if img == '':
     html = html.replace("IMAGE_PLACEHOLDER", defaultImg)
 else:
+    img = img + '?34598734987'
     html = html.replace("IMAGE_PLACEHOLDER", img)
 
 f = open(f'{ARTICLE_FOLDER_PATH}{articleID}.html', 'w')
