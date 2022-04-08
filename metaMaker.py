@@ -66,7 +66,7 @@ img = input("Enter an image url (leave blank for default): ")
 if img == '':
     html = html.replace("IMAGE_PLACEHOLDER", defaultImg)
 else:
-    img = img + '?34598734987'
+    img = img + '?34598734987' #makes a unique url so that twitter will be sure to find the img
     html = html.replace("IMAGE_PLACEHOLDER", img)
 
 f = open(f'{ARTICLE_FOLDER_PATH}{articleID}.html', 'w')
