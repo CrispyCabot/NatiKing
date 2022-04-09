@@ -3,6 +3,8 @@ ARTICLE_FOLDER_PATH = 'C:/Users/cjbas/Desktop/jamenwalz.github.io/articles/'
 
 import os
 
+#this is a test
+
 html = '''
 <!DOCTYPE html>
 <html lang="">
