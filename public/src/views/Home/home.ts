@@ -27,9 +27,15 @@ export default defineComponent({
       tagsArray: [],
     };
   },
+  props: {
+    visibleArticles: { type: Boolean, default: () => true },
+  },
   async created() {
     this.isLoading = true;
-    this.posts = await this.fetchPosts([]);
+    this.posts = await this.fetchPosts({
+      tags: [],
+      visible: this.visibleArticles,
+    });
     this.splicedPosts = this.posts.splice(0, 10);
     this.isLoading = false;
     window.addEventListener("scroll", this.updateInfScroll);
@@ -43,7 +49,7 @@ export default defineComponent({
         };
       });
     },
-    ...mapGetters(["getIsLoggedIn", "getLogo"]),
+    ...mapGetters(["getIsLoggedIn", "getLogo", "getLoggedInUser"]),
   },
   methods: {
     ...mapActions(["fetchPosts"]),
@@ -85,6 +91,11 @@ export default defineComponent({
   watch: {
     tagsArray() {
       this.tagSearch();
+    },
+    //Bad fix but idk weird stuff is happening this just reloads the whole page
+    //So that switching between /invisibles and /home actually changes the content
+    visibleArticles() {
+      this.$router.go(0);
     },
   },
 });

@@ -54,6 +54,15 @@ router.route("/posts").get((req, res) => {
         res.json(response);
     }).sort({ date: -1 });
 });
+router.route("/invisPosts").get((req, res) => {
+    Posts.find({ visible: { $eq: false } }, async(err, response) => {
+        if (err) {
+            console.log(err);
+            return;
+        }
+        res.json(response);
+    }).sort({ date: -1 });
+});
 router.route("/postsByTag/:tags").get((req, res) => {
     const { tags } = req.params;
     const tagsArray = tags.split(",");

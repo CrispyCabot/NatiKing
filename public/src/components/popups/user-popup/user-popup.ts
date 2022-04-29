@@ -12,7 +12,7 @@ export default defineComponent({
   methods: {
     ...mapActions(["logUserOut"]),
     ...mapMutations(["updateIsLoggedIn", "updateLoggedInUser"]),
-    async redirectLink(link: string) {
+    async redirectLink(link: string, refresh = false) {
       this.$emit("link-click");
 
       if (link == "/logout") {

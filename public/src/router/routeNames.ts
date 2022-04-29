@@ -2,6 +2,7 @@ export default {
   Login: "login",
   SignUp: "signup",
   Home: "home",
+  Invisibles: "invisibles",
   NotFound: "not-found",
   Profile: "profile",
   Article: "article",

@@ -32,6 +32,17 @@
           <p>Create Post</p>
         </div>
         <div
+          v-if="getLoggedInUser.access_level >= 10"
+          class="link"
+          @click="redirectLink('/invisibles')"
+        >
+          <font-awesome-icon
+            class="icon"
+            :icon="['fas', 'pen']"
+          ></font-awesome-icon>
+          <p>Invisible Articles</p>
+        </div>
+        <div
           v-if="getLoggedInUser.access_level >= 30"
           class="link"
           @click="redirectLink('/admin')"

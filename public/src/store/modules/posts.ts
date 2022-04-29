@@ -1,7 +1,8 @@
 import api from "@/api/api";
 
 export const PostActions = {
-  fetchPosts({ getters }: any, tags: string[]) {
+  fetchPosts({ getters }: any, payload: any) {
+    const { tags, visible } = payload;
     const isUsingMockData = getters.getIsUsingMockData;
     let route = "";
     if (tags.length == 0) {
@@ -10,6 +11,9 @@ export const PostActions = {
       route = isUsingMockData
         ? `/mock/postsByTag/${tags}`
         : `/postsByTag/${tags}`;
+    }
+    if (!visible) {
+      route = "/invisPosts";
     }
     return new Promise((resolve, reject) => {
       api

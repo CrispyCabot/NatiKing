@@ -19,6 +19,13 @@ const routes: Array<RouteRecordRaw> = [
     path: "/",
     name: routeNames.Home,
     component: Home,
+    props: { visibleArticles: true },
+  },
+  {
+    path: "/invisibles",
+    name: routeNames.Invisibles,
+    component: Home,
+    props: { visibleArticles: false },
   },
   {
     path: "/signup",
