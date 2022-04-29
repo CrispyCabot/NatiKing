@@ -39,12 +39,12 @@ export const PostActions = {
   },
 
   createNewPost({ getters }: any, payload: any) {
-    const { ownerID, title, description, tags } = payload;
+    const { ownerID, title, description, tags, visible } = payload;
     const isUsingMockData = getters.getIsUsingMockData;
     const route = isUsingMockData ? `/mock/posts/create` : `/posts/create`;
     return new Promise((resolve, reject) => {
       api
-        .post(route, { ownerID, title, description, tags })
+        .post(route, { ownerID, title, description, tags, visible })
         .then(({ data }) => {
           resolve(data);
         })

@@ -61,6 +61,7 @@ export default defineComponent({
         comments: [] as object[],
         date: Object(),
         description: "",
+        visible: "",
       },
       authorName: "No Author Found",
       authorID: "",
@@ -77,6 +78,7 @@ export default defineComponent({
       pageTitle: "Nati King",
       shortDesc: "",
       isLoading: true,
+      visibleRadio: "",
     };
   },
   components: {
@@ -92,9 +94,7 @@ export default defineComponent({
     postID: { type: String, default: () => "" },
   },
   async created() {
-    console.log(this.postID);
     this.postInfo = await this.fetchPostById(this.postID);
-    console.log(this.postInfo);
     this.setupFieldValues();
     this.handleMeta();
     const writer = await this.fetchUserById(this.postInfo.owner_id);
@@ -145,7 +145,9 @@ export default defineComponent({
       this.isMounted = true;
     },
     setupFieldValues() {
+      console.log(this.postInfo);
       this.newArticleContent = this.postInfo.description;
+      this.visibleRadio = this.postInfo.visible ? "yes" : "no";
       this.titleInput = this.postInfo.title;
       this.tagsArray = JSON.parse(JSON.stringify(this.postInfo.tags));
     },
@@ -310,6 +312,7 @@ export default defineComponent({
           description: this.postInfo.description,
           title: this.titleInput,
           tags: this.tagsArray,
+          visible: this.visibleRadio,
         },
       });
       if (res.status == 200) {

@@ -126,7 +126,7 @@ router.route("/users/logout").post(async(req, res) => {
 const Posts = require("../models/post-model");
 //Post setters
 router.route("/posts/create").post(async(req, res) => {
-    const { ownerID, title, description, tags } = req.body;
+    const { ownerID, title, description, tags, visible } = req.body;
 
     const post = await Posts.create({
         owner_id: ownerID,
@@ -136,6 +136,7 @@ router.route("/posts/create").post(async(req, res) => {
         image_path: "default.png",
         likes: [],
         comments: [],
+        visible: visible,
         date: Date.now(),
     });
 

@@ -20,6 +20,27 @@
             {{ tag }}
           </p>
         </div>
+        <fieldset v-if="isEditing">
+          <legend>Visible?</legend>
+
+          <input
+            v-model="visibleRadio"
+            type="radio"
+            id="yesVisible"
+            value="yes"
+            name="visible"
+          />
+          <label for="yesVisible">Yes</label><br />
+
+          <input
+            v-model="visibleRadio"
+            value="no"
+            type="radio"
+            id="noVisible"
+            name="visible"
+          />
+          <label for="noVisible">No</label><br />
+        </fieldset>
         <TagInput v-if="isEditing" v-model="tagsArray" />
         <p>{{ date }}</p>
         <p>{{ numLikes }} like(s)</p>

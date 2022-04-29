@@ -20,6 +20,7 @@ export default defineComponent({
       content: "Enter some text here...",
       tagsArray: [] as string[],
       title: "",
+      visible: "yes",
     };
   },
   async created() {},
@@ -50,11 +51,13 @@ export default defineComponent({
           isShowing: true,
         });
       } else {
+        console.log(this.visible === "yes");
         const res = await this.createNewPost({
           ownerID: this.getLoggedInUser._id,
           title: this.title,
           description: this.content,
           tags: this.tagsArray,
+          visible: this.visible === "yes",
         });
 
         if (res.status == 200) {

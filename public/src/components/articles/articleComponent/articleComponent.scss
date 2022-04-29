@@ -12,6 +12,22 @@
         width: 100%;
         border-radius: 10px;
         padding: 8px 10px;
+        fieldset {
+            text-align: left;
+            color: $off_white;
+            width: 10rem;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            label {
+                margin-left: 8px;
+                display: inline-block;
+            }
+            input {
+                margin: 1px 1px 1px 8px;
+                width: fit-content;
+                display: inline-block;
+            }
+        }
         .article-content {
             text-align: initial;
             iframe {

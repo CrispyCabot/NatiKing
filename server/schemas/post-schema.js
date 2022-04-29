@@ -8,6 +8,7 @@ const post_schema = new Schema({
     description: String,
     likes: [Schema.Types.ObjectId], //user ids
     tags: [String],
+    visible: Boolean,
     comments: [{
         _id: { type: Schema.ObjectId, auto: true },
         user_id: Schema.Types.ObjectId,

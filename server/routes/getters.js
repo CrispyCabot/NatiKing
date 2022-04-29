@@ -46,7 +46,7 @@ router.route("/writers").get((req, res) => {
 //Posts getters
 const Posts = require("../models/post-model");
 router.route("/posts").get((req, res) => {
-    Posts.find({}, async(err, response) => {
+    Posts.find({ visible: { $eq: true } }, async(err, response) => {
         if (err) {
             console.log(err);
             return;

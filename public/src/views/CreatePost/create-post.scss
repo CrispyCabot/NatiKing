@@ -18,6 +18,20 @@
             border: none;
             padding: 10px;
         }
+        fieldset {
+            width: 10rem;
+            border-radius: 10px;
+            margin-bottom: 5px;
+            label {
+                margin-left: 8px;
+                display: inline-block;
+            }
+            input {
+                margin: 1px 1px 1px 8px;
+                width: fit-content;
+                display: inline-block;
+            }
+        }
     }
 }
 
