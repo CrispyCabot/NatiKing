@@ -63,18 +63,20 @@ router.route("/invisPosts").get((req, res) => {
         res.json(response);
     }).sort({ date: -1 });
 });
-router.route("/postsByTag/:tags").get((req, res) => {
-    const { tags } = req.params;
+router.route("/postsByTag/:tags/:visible").get((req, res) => {
+    const { tags, visible } = req.params;
     const tagsArray = tags.split(",");
 
     //tags: { $in: tagsArray }
-    Posts.find({ tags: { $in: tagsArray } }, async(err, response) => {
-        if (err) {
-            console.log(err);
-            return;
+    Posts.find({ tags: { $in: tagsArray }, visible: { $eq: visible } },
+        async(err, response) => {
+            if (err) {
+                console.log(err);
+                return;
+            }
+            res.json(response);
         }
-        res.json(response);
-    }).sort({ date: -1 });
+    ).sort({ date: -1 });
 });
 router.route("/posts/:id").get((req, res) => {
     const { id } = req.params;

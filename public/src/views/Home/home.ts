@@ -78,7 +78,10 @@ export default defineComponent({
       }
     },
     async tagSearch() {
-      this.posts = await this.fetchPosts(this.tagsArray);
+      this.posts = await this.fetchPosts({
+        tags: this.tagsArray,
+        visible: this.visibleArticles,
+      });
       this.splicedPosts = this.posts.splice(0, 10);
     },
     test() {

@@ -10,7 +10,7 @@ export const PostActions = {
     } else {
       route = isUsingMockData
         ? `/mock/postsByTag/${tags}`
-        : `/postsByTag/${tags}`;
+        : `/postsByTag/${tags}/${visible}`;
     }
     if (!visible) {
       route = "/invisPosts";
