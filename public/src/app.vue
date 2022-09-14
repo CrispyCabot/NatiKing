@@ -36,28 +36,32 @@
     <div v-if="!isMobileView" class="leaf">
       <div>
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/Cincinnati_Bengals_logo.svg/1280px-Cincinnati_Bengals_logo.svg.png"
-        />
-      </div>
-      <div>
-        <img src="https://i.gyazo.com/51d3ac2e3da92bd13c4d9949ad845c71.png" />
-      </div>
-      <div>
-        <img src="https://i.gyazo.com/51d3ac2e3da92bd13c4d9949ad845c71.png" />
-      </div>
-      <div>
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cincinnati_Reds_Logo.svg/1280px-Cincinnati_Reds_Logo.svg.png"
+          src="https://gray-wxix-prod.cdn.arcpublishing.com/resizer/Wcvj6Ck3DlZBK5LIrJRxgmFuTfw=/980x0/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/gray/SVV7MS42M5COTEQW7CXWA3XLKI.gif"
         />
       </div>
       <div>
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cincinnati_Reds_Logo.svg/1280px-Cincinnati_Reds_Logo.svg.png"
+          src="https://gray-wxix-prod.cdn.arcpublishing.com/resizer/Wcvj6Ck3DlZBK5LIrJRxgmFuTfw=/980x0/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/gray/SVV7MS42M5COTEQW7CXWA3XLKI.gif"
         />
       </div>
       <div>
         <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/01/Cincinnati_Reds_Logo.svg/1280px-Cincinnati_Reds_Logo.svg.png"
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Paycor_Stadium_logo.svg/1200px-Paycor_Stadium_logo.svg.png"
+        />
+      </div>
+      <div>
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/thumb/7/73/Paycor_Stadium_logo.svg/1200px-Paycor_Stadium_logo.svg.png"
+        />
+      </div>
+      <div>
+        <img
+          src="https://www.pngmart.com/files/22/Cincinnati-Bengals-PNG-File.png"
+        />
+      </div>
+      <div>
+        <img
+          src="https://www.pngmart.com/files/22/Cincinnati-Bengals-PNG-File.png"
         />
       </div>
       <div>
